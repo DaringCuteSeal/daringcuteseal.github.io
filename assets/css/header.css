@@ -1,0 +1,14 @@
+/* a little dirty work... */
+
+.masthead {
+	border: none;
+	background-color: #1D222B;
+}
+
+.masthead__inner-wrap {
+	background-color: #1D222B;
+}
+
+.greedy-nav {
+	background-color: #1D222B;
+}

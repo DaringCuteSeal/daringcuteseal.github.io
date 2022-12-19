@@ -1,0 +1,11 @@
+main:
+  - title: About
+    url: /about
+  - title: Blog
+    url: /blog
+  - title: Software
+    url: /software
+  - title: Art
+    url: /art
+  - title: Miscellaneous
+    url: /misc
