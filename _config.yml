@@ -28,7 +28,6 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : "/assets/image/profile-transparent.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
-breadcrumb_separator     : ">"
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -203,7 +202,7 @@ sass:
 
 
 # Outputting
-permalink: /blog/:year/:month/:title/
+permalink: /blog/:title/
 paginate: 3 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -273,6 +272,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: false
       share: true
       related: true
