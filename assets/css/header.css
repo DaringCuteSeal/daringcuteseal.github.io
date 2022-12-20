@@ -12,3 +12,10 @@
 .greedy-nav {
 	background-color: #1D222B;
 }
+
+.page__footer {
+	background-image: url('/assets/image/bg-short.png');
+	background-size: 70%;
+	background-position-y: 50%;
+
+}
