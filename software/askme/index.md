@@ -2,6 +2,7 @@
 layout: single
 title: AskMe
 desc: AskMe is a collection of simple shell scripts to help you study, at the comfort of your terminal
+toc: true
 
 ---
 

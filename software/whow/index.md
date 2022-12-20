@@ -2,6 +2,7 @@
 layout: single
 title: Whow
 desc: Whow is a simple and fancy CLI task manager, written in BASH
+toc: true
 
 ---
 

@@ -2,6 +2,7 @@
 layout: single
 title: CIVZ Documentation
 desc: CIVZ documentation
+toc: true
 ---
 
 # About
