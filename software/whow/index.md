@@ -63,6 +63,21 @@ And the rendered view (`whow show events`):
 
 ![Rendered events](img/events.png)
 
+## Schedules
+
+Doesn't remind you or anything, but is a nice addition to your widget stack.
+
+Example of a schedule:
+```
+sched ev "06:00" % "Wake up"
+sched wd "06:45" "13:15" "School" @school
+sched we "08:00" "09:00" "Code" @programming
+```
+
+And the rendered view (`whow show schedule`):
+
+![Rendered schedule](img/schedule.png)
+
 
 # Inspiration and History
 
