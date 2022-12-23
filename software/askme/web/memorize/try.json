@@ -1,0 +1,13 @@
+{
+	"title": "AskMe Memorize",
+	"description": "AskMe memorize demo question.",
+	"list":
+	[
+		["Key one", "value one"],
+		["Key two", "value two"],
+		["Key three", "value three"],
+		["Key four", "value four"],
+		["Key five", "value five"]
+	]
+
+}
