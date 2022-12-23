@@ -182,7 +182,7 @@ function check()
 	for(i = 0; i < len; i++)
 	{
 		// mark red strings that didn't match
-		if(els[i].textContent != file.list[i])
+		if(els[i].textContent.toLowerCase() != file.list[i].toLowerCase())
 		{
 			els[i].style.color = "red";
 			correct = false;
