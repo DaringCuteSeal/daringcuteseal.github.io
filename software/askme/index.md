@@ -12,8 +12,9 @@ As of now, it includes:
 - AskMe Multiple Choices
 - AskMe Memorize
 - AskMe-dmenu
+- AskMe Web (memorize)
 
-## AskMe - Multiple Choices
+## Multiple Choices
 
 
 AskMe Multiple Choices supports multiple choices, from a to z. The questions are made by declaring functions called `q_1`, `q_2`, `q_3`, and so on. You can set some properties and a title
@@ -54,7 +55,7 @@ And how it looks like with AskMe:
 
 ![AskMe Multiple Choices](img/multchoices.png)
 
-## AskMe Memorize
+## Memorize
 
 AskMe Memorize is used for memorizing stuff like translations, meanings, etc. It supports multiple answers too, but you have to type in the full associated answer instead of only a letter.
 
@@ -82,7 +83,7 @@ And how it looks like:
 
 ![AskMe Memorize](img/memorize.png)
 
-## AskMe-dmenu
+## dmenu
 
 AskMe-dmenu is just AskMe Memorize with [dmenu](https://tools.suckless.org/dmenu/).
 
@@ -95,6 +96,23 @@ Here's how it looks like:
 And a GIF showing me using it:
 
 ![AskMe-dmenu](img/dmenu.gif)
+
+## Web (Memorize)
+
+AskMe Web (memorize) is a port of AskMe Memorize but for browsers. I wrote this so I could embed AskMe to my [Notion](https://notion.so) pages. It has two modes: input mode and dropdown mode. Input mode lets the user to input answers manually, while dropdown mode lets the user to choose answers with dropdown menus.
+
+You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/memorize](https://daringcuteseal.xyz/software/askme/web/memorize).
+
+Here's how it looks like with input mode:
+
+![AskMe Web (Memorize), input mode](img/web-memorize-input.png)
+
+And dropdown mode:
+
+![AskMe Web (Memorize), dropdown mode](img/web-memorize-dropdown.png)
+
+
+
 
 # History
 
