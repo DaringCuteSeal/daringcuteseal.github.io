@@ -22,7 +22,7 @@ AskMe Multiple Choices supports multiple choices, from a to z. The questions are
 
 Here's an example:
 
-```
+```bash
 #!askme-multchoices
 
 props()
@@ -61,7 +61,7 @@ AskMe Memorize is used for memorizing stuff like translations, meanings, etc. It
 
 Here's an example:
 
-```
+```bash
 #!askme-memorize
 
 title="My Title"
