@@ -112,6 +112,43 @@ And dropdown mode:
 ![AskMe Web (Memorize), dropdown mode](img/web-memorize-dropdown.png)
 
 
+## Web (List Memorize)
+Embeddable list memorizer.
+From a studying survey™ at my class, a lot of my friends apparently "asked themselves" when studying, which is a bad way to memorize something.
+
+Also, check out [list-memorize](https://raw.githubusercontent.com/DaringCuteSeal/shell-scripts/main/list-memorize) for a based studying experience from the CLI.
+
+Here's an example:
+```json
+{
+    "title": "An Example Title",
+    "description": "An example description",
+    "list":
+    [
+        "List one",
+        "List two",
+        "List three",
+        "List four"
+    ]
+}
+```
+
+How it looks like:
+![civz-interface](civz-interface.png)
+
+- Use the most left input box to type a string value.
+- Use the `Add` button to add the string from the input box to the list.
+- Use the `Check` button to match your answers with the correct answers.
+- Use the `Clear` button to start over.
+
+### Demo
+[CIVZ with a sample list](/software/civz?file=demo/try.json).
+
+Answers are:
+1. List one
+2. List two
+3. List three
+
 
 
 # History
@@ -119,8 +156,6 @@ And dropdown mode:
 The first concept of AskMe came from a little handcrafted shell script I wrote back when I tried to memorize some Sundanese words with its "sounding". Actually I don't even understand what that is, but I just have to memorize that 💀 Anyways, it was a simple 64-lined script that asks you a word and expects you to answer the correct associated answer, kinda like a flash card or some sort of that. It was actually even more simple back then, but became too simple for me soon.
 
 A couple days before my mid-term test, I decided to write what now known as "AskMe Multiple Choices", which is a nicer more sophisticated shell script that supports multiple choices answers. After my mid-term test was done, I really liked my "AskMe Multiple Choices" and decided to write what now known as "AskMe Memorize", which was a better version of that first 64-lined script. Then, when I had to memorize some Latin/Greek words and its meanings, I found it too hard and unnecessary to memorize the entire thing, so I wrote Askme-dmenu that shows all the available choices.
-
-I might write more AskMe scripts soon.
 
 ---
 

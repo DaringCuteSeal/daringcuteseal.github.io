@@ -1,4 +1,4 @@
-/* CIVZ: memorize a list
+/* AskMe List Memorizer (originally called CIVZ)
  *
  * Made with <3 for 8D on December 2022.
  * Thank you for an opportunity to learn more about JavaScript.
