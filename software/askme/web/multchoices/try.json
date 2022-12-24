@@ -1,0 +1,39 @@
+{
+	"title": "Multiple Choice Question Test",
+	"description": "Test questions.",
+
+	"list":
+	[
+		{
+			"label": "First question",
+			"choice":
+			[
+				"Not the correct answer",
+				"The correct answer",
+				"Not the correct answer too"
+			],
+			"correct": 2
+		},
+
+		{
+			"label": "Second question",
+			"choice":
+			[
+				"The correct answer",
+				"Not the correct answer too",
+				"Not the correct answer"
+			],
+			"correct": 1
+		},
+
+		{
+			"label": "Third question",
+			"choice":
+			[
+				"True",
+				"False"
+			],
+			"correct": 1
+		}
+	]
+}

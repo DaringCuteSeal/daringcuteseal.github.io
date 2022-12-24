@@ -14,6 +14,7 @@ As of now, it includes:
 - AskMe-dmenu
 - AskMe Web (memorize)
 - AskMe Web (list memorize)
+- AskMe Web (multiple choices)
 
 ## Multiple Choices
 
@@ -102,8 +103,23 @@ And a GIF showing me using it:
 
 AskMe Web (memorize) is a port of AskMe Memorize but for browsers. I wrote this so I could embed AskMe to my [Notion](https://notion.so) pages. It has two modes: input mode and dropdown mode. Input mode lets the user to input answers manually, while dropdown mode lets the user to choose answers with dropdown menus.
 
-You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/memorize](https://daringcuteseal.xyz/software/askme/web/memorize).
 
+Here's an example file:
+```json
+{
+	"title": "AskMe Memorize",
+	"description": "AskMe memorize demo question.",
+	"list":
+	[
+		["Key one", "value one"],
+		["Key two", "value two"],
+		["Key three", "value three"],
+		["Key four", "value four"],
+		["Key five", "value five"]
+	]
+
+}
+```
 Here's how it looks like with input mode:
 
 ![AskMe Web (Memorize), input mode](img/web-memorize-input.png)
@@ -112,6 +128,10 @@ And dropdown mode:
 
 ![AskMe Web (Memorize), dropdown mode](img/web-memorize-dropdown.png)
 
+You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/memorize](web/memorize).
+
+[Demo can be found here.](web/memorize?file=try.json)
+
 
 ## Web (List Memorize)
 Embeddable list memorizer.
@@ -119,7 +139,7 @@ From a studying survey™ at my class, a lot of my friends apparently "asked the
 
 Also, check out [list-memorize](https://raw.githubusercontent.com/DaringCuteSeal/shell-scripts/main/list-memorize) for a based studying experience from the CLI.
 
-Here's an example:
+Here's an example file:
 ```json
 {
     "title": "An Example Title",
@@ -135,25 +155,72 @@ Here's an example:
 ```
 
 How it looks like:
-![civz-interface](civz-interface.png)
+
+![list-memorize interface](img/web-list-memorize-interface.png)
 
 - Use the most left input box to type a string value.
 - Use the `Add` button to add the string from the input box to the list.
 - Use the `Check` button to match your answers with the correct answers.
 - Use the `Clear` button to start over.
 
-You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/list-memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/list-memorize](https://daringcuteseal.xyz/software/askme/web/list-memorize).
+You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/list-memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/list-memorize](web/list-memorize).
 
-### Demo
-[AskMe List Memorize with a sample list](web/memorize-list?file=/try.json).
+[Demo can be found here.](web/list-memorize?file=/try.json).
 
-Answers are:
-1. List one
-2. List two
-3. List three
+## Web (Multiple Choices)
 
+AskMe Web (multiple choices) is a port of AskMe multiple choices but for browsers.
 
+You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/multchoices), or use my instance at [daringcuteseal.xyz/software/askme/web/multchoices](web/multchoices).
 
+Here's an example file:
+```json
+{
+	"title": "Multiple Choice Question Test",
+	"description": "Test questions.",
+
+	"list":
+	[
+		{
+			"label": "First question",
+			"choice":
+			[
+				"Not the correct answer",
+				"The correct answer",
+				"Not the correct answer too"
+			],
+			"correct": 2
+		},
+
+		{
+			"label": "Second question",
+			"choice":
+			[
+				"The correct answer",
+				"Not the correct answer too",
+				"Not the correct answer"
+			],
+			"correct": 1
+		},
+
+		{
+			"label": "Third question",
+			"choice":
+			[
+				"True",
+				"False"
+			],
+			"correct": 1
+		}
+	]
+}
+```
+
+And how it looks like:
+
+![AskMe web multiple choices](img/web-multchoices-interface.png)
+
+[Demo can be found here.](web/multchoices?file=try.json)
 # History
 
 The first concept of AskMe came from a little handcrafted shell script I wrote back when I tried to memorize some Sundanese words with its "sounding". Actually I don't even understand what that is, but I just have to memorize that 💀 Anyways, it was a simple 64-lined script that asks you a word and expects you to answer the correct associated answer, kinda like a flash card or some sort of that. It was actually even more simple back then, but became too simple for me soon.

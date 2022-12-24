@@ -93,8 +93,8 @@ async function parseFile()
 	// Set title
 	if(!file.title)
 	{
-		document.title = "CIVZ";
-		headerEl.textContent = "CIVZ";
+		document.title = "AskMe List Memorize";
+		headerEl.textContent = "AskMe List Memorize";
 	}
 	else
 	{
@@ -105,7 +105,7 @@ async function parseFile()
 	// Set description
 	if(!file.description)
 	{
-		descEl.textContent = "CIVZ Memorizer"
+		descEl.textContent = "An AskMe list memorize question.";
 	}
 	else
 	{
