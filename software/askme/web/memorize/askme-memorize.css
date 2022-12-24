@@ -1,0 +1,18 @@
+li {
+	padding-top: 10px;
+}
+
+button {
+	width: 130px;
+	height: 50px;
+	font-size: large;
+}
+
+.input:disabled {
+	background-color: #009700;
+	color: white;
+}
+
+.input:disabled:hover {
+	cursor: not-allowed;
+}
