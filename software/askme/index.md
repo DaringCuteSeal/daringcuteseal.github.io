@@ -13,6 +13,7 @@ As of now, it includes:
 - AskMe Memorize
 - AskMe-dmenu
 - AskMe Web (memorize)
+- AskMe Web (list memorize)
 
 ## Multiple Choices
 
