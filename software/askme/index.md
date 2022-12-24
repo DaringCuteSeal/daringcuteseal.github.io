@@ -142,7 +142,7 @@ How it looks like:
 - Use the `Check` button to match your answers with the correct answers.
 - Use the `Clear` button to start over.
 
-You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/list-memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/list-memorize](https://daringcuteseal.xyz/software/askme/web/memorize).
+You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/list-memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/list-memorize](https://daringcuteseal.xyz/software/askme/web/list-memorize).
 
 ### Demo
 [AskMe List Memorize with a sample list](web/memorize-list?file=/try.json).
