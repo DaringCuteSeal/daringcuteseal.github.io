@@ -132,7 +132,7 @@ function initInput()
 	{
 		// Shuffle dropdown order
 		dropdownOrder = file.list.slice();
-		for(let i = dropdownOrder.length - 2; i > 0; i--)
+		for(let i = dropdownOrder.length - 1; i > 0; i--)
 		{
 			const j = Math.floor(Math.random() * (i + 1));
 			var temp = dropdownOrder[i]
