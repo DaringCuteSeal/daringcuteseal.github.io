@@ -59,8 +59,7 @@ And how it looks like with AskMe:
 
 ## Memorize
 
-AskMe Memorize is used for memorizing stuff like translations, meanings, etc. It supports multiple answers too, but you have to type in the full associated answer instead of only a letter.
-
+AskMe Memorize is used for memorizing stuff like translations, meanings, etc. To answer, you have to type in the full associated answer. It supports multiple answers, too.
 Here's an example:
 
 ```bash
