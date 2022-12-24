@@ -161,6 +161,7 @@ function resetColor()
 function clear()
 {
 	checkBtn.disabled = false;
+	checkBtn.textContent = "Check";
 
 	resetColor();
 
