@@ -11,7 +11,7 @@ So yeah, my dad really wanted to get my phone and use it for daily driver... bec
 
 Okay yeah I tried running Android apps on my UT today and it... kinda works! Not just them, I actually wanted to daily drive it too, like, imagine running Linux at your school every day lmao.
 
-First, I tried Waydroid cuz I thought Anbox wouldn't work since my phone wasn't mentioned as "supported" at "Run Android Apps" UBports's documentation page. It... doesn't work :D Or precisely... I did install that successfully but it kept throwing errors. And it's weird how people have tried that and made it work before cuz it's literally called "Waydroid"! It's meant to run on Wayland and UT uses Mir.
+First, I tried Waydroid cuz I thought Anbox wouldn't work since my phone wasn't mentioned as "supported" at "Run Android Apps" UBports's documentation page. It... doesn't work :D Or precisely... I did install that successfully but it kept throwing errors.
 
 And second, I tried Anbox... with the fear of bricking my phone but I did that anyways. IT WORKED!! Easier than I thought. Apparently, the UT team (or like whoever ported UT to ZenFone Max Pro M1) already integrated Anbox to the Ubuntu Touch system nicely so it has tools preinstalled that you can use to run it directly. I ran `anbox-tool install` just like that and Anbox got installed on my phone.
 
