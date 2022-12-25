@@ -129,7 +129,7 @@ And dropdown mode:
 
 You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/memorize](web/memorize).
 
-[Demo can be found here.](web/memorize?file=try.json)
+[Demo can be found here](web/memorize?file=try.json).
 
 
 ## Web (List Memorize)
@@ -164,7 +164,7 @@ How it looks like:
 
 You can host it yourself by [getting the source code](https://github.com/DaringCuteSeal/AskMe/tree/main/web/list-memorize), or use my instance at [daringcuteseal.xyz/software/askme/web/list-memorize](web/list-memorize).
 
-[Demo can be found here.](web/list-memorize?file=/try.json).
+[Demo can be found here](web/list-memorize?file=try.json).
 
 ## Web (Multiple Choices)
 
@@ -219,7 +219,8 @@ And how it looks like:
 
 ![AskMe web multiple choices](img/web-multchoices-interface.png)
 
-[Demo can be found here.](web/multchoices?file=try.json)
+[Demo can be found here](web/multchoices?file=try.json).
+
 # History
 
 The first concept of AskMe came from a little handcrafted shell script I wrote back when I tried to memorize some Sundanese words with its "sounding". Actually I don't even understand what that is, but I just have to memorize that 💀 Anyways, it was a simple 64-lined script that asks you a word and expects you to answer the correct associated answer, kinda like a flash card or some sort of that. It was actually even more simple back then, but became too simple for me soon.
