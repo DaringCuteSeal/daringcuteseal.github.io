@@ -23,14 +23,14 @@ name                     : "DaringCuteSeal"
 description              : "DaringCuteSeal's website"
 url                      : "https://daringcuteseal.xyz"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "DaringCuteSeal/daringcuteseal.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/image/profile-transparent.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : false
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -61,7 +61,7 @@ atom_feed:
   hide                   : # true, false (default)
 search                   : true
 search_full_content      : true
-search_provider          : # lunr (default), algolia, google
+search_provider          : "lunr" #algolia, google
 lunr:
   search_within_pages    : # true, false (default)
 algolia:
@@ -272,6 +272,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: false # but already included in social share includes.
       share: true
       related: true
