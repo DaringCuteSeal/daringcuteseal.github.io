@@ -1,23 +1,26 @@
 ---
 layout: single
 title: AskMe
-desc: AskMe is a collection of simple shell scripts to help you study, at the comfort of your terminal
+desc: AskMe is a collection of simple scripts to help you study, at the comfort of your terminal
 toc: true
 
 ---
 
-AskMe is a collection of simple shell scripts to help you study, at the comfort of your terminal. I don't know how other people study but I totally have to answer some questions. Its files are still very shell-y but it should be fine for those using the terminal all the time.
+# About
+AskMe is a collection of simple scripts to help you study. I don't know how other people study but I totally have to answer some questions.
 
 As of now, it includes:
-- AskMe Multiple Choices
-- AskMe Memorize
-- AskMe-dmenu
-- AskMe Web (memorize)
-- AskMe Web (list memorize)
-- AskMe Web (multiple choices)
+- AskMe Multiple Choices **(shell script)**
+- AskMe Memorize **(shell script)**
+- AskMe-dmenu **(shell script)**
+- AskMe Web (memorize) **(web app)**
+- AskMe Web (list memorize) **(web app)**
+- AskMe Web (multiple choices) **(web app)**
+
+# Shell Script Version
+Perfect for people who live in the terminal. Questions are written with shell syntax so if you're comfortable with shell scripting, you should be good to go.
 
 ## Multiple Choices
-
 
 AskMe Multiple Choices supports multiple choices, from a to z. The questions are made by declaring functions called `q_1`, `q_2`, `q_3`, and so on. You can set some properties and a title
  with the `props` function.
@@ -98,7 +101,11 @@ And a GIF showing me using it:
 
 ![AskMe-dmenu](img/dmenu.gif)
 
-## Web (Memorize)
+
+# Web App Version
+Create a sharable link or embed these mini quiz to your website. Or use it however you want.
+
+## Memorize
 
 AskMe Web (memorize) is a port of AskMe Memorize but for browsers. I wrote this so I could embed AskMe to my [Notion](https://notion.so) pages. It has two modes: input mode and dropdown mode. Input mode lets the user to input answers manually, while dropdown mode lets the user to choose answers with dropdown menus.
 
@@ -132,7 +139,7 @@ You can host it yourself by [getting the source code](https://github.com/DaringC
 [Demo can be found here](web/memorize?file=try.json).
 
 
-## Web (List Memorize)
+## List Memorize
 Embeddable list memorizer.
 From a studying survey™ at my class, a lot of my friends apparently "asked themselves" when studying, which is a bad way to memorize something.
 
@@ -166,7 +173,7 @@ You can host it yourself by [getting the source code](https://github.com/DaringC
 
 [Demo can be found here](web/list-memorize?file=try.json).
 
-## Web (Multiple Choices)
+## Multiple Choices
 
 AskMe Web (multiple choices) is a port of AskMe multiple choices but for browsers.
 
