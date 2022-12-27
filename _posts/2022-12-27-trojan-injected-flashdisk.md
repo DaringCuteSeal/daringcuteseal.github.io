@@ -12,7 +12,7 @@ A week ago, I went to a stationary store to print a document because my printer 
 
 Today, I decided to check my flashdisk on my old laptop running Artix Linux—and something strange showed up!
 
-![content of flashdisk](image/trojan-flashdisk-content.png)
+![content of flashdisk](/blog/image/trojan-flashdisk-content.png)
 
 Yep, that's a Windows® autorun file that executes automatically when you plug your flashdisk!
 
@@ -25,7 +25,7 @@ UseAUtoPlAY=1
 
 Apparently, it executes a file inside the `__` directory. I uploaded the file to VirusTotal and...
 
-![virustotal](image/trojan-flashdisk-virustotal.png)
+![virustotal](/blog/image/trojan-flashdisk-virustotal.png)
 
 Boom! I got a Windows® trojan. Pretty cool. I then stored it to my hard disk as a malware sample because why not.
 
