@@ -14,7 +14,7 @@ Today, I decided to check my flashdisk on my old laptop running Artix Linux—an
 
 ![content of flashdisk](/blog/image/trojan-flashdisk-content.png)
 
-Yep, that's a Windows® autorun file that executes automatically when you plug your flashdisk!
+Yep, that's a Windows® autorun file that tells the OS what to execute automatically when you plug your flashdisk!
 
 That's sus as hell. Here's the content of it:
 ```ini
