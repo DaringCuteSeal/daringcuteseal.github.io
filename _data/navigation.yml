@@ -3,6 +3,8 @@ main:
     url: /about
   - title: Blog
     url: /blog
+  - title: Commissions
+    url: /comms
   - title: Software
     url: /software
   - title: Art
