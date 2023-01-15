@@ -9,8 +9,9 @@ Info
 ====
 
 *   To ask for a commission, please [mail me](mailto:daringcuteseal@gmail.com).
-*   I'm not picky for the price. Anything over or equal to $2 for 2D illustration and $5 for 3D stuff. Pay what you think my art is worth.
+*   I'm not picky for the price. Any amount over than $2 for 2D illustration and over $5 for 3D stuff. Pay what you think my art is worth.
 *   Check out my [DeviantArt](https://www.deviantart.com/daringcuteseal), [Instagram](https://instagram.com/daringcuteseal), and [Sketchfab](https://sketchfab.com/Mysticreator) for other examples of my work.
+*   Due to school, your requests might take longer to finish than expected.
 
 Categories
 ==========
@@ -60,7 +61,7 @@ Character 3D Model
 *   A plain render of a your character.
 *   A `.blend` model.
 
-Send me a reference sheet and I'll make a 3D model for you. You might want to specify how it's made, like if you need it to be in high-poly or in low-poly, etc. I can optionally rig it (only basic rig).
+Send me a reference sheet and I'll make a 3D model for you. No humans. You might want to specify how it's made, like if you need it to be in high-poly or in low-poly, etc. I can optionally rig it (only basic rig).
 
 
 2D Illustration
