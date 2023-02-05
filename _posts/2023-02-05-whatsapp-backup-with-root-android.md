@@ -37,7 +37,7 @@ So, here's what I ended up doing (requires root shell):
     drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:41 app_minidumps
     drwxrws--x 16 u10_a182 u10_a182_cache 3.4K 2023-02-05 11:17 cache
     drwxrws--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:39 code_cache
-    drwxrwx--x  2 0_a182 u10_a182_cache 3.4K 2023-02-05 10:50 databases
+    drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-05 10:50 databases
     drwxrwx--x 15 u10_a182 u10_a182_cache 3.4K 2023-02-05 11:24 files
     drwx------  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:41 lib-main
     drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-05 07:07 no_backup
