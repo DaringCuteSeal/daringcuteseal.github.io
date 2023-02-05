@@ -9,7 +9,7 @@ tag:
 
 ![f\*ck whatsapp](/blog/image/whatsapp.png)
 
-I'm so fed up with What$App! Why can't they implement an actually good back up solution?!?! And I can ask my school to use something else instead?!?!! Ugh.
+I'm so fed up with What$App! Why can't they implement an actually good back up solution?!?! And can I ask my school to use something else instead?!?!! Ugh.
 
 Anyways, I've been looking for a container/virtualization solution for Android to run proprietary apps securely for a while now, and I recently found [Shelter](https://github.com/PeterCxy/Shelter) which is a perfect app for that! It creates a separate "work" container profile that has its own files and app data, plus we can switch off the work container to prevent apps there from collecting our data.
 
