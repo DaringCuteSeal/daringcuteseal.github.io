@@ -9,7 +9,7 @@ tag:
 
 ![f\*ck whatsapp](/blog/image/whatsapp.png)
 
-I'm so fed up with What$App! Why can't they implement an actually good back up solution?!?! And I can ask my school to use something else instead?!?!! Ugh.
+I'm so fed up with What$App! Why can't they implement an actually good back up solution?!?! And can I ask my school to use something else instead?!?!! Ugh.
 
 Anyways, I've been looking for a container/virtualization solution for Android to run proprietary apps securely for a while now, and I recently found [Shelter](https://github.com/PeterCxy/Shelter) which is a perfect app for that! It creates a separate "work" container profile that has its own files and app data, plus we can switch off the work container to prevent apps there from collecting our data.
 
@@ -37,7 +37,7 @@ So, here's what I ended up doing (requires root shell):
     drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:41 app_minidumps
     drwxrws--x 16 u10_a182 u10_a182_cache 3.4K 2023-02-05 11:17 cache
     drwxrws--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:39 code_cache
-    drwxrwx--x  2 0_a182 u10_a182_cache 3.4K 2023-02-05 10:50 databases
+    drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-05 10:50 databases
     drwxrwx--x 15 u10_a182 u10_a182_cache 3.4K 2023-02-05 11:24 files
     drwx------  2 u10_a182 u10_a182_cache 3.4K 2023-02-04 22:41 lib-main
     drwxrwx--x  2 u10_a182 u10_a182_cache 3.4K 2023-02-05 07:07 no_backup
