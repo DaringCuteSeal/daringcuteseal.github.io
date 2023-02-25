@@ -25,6 +25,10 @@ Character Design
 
 ![](examples/yokina.png)
 
+![](examples/chloe.png)
+
+![](examples/dito.png)
+
 **You will get:**
 
 *   A character reference sheet with simple sketch, color, and shading.
@@ -55,6 +59,8 @@ Character 3D Model
 ![](examples/baby-penguin.png)
 
 ![](examples/pearl.png)
+
+![](examples/narwhump.png)
 
 **You will get:**
 
