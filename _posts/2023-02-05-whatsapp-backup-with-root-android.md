@@ -45,7 +45,7 @@ So, here's what I ended up doing (requires root shell):
 
     ```
 
-4. Change the `files` and `databases` owner to the previous owner we've checked, recursively. In this case, it is `u10_a182:u10_a182_cache`. Run `chown -R u10_a182:u10_a182_cache /data/user/10/com.whatsapp{files,databasea}`.
+4. Change the `files` and `databases` owner to the previous owner we've checked, recursively. In this case, it is `u10_a182:u10_a182_cache`. Run `chown -R u10_a182:u10_a182_cache /data/user/10/com.whatsapp{files,databases}`.
 5. Set up WhatsApp on the *WORK* profile normally. It won't prompt you for any backup restore, but after the entire process is done, you should see your previous chat history.
 
 
