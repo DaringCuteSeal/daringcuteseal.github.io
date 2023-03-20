@@ -32,7 +32,7 @@ Kemarin, habis aku tidur siang karena agak tertekan, aku akhirnya bisa ngarang c
 
 # Progress
 <p style="text-align: center;">
-    <video autoplay width=400px>
+    <video loop autoplay width=400px>
     <source src="/blog/image/misi-hijau-rec-1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video> 
