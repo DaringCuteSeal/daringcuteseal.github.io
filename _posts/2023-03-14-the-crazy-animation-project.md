@@ -46,7 +46,9 @@ After some thought, I switched my render engine to EEVEE. I tried everything I c
 
 ![bad hair](/blog/image/itll-be-alright-hair.png)
 
-Then, I rendered everything in a day! However, I noticed so many damn mistakes, and so I re-rendered everything 💩 the second one is better, although there were still some mistakes. After some **62** days, I finally finished my animation. Kinda satisfied, but I still need more practice 🔥
+Then, I rendered everything in a day! However, I noticed so many damn mistakes, and so I re-rendered everything 💩 the second one is better, although there were still some mistakes.
+
+And finally, after some **62** days, I finally finished my animation. Kinda satisfied, but I still need more practice 🔥
 
 # Thanks
 * [BlenderKit](https://www.blenderkit.com) for interior asset
