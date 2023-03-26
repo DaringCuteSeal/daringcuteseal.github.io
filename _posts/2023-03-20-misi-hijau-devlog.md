@@ -24,7 +24,7 @@ Tapi untungnya lusa aku udah libur, jadi aku bisa ngerjain game ini tAnpa Perlu 
 Candaaa 🙂 Aku kan anak kesayangan wakasis buat ngedit video (*somehow*) sekaligus koordinator bidang IT OSIS terabsurd sepanjang sejarah PHI (my school). Aku bakal pergi ke Tasikmalaya karena program Sahabat Belajar pas 5 April (*which apparently is also* tanggal technical meeting lomba kodingku). Dan juga, aku harus bantu (doang karena semua beban ditanggung ke ketua OSIS xixiix 🤍) nyiapin buat kegiatan Sahabat Belajar itu. *But nah, the timing for this competition is still way better than the previous one.*
 
 # Ide
-Nyari ide itu susah BANGET, apalagi *when you're constrained in a theme*. Dan worse, aku baru pakai semua tenaga otakku untuk bikin [It'll be Alright](/_posts/2023-03-14-the-crazy-animation-project.md). Oh ya, aku diajak sehari setelah aku nyelesain animasi itu, ahha.
+Nyari ide itu susah BANGET, apalagi *when you're constrained in a theme*. Dan worse, aku baru pakai semua tenaga otakku untuk bikin [It'll be Alright](/blog/the-crazy-animation-project/). Oh ya, aku diajak sehari setelah aku nyelesain animasi itu, ahha.
 
 Aku udah nyoba nyari ide sendiri dan nanya orang (dan ChatGPT because why not). Benar-benar gak ada yang bikin aku semangat banget! "Tech for a better future"... *literally nothing in my mind fits that tbh*. Aku sebenarnya belum punya ide solid tentang game ini, jadi aku berusaha ngejar kode aja dulu dengan *rough idea*. Awalnya, aku mau bikin sesuatu yang berkaitan sama misi menyelamatkan kota dari krisis energi dengan bikin semacam mesin pembangkit energi hijau, tapi kayanya itu susah banget jadi ku-cancel.
 
@@ -32,7 +32,7 @@ Kemarin, habis aku tidur siang karena agak tertekan, aku akhirnya bisa ngarang c
 
 # Progress
 <p style="text-align: center;">
-    <video autoplay width=400px>
+    <video loop autoplay width=400px>
     <source src="/blog/image/misi-hijau-rec-1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video> 
