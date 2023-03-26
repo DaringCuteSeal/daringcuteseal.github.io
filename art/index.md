@@ -14,4 +14,4 @@ You can check the catalog at [wallpapers.daringcuteseal.xyz](https://wallpapers.
 
 # Sticker Designs
 I release some of my A3 sticker designs <img src="img/go-sticker.png" width=100px>
-Most of them are programming/FOSS-related. [check them out!](https://github.com/DaringCuteSeal/fossstickers")
+Most of them are programming/FOSS-related. [check them out!](https://github.com/DaringCuteSeal/fossstickers)

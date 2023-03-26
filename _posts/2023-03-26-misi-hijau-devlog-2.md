@@ -42,7 +42,7 @@ Super bad. Looks like crap? Look at the arguments I pass. Is it normal?????? Wel
 
 # The Progress
 <p style="text-align: center;">
-    <video autoplay width=400px>
+    <video autoplay loop width=400px>
     <source src="/blog/image/misi-hijau-rec-2.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video> 
