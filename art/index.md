@@ -4,7 +4,7 @@ title: Art
 toc: true
 ---
 
-# Finding my Art
+# Where to Find my Artwork
 I'm mainly a CGI artist. I illustrate with [Krita](https://krita.org) too sometimes. I post my art to my [Instagram](https://instagram.com/daringcuteseal) and my [DeviantArt](https://deviantart.com/daringcuteseal).
 
 # Wallpapers
