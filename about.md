@@ -16,7 +16,6 @@ Hi!! So.. I'm Pearl—well actually that's my nickname, but I just like to be ca
 The quickest way to contact me is probably through my Discord, Reddit, or email.
 
 * [Odysee][odysee]
-* [Mastodon][mastodon]
 * [Discord][discord]
 * [Discord server][discord_server]
 * [Sketchfab][sketchfab]
@@ -41,7 +40,6 @@ If you like what I'm doing, consider donating to me 💙
 
 
 [odysee]: https://odysee.com/@Daringcuteseal
-[mastodon]: https://mastodon.social/@Daringcuteseal
 [discord]: https://discord.com/users/781018748877537330
 [discord_server]: https://discord.gg/3bYmuKfHP4
 [sketchfab]: https://sketchfab.com/Mysticreator
