@@ -113,7 +113,7 @@ All you need to restart a game is to trigger the `LevelRestart` event, and `Leve
 
 # Factory!
 
-My game handler had the responsibility to create sprites and UI components in the older versions of my game:
+My game loop handler had the responsibility to create sprites and UI components in the older versions of my game:
 
 ```python
 class Game:
