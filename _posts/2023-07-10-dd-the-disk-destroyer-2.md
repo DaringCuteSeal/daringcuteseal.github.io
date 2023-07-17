@@ -36,7 +36,7 @@ sector-size: 512
 
 I overwrote 2 gigs of data from the start of the disk, so that means I destroyed the partition table and rendered the first partition inaccessible and corrupted.
 
-As for the partition table, I'm safe because I kept a backup of my disk layout (restore with `sfdisk`) :D if you don't keep a backup and you lost your disk layout, try remaking the partitions manually.
+As for the partition table, I'm safe because I kept a backup of my disk layout (restore with `sfdisk`) :D if you don't keep a backup and you lost your disk layout, try remaking the partitions manually or attempt to recover your layout (try using an app like GParted).
 
 **Pro tip: make drive layout backups too. They're as important as the usual file backups.**
 
