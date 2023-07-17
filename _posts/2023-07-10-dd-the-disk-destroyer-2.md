@@ -50,13 +50,13 @@ After a bit of research, I found that ext4 partitions have [super blocks](https:
 First of all, we need to know which super block to use. You can run...
 
 ```
-mke2fs -n /dev/sdX
+mke2fs -n /dev/sdXn
 ```
 
 (`n` option to list backup super blocks and not actually setup a new file system) to check all the available backup super blocks. Then, we can run `e2fsck` like so:
 
 ```
-e2fsck -b SUPERBLOCK /dev/sdX
+e2fsck -b SUPERBLOCK /dev/sdXn
 ```
 
 replace SUPERBLOCK with the super block you want. You'd probably want the super block that's located near the partition start (one with the lowest number). Also, since it might take forever to answer the prompts given by fsck, you might want to pass the `y` option too so fsck will automatically assume yes to all prompts (generally safe).
