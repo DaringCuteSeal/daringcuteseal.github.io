@@ -17,4 +17,4 @@ And so that brings us to the fact that we are never correct or wrong. Nothing is
 
 Science, religion, and superstitions come from the same thing: observation. They are just ways to make sense of the world. Of all the above, science seems to be the best way of predicting and explaining this world. But then again, human rationality is just human rationality.
 
-So now, when you can't win an argument about a different view of this world with you: embrace it. It's a friendly reminder of how knowledge is just.. observation.
+So now, when you can't win an argument about a different view of this world: embrace it. It's a friendly reminder of how knowledge is just.. observation.

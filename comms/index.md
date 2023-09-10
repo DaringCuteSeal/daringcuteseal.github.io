@@ -9,7 +9,7 @@ Info
 ====
 
 *   To ask for a commission, please [mail me](mailto:daringcuteseal@gmail.com).
-*   I'm not picky for the price. Any amount over than $2 for 2D illustration and over $5 for 3D stuff. Pay what you think my art is worth.
+*   I'm not very picky for the pricing. Perhaps any amount over than $2 for 2D illustration and over $5 for 3D stuff. Pay what you think my art is worth.
 *   Check out my [DeviantArt](https://www.deviantart.com/daringcuteseal), [Instagram](https://instagram.com/daringcuteseal), and [Sketchfab](https://sketchfab.com/Mysticreator) for other examples of my work.
 *   Due to busy times with my school, your requests might take longer to finish than expected.
 
@@ -20,7 +20,7 @@ Character Design
 ----------------
 
 
-![](examples/lunoch.png)
+![Lunoch the Irrawaddy Dolphin](examples/lunoch.png)
 
 ![](examples/refsheet1.png)
 
@@ -100,7 +100,7 @@ Headshot only for complex animals; I might be able to do fullbody for simpler an
 
 ![Dare to be cute](examples/dare-to-be-cute.png)
 
-![Death](<i can fall at any time.png>)
+![Death](examples/death.png)
 
 ### Organic-Looking Illustration
 
@@ -110,9 +110,9 @@ Headshot only for complex animals; I might be able to do fullbody for simpler an
 
 ![Jacket](examples/jacket.png)
 
-![Penguin](<penguin watermarked.png>)
+![Penguin](examples/penguin-watermarked.png)
 
-![Penguin 2](<other penguin.png>)
+![Penguin 2](examples/other-penguin.png)
 
 
 
@@ -124,7 +124,7 @@ Posters/Flyers
 
 ![Talent Show Poster (in Indonesian)](examples/a4-poster-1.png)
 
-![Cloning and Reproduction Engineering Biology poster](poster2-2.png)
+![Cloning and Reproduction Engineering Biology poster](examples/poster2-2.png)
 
 
 Animation (3D/2D)
