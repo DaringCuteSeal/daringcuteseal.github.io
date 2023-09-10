@@ -106,7 +106,7 @@ Headshot only for complex animals; I might be able to do fullbody for simpler an
 
 ![Lamb for my poster](examples/lamb.png)
 
-![Our composition](examples/our-composition.png>)
+![Our composition](examples/our-composition.png)
 
 ![Jacket](examples/jacket.png)
 
@@ -132,8 +132,6 @@ Animation (3D/2D)
 
 **You will get:**
 * An animation (any format you prefer).
-
-(Note: please don't email me and ask for $1 animation 💀)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VDJWoM5AC4o?si=t_CpyGzz8wo32VAf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
