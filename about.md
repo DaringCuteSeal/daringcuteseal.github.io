@@ -13,6 +13,7 @@ Just an ordinary 14-year-old Indonesian girl. I'm a furry, and I enjoy art and t
 
 My fursona's a seal and she's Pearl (you can call me that too).
 
+<img src="/assets/image/pearl-plain.png" width=300px>
 <img src="/assets/image/pearl-funky.png" width=300px>
 
 ---

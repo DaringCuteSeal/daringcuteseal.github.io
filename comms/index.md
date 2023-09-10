@@ -19,6 +19,9 @@ Categories
 Character Design
 ----------------
 
+
+![](examples/lunoch.png)
+
 ![](examples/refsheet1.png)
 
 ![](examples/refsheet2.png)
@@ -43,24 +46,31 @@ I accept any kind of creature. Humans, animals, mystical creatures, whatever you
 
 *   A render of a scene.
 
-![](examples/l1y.png)
+![Linux 1st anniversary](examples/l1y.png)
 
-![](examples/linux-engineering.png)
+![Linux Engineering](examples/linux-engineering.png)
 
-![](examples/owl-remake-2yrs.png)
+![Remake of an Old Owl Art](examples/owl-remake-2yrs.png)
 
-I can make many stuff except for human-related things. Please don't ask for a human render.
+I can make many stuff. Not very good at humans though (I'm able to make simple ultra-stylized humans):
+
+![Human](examples/best-stories.jpeg)
+
+ More examples can be seen in my [wallpapers page](https://wallpapers.daringcuteseal.xyz).
+
 
 Character 3D Model
 ------------------
 
-![](examples/wolf.png)
+![CyberScure Robot](examples/cybscure-1.png)
 
-![](examples/baby-penguin.png)
+![Wolf](examples/wolf.png)
 
-![](examples/pearl.png)
+![Baby penguin](examples/baby-penguin.png)
 
-![](examples/narwhump.png)
+![Pearl](examples/pearl.png)
+
+![Narwhump](examples/narwhump.png)
 
 **You will get:**
 
@@ -73,19 +83,58 @@ Send me a reference sheet and I'll make a 3D model for you. No humans. You might
 2D Illustration
 ---------------
 
-
 ### Semi-Realistic Animal Portraits
 
-![](examples/frog.png)
+![Frog](examples/frog.png)
 
-![](examples/dog.png)
+![Dog](examples/dog.png)
 
 Headshot only for complex animals; I might be able to do fullbody for simpler animals.
 
-### Ink-Styled Illustration
+### Ink-Styled (Solid Lines) Illustration
+![Egocentric](examples/egocentric.png)
 
-![](examples/pearl2.png)
+![Pearl 2](examples/pearl2.png)
 
-![](examples/chihuahua.png)
+![Chihuahua](examples/chihuahua.png)
 
-![](examples/dare-to-be-cute.png)
+![Dare to be cute](examples/dare-to-be-cute.png)
+
+![Death](<i can fall at any time.png>)
+
+### Organic-Looking Illustration
+
+![Lamb for my poster](examples/lamb.png)
+
+![Our composition](examples/our-composition.png>)
+
+![Jacket](examples/jacket.png)
+
+![Penguin](<penguin watermarked.png>)
+
+![Penguin 2](<other penguin.png>)
+
+
+
+Posters/Flyers
+--------------
+
+**You will get:**
+* Well, a poster/flyer.
+
+![Talent Show Poster (in Indonesian)](examples/a4-poster-1.png)
+
+![Cloning and Reproduction Engineering Biology poster](poster2-2.png)
+
+
+Animation (3D/2D)
+-----------------
+
+**You will get:**
+* An animation (any format you prefer).
+
+(Note: please don't email me and ask for $1 animation 💀)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VDJWoM5AC4o?si=t_CpyGzz8wo32VAf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kYDscsf-vE0?si=3LhwvPgDG5j0Q7Iy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
