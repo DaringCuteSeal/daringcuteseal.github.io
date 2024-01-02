@@ -37,8 +37,8 @@ I have decided to take art more seriously, and so I started following YouTube ar
 
 I redrew some of my old work yesterday, and wow all the art studies are totally worth it.
 
-![Art redraw](../blog/image/2024-art-redraw1.png)
-![Art redraw 2](../blog/image/2024-art-redraw2.png)
+![Art redraw](/blog/image/2024-art-redraw1.png)
+![Art redraw 2](/blog/image/2024-art-redraw2.png)
 
 ## Student Council
 I enrolled myself to my school's student council once again and this time, they made me the coordinator for the *"Information Technology Development and Communication"* section. I actually proposed myself to be a secretary but nah, they just have to put me somewhere else. I have never gotten the role that I originally wanted 💀
