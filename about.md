@@ -7,21 +7,21 @@ author_profile: true
 Hi, I'm Cikitta.
 
 <img src="/assets/image/me but dead.jpg" width=500px alt="me but dead">
-<img src="/assets/image/haha pencil go brr.jpg" width=500px>
+<img src="/assets/image/beach3.png" width=300px>
 
 Just an ordinary 14-year-old Indonesian girl. I'm a furry, and I enjoy art and tech. I'm primarily a CGI artist, but I illustrate in 2D, too. I'm also a Linux enthusiast (kind of; a less hardcore one) and I enjoy coding in my free time. You can find me under the username "Daringcuteseal" or "Mysticreator" across the internet.
 
 My fursona's a seal and she's Pearl (you can call me that too).
 
-<img src="/assets/image/pearl-plain.png" width=300px>
-<img src="/assets/image/pearl-funky.png" width=300px>
+<div style="text-align: center">
+	<img src="/assets/image/pearl-chill.png" width=400px>
+</div>
 
 ---
 
 # More Social Links
 The quickest way to contact me is probably through my Discord, Reddit, or email.
 
-* [Odysee][odysee]
 * [School (personal) Instagram][personal_insta]
 * [Discord][discord]
 * [Discord server][discord_server]
@@ -31,6 +31,7 @@ The quickest way to contact me is probably through my Discord, Reddit, or email.
 * [Monkeytype][monkeytype]
 * [AUR][aur]
 * [Scratch][scratch]
+* [Odysee][odysee]
 * [Telegram][telegram]
 
 ---
@@ -46,7 +47,7 @@ If you like what I'm doing, consider donating to me 💙
 
 
 
-[odysee]: https://odysee.com/@Daringcuteseal
+[personal_insta]: https://instagram.com/cikitta.pkg.tar.zst
 [discord]: https://discord.com/users/781018748877537330
 [discord_server]: https://discord.gg/3bYmuKfHP4
 [sketchfab]: https://sketchfab.com/Mysticreator
@@ -56,4 +57,4 @@ If you like what I'm doing, consider donating to me 💙
 [aur]: https://aur.archlinux.org/account/daringcuteseal
 [scratch]: https://scratch.mit.edu/users/Mysticreator
 [telegram]: https://t.me/Daringcuteseal
-[personal_insta]: https://instagram.com/cikitta.pkg.tar.zst
+[odysee]: https://odysee.com/@Daringcuteseal
