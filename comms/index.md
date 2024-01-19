@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: placeholder
 title: Commissions
 toc: true
 author_profile: true
