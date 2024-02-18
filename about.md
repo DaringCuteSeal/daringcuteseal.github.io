@@ -2,7 +2,10 @@
 layout: single
 title: About Me
 author_profile: true
+
+
 ---
+
 
 Hi, I'm Cikitta.
 
@@ -22,17 +25,16 @@ My fursona's a seal and she's Pearl (you can call me that too).
 # More Social Links
 The quickest way to contact me is probably through my Discord, Reddit, or email.
 
-* [School (personal) Instagram][personal_insta]
-* [Discord][discord]
-* [Discord server][discord_server]
-* [Sketchfab][sketchfab]
-* [SheepIt][sheepit]
-* [Keymash][keymash]
-* [Monkeytype][monkeytype]
-* [AUR][aur]
-* [Scratch][scratch]
-* [Odysee][odysee]
-* [Telegram][telegram]
+* <i class="fab fa-fw fa-discord"></i> [Discord server][discord_server]
+* <i class="fas fa-fw fa-cubes"></i> [Sketchfab][sketchfab]
+* <i class="fas fa-fw fa-solid fa-server"></i> [SheepIt][sheepit]
+* <i class="fas fa-fw fa-keyboard"></i> [Keymash][keymash]
+* <i class="fas fa-fw fa-keyboard"></i> [Monkeytype][monkeytype]
+* <i class="fas fa-fw fa-box"></i> [AUR][aur] 
+* <i class="fas fa-fw fa-code"></i> [Scratch][scratch] 
+* <i class="fas fa-fw fa-video"></i> [Odysee][odysee] 
+* <i class="fab fa-fw fa-telegram"></i> [Telegram][telegram] 
+
 
 ---
 
