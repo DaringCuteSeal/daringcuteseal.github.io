@@ -131,6 +131,9 @@ author:
     - label: "DeviantArt"
       icon: "fab fa-fw fa-deviantart"
       url: "https://www.deviantart.com/daringcuteseal"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.com/users/781018748877537330"
 
 # Site Footer
 footer:
