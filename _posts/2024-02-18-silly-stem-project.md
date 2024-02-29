@@ -21,7 +21,7 @@ It was my first time poking with an Arduino and electrical components... and it'
 
 So yeah, my team got chosen to join a STEM project competition on Feb 1st 2024 at another campus of my school. We got chosen because no other teams from my campus actually spent their effort to write a good proposal though. There were like 40 participants from many other campuses of my school in Jakarta, so to be fair, I had low hopes.
 
-The competition's theme was sustainability. We decided to make a "smart" pot powered by Arduino that we call BloomBot, believing that people would be mezmerized by anything that has electrical circuitery on it :P (but not really, none of the winners actually had such thing). We were completely stumped because we got no other good ideas that we could actually execute, so we went with that smart pot thing. 
+The competition's theme was sustainability. We decided to make a "smart" pot powered by Arduino that we call BloomBot, believing that people would be mezmerized by anything that has electrical circuitry on it :P (but not really, none of the winners actually had such thing). We were completely stumped because we got no other good ideas that we could actually execute, so we went with that smart pot thing. 
 
 Our team was actually okay, probably the best team I've ever been in. However, our time management SUCKED. I'm sure our team could've done a better job at this competition if we actually plan ahead of time 😭 I'll tell you about it.
 
@@ -53,7 +53,7 @@ Our pot uses a DHT11 sensor—it's a cheap temperature and air humidity sensor f
 
 
 # Oh no..
-However, for my part—coding and circuitery, it didn't go as planned. I am a silly, goofy programmer and I've never coded any proper app in C/C++ before. So.. in a nutshell, my code sucks. And in the day that our team went to compete, my code is still like 80% done and I had to CODE THERE. Aah.
+However, for my part—coding and circuitry, it didn't go as planned. I am a silly, goofy programmer and I've never coded any proper app in C/C++ before. So.. in a nutshell, my code sucks. And in the day that our team went to compete, my code is still like 80% done and I had to CODE THERE. Aah.
 
 Here's another silly part: when one of the judges <small>(he was scary looking and roasts people 🗿)</small> was talking about a genuine feature of our pot, a bug arose. LITERALLY while I was saying that it's a feature. Like bro, my code straight up bullied me and said "fuck you it's a bug not a feature hahahahahahahaa."
 
