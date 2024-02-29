@@ -85,7 +85,7 @@ I laughed so hard the people at my desk asked why I giggled.
 
 I got two hours to complete my code which was EXTREMELY short for me (I wonder why, maybe because I used the most uncomfortable Python text editor on earth?). I spent the first hour just working on my app's layout because damn, things are hard without intellisense. But my code studies helped me so much because I literally already know what to do (pun??) 😭 But my heart was already pounding like crazy so I couldn't really code like how I usually do.
 
-I did get my app working though, BUT it was REALLY REALLY REALLY REALLY BAD. Okay not THAT bad, but it has a really serious bug where I couldn't even delete my proper to-do's. Sometimes the archive button works, other times my app would just throw an `index out of range` error.
+I did get my app working though, BUT it was REALLY REALLY REALLY REALLY BAD. Okay not THAT bad, but it has a really serious bug where I couldn't even delete my proper to-do's. Sometimes the archive button works, other times my app would just throw an `index out of range` error. And then, I wanted to assign a unique color for each tag but that didn't seem to work. My app would just make a new tag with a new color every time I add a new task.
 
 ![My to-do app](/blog/image/todo-app-comp.png)
 
