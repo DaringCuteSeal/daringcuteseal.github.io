@@ -134,6 +134,9 @@ author:
     - label: "Discord"
       icon: "fab fa-fw fa-discord"
       url: "https://discord.com/users/781018748877537330"
+    - label: "Signal"
+      icon: "fab fa-fw fa-signal"
+      url: "https://signal.me/#eu/NuHjijfk3dyLcEoG5Nv/ea/9CSDTPtHwt0yokOPsHAb2z5sZrNNBw4LQV28kDcJ4"
 
 # Site Footer
 footer:

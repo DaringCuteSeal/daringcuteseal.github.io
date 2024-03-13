@@ -114,8 +114,5 @@ For making my journey 100 times more fun there: [Kraafter](https://kraafter.me/)
 
 ![](/blog/image/coding-comp-art.png)
 
-
-
-
 # A Note
 I do not hate IDLE. It works.. as a basic Python IDE—and that's it. However, it's wayyy too minimal for me. I am too used to using Intellisense and all those goodies.
