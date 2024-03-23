@@ -9,7 +9,7 @@ excerpt: So if you are still just laying around and being lazy, you have to reme
 
 <div style="text-align: center;"><img src="/blog/image/its-about-the-ones-who-matter-to-us.png" width=400px></div>
 
-> So if you are still just laying around and being lazy, you have to remmber that you have to be **meaningful to others**. When you leave this world, will others miss you?
+> So if you are still just laying around and being lazy, you have to remember that you have to be **meaningful to others**. When you leave this world, will others miss you?
 
 ..said one of my teachers when I was in class a while back.
 
