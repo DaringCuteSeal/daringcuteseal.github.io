@@ -1,5 +1,6 @@
 ---
-title: Abandoned 
+title: Abandonment
+excerpt: 
 tag:
 - thoughts
 - philosophy
