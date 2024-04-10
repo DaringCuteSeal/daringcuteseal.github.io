@@ -1,6 +1,6 @@
 ---
 title: Abandonment
-excerpt: 
+excerpt: ""
 tag:
 - thoughts
 - philosophy

@@ -81,7 +81,7 @@ Yeah, as I said before, the experience is absolutely amazing but still not perfe
 
 
 ## Gadgetbridge-Related Things
-1. The activity sync doesn't always work. The progress can kinda just freeze and during that time, other features like notification sync or "find watch" won't work. But when it does work, everything will be synced normally.
+1. The activity sync doesn't always work. The progress can kinda just freeze and during that time, other features like notification sync or "find watch" won't work. But when it does work, everything will be synced normally. ***(EDIT: I recently nuked my phone so I reinstalled Gadgetbridge and started everything from scratch and this time the sync feature works perfectly fine. Not sure how it'll be in the future, though.)***
 2. When the alarms slots aren't full, Gadgetbridge will just fill the rest of the slots with 6:30 AM alarms and then I will have like 7 useless alarms every time I try to edit the alarms through my phone-
 3. I can't add recurring alerts, they will repeat in weird intervals. One-time alerts work fine though.
 
