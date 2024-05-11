@@ -211,7 +211,7 @@ Now, this wasn't as easy as I thought. On my first attempt, I stored all of the 
 
 ![Beantextures data diagram 3](/blog/image/beantextures-data-diagram-3.png)
 
-However, this [***ONE ANNOYING 7 YEARS-OLD BLENDER BUG***](https://projects.blender.org/blender/blender/issues/48975) causes the view3d properties (a custom Bone `PropertyGroup`, i.e `beantextures_data`) to not be animatable or drivable (by drivers) because Blender cannot dereference the paths for the properties. And that is enough to break Beantextures's SOLE PURPOSE: to make textures ANIMATABLE!
+However, this [***ONE ANNOYING 8 YEAR-OLD BLENDER BUG***](https://projects.blender.org/blender/blender/issues/48975) causes the view3d properties (a custom Bone `PropertyGroup`, i.e `beantextures_data`) to not be animatable or drivable (by drivers) because Blender cannot dereference the paths for the properties. And that is enough to break Beantextures's SOLE PURPOSE: to make textures ANIMATABLE!
 
 Dammit, they're probably not going to fix this any time soon. Let's just place informations about the view3d properties somewhere else, like the armature:
 
@@ -370,5 +370,7 @@ I can do better. I CAN DO BETTER:
 # A Better Solution
 
 Lesson learned. ***Just use what's available, don't invent things that already exist***. My goal for the third rewrite of Beantextures would be making it a rig-generating add-on that utilizes Blender's shader nodes directly, without the need for it to provide its own logics.
+
+And also yeah, I didn't know that the `Image Sequence` node can indeed be used to make animatable textures, I forgot to set the `Frames` parameter to 1 :D I'm definitely gonna try to utilize that on my third rewrite.
 
 Thank you for reading, have a nice day.
