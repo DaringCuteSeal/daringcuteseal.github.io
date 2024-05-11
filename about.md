@@ -10,7 +10,10 @@ author_profile: true
 Hi, I'm Cikitta.
 
 <img src="/assets/image/me but dead.jpg" width=500px alt="me but dead">
+
 <img src="/assets/image/beach3.png" width=300px>
+
+<small><i>yes i like the beach but damn my skin be dark now</i></small>
 
 Just an ordinary 15-year-old Indonesian girl. I'm a furry, and I enjoy art and tech. I'm primarily a CGI artist, but I illustrate in 2D, too. I'm also a Linux enthusiast (kind of; a less hardcore one) and I enjoy coding in my free time. You can find me under the username "Daringcuteseal" or "Mysticreator" across the internet.
 
@@ -39,7 +42,7 @@ The quickest way to contact me is probably through my Discord, Reddit, or email.
 ---
 
 # Donate
-If you like what I'm doing, consider donating to me 💙
+If you like what I'm doing, consider donating to me! 💙
 
 <div>
 	<a href="https://liberapay.com/Daringcuteseal/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
