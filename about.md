@@ -55,7 +55,7 @@ If you like what I'm doing, consider donating to me! 💙
 [personal_insta]: https://instagram.com/cikitta.pkg.tar.zst
 [discord]: https://discord.com/users/781018748877537330
 [discord_server]: https://discord.gg/3bYmuKfHP4
-[sketchfab]: https://sketchfab.com/Mysticreator
+[sketchfab]: https://sketchfab.com/daringcuteseal
 [sheepit]: https://www.sheepit-renderfarm.com/user/Daringcuteseal/profile
 [keymash]: https://keymash.io/profile/Daringcuteseal-9813
 [monkeytype]: https://monkeytype.com/profile/Darkowl
