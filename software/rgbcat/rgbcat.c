@@ -1,3 +1,6 @@
+// 2022 daringcuteseal.github.io
+// not licensed, do whatever you want
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

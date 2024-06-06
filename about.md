@@ -26,7 +26,7 @@ My fursona's a seal and she's Pearl (you can call me that too).
 ---
 
 # More Social Links
-The quickest way to contact me is probably through my Discord, Reddit, or email.
+The quickest way to contact me is probably through my Discord or my email.
 
 * <i class="fab fa-fw fa-discord"></i> [Discord server][discord_server]
 * <i class="fas fa-fw fa-cubes"></i> [Sketchfab][sketchfab]
