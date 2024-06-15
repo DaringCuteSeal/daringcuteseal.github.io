@@ -1,6 +1,7 @@
 ---
 layout: single
 toc: true
+title: "Bouquet Compilation Instruction"
 ---
 # Source Code
 1. 20x20 assorted origami paper (6 with good sensible colors and 6 green ones)
