@@ -5,7 +5,7 @@ description: Seadogs Lore
 toc: true
 ---
 
-Seadogs are ***not*** seals. They are semiaquatic, dog-like creatures who wanders around coasts of tropical places. [Pearl](pearl.png) is a true seadog (with slightly longer arms than average!).
+Seadogs are ***not*** seals. They are semiaquatic, dog-like creatures who wander around coasts of mostly tropical places. [Pearl](pearl.png) is a true seadog (with slightly longer arms than average!).
 
 
 # Morphology
