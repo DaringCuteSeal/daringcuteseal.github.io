@@ -1,10 +1,10 @@
 ---
 layout: single
-title: Seadogs Lore
+title: Seadog Lore
 toc: true
 ---
 
-Seadogs are species of seal. They are semiaquatic, dog-like creatures who wander around coasts of mostly tropical places. [Pearl](pearl.png) is a true seadog (with slightly longer arms than average!).
+Seadog is a species of seal. Seadog is a semiaquatic, dog-like creature who wanders around coasts of mostly tropical places. [Pearl](pearl.png) is a true seadog (with slightly longer arms than average!).
 
 ![Seadogs](seadogs.png)
 
