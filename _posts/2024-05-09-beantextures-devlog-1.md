@@ -2,6 +2,7 @@
 title: "Beantextures Devlog 1 - The Troubling Experiment"
 toc: true
 tag:
+- blender
 - programming
 - devlog
 - python

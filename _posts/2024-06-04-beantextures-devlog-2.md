@@ -5,6 +5,7 @@ tag:
 - programming
 - devlog
 - python
+- blender
 ---
 
 YEEEEHAWWW! Okay so, the holiday finally came. Well not really, this is actually a free gap time before my graduation.. aww I'm gonna graduate to high school soon :( (and force my uncreative hands to make flower bouquets.. 😵🤫 which I want to just postpone but it's coming after me soon!) <small>(edit: now my school is forcing everyone to buy REAL flowers! 😡)</small>
