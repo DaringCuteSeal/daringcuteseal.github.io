@@ -19,11 +19,12 @@ Alright but first, let me show you some progress I've done (almost nothing but o
 
 So now, with the help of Beantextures, you can make a node group like this without fretting (but honestly, idk who needs a 2D facial expression rig with 49 images):
 
-[Beantextures node group generator result](/blog/image/beantextures-3-node-tree.png)
+![Beantextures node group generator result](/blog/image/beantextures-3-node-tree.png)
 
 I made that node group setup for testing purposes. Now, just a while ago, instead of showing some actual image, the node group would crash and display a pink 'texture not found' as its color instead after it hits some 29-ish images. Kinda like this similar issue:
 
-[Shader error image](https://i.sstatic.net/dHTC6.png)
+![Shader error image](/blog/image/eevee-error.png)
+
 (Source: [@mangojambo at Blender Stack Exchange](https://blender.stackexchange.com/questions/136315/blender-2-8-eevee-is-there-a-limit-for-image-nodes-quantity-in-a-material))
 
 I then found [this other Blender Stack Exchange question](https://blender.stackexchange.com/questions/208648/pink-material-when-using-2-x-pbr-principled-bsdf-materials-into-a-mix-shader-w), which suggested that EEVEE has a limitation that prevents you from having more than 24 images on one material:
