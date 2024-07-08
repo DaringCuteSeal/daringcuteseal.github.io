@@ -38,7 +38,7 @@ ERROR (gpu.shader): GPU_material_compile Linking:
       | Error: Too many fragment shader texture samplers
 ```
 
-But after I relaunched Blender and opened the exact same file, it works. This time, it.. worked. 49 images, compiled shader.
+But after I relaunched Blender and opened the exact same file, it works. 49 images, compiled shader.
 
 Well maybe time has gone by a lil; I can only find old threads where people talk about that issue, maybe it's been resolved now and my issue is just because of some runtime bug.
 
@@ -60,7 +60,7 @@ So totally, all those math nodes and mix nodes definitely add to the overall ove
 The computational cost of v3 is totally wayy more exponential than my v2. I'm so dead honestly (also: I need sleep), I should do more benchmarks soon—will update here later.
 
 # nuuu
-Lesson learned: *BENCHMARK APPROACHES BEFORE YOU IMPLEMENT IT!!* Idk why I didn't do this, though. *Oh* wait it's probably because early on, I was like, "Yeah let's write how it may work. Nvm *nahhhhhhh* we write backend later I think. This is SEEEEERIOUSLY dead easy to implement". But *she really thought that it's gon be fast 💀*
+Lesson learned: *BENCHMARK APPROACHES BEFORE YOU IMPLEMENT IT!!* Idk why I didn't do this, though. *Oh* wait it's probably because early on, I was like, "Yeah let's write how it may work. Nvm *nahhhhhhh* we write backend later I think. This is SEEEEERIOUSLY dead easy to implement". But *she really thought that it's gon be performant 💀*
 
 Yep, I fell to the same hole again. But actually, no, this time I actually did implement it easily, it just had some performance issues.
 
