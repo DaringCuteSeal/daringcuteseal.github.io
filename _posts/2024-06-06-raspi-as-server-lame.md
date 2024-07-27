@@ -14,7 +14,7 @@ A month ago, I deployed a [Nextcloud](https://nextcloud.com) instance on my phon
 
 Yeah, I know, that sounds silly. But for an experiment, why not? After all, it's not like I bought a new phone just for this—I just took my old and slightly abandoned [Asus ZenFone X00TD](https://wiki.lineageos.org/devices/X00TD/) and tried to poke around with it. My Asus phone has been around since 2019 and I've installed custom ROMs there for like 20 times or something idk 💀—and surprisingly, it still works great! Also, yeah, that old phone will be used for something else if I don't utilize it soon, so I decided to do this experiment.
 
-![Ubuntu Touch server ssh](/blog/image/phablet.png)
+<a href="/blog/image/phablet.png">![Ubuntu Touch server ssh](/blog/image/phablet.png)</a>
 
 # First Attempt
 
@@ -42,7 +42,7 @@ I chose [Cloudflare's tunneling service](https://github.com/cloudflare/cloudflar
 
 And then, boom! It's public!
 
-![Nextcloud screenshot](/blog/image/nextcloud.png)
+<a href="/blog/image/nextcloud.png">![Nextcloud screenshot](/blog/image/nextcloud.png)</a>
 
 \*plan with no charge is available
 

@@ -9,7 +9,7 @@ author_profile: true
 
 Hi, I'm Cikitta.
 
-<img src="/assets/image/me but dead.jpg" width=500px alt="me but dead">
+<a href="/assets/image/me but dead.jpg"><img src="/assets/image/me but dead.jpg" width=500px alt="me but dead"></a>
 
 <img src="/assets/image/beach3.png" width=300px>
 
@@ -20,7 +20,7 @@ Just an ordinary 15-year-old Indonesian girl. I'm a furry, and I enjoy art and t
 My fursona's a seal and she's Pearl (you can call me that too).
 
 <div style="text-align: center">
-	<img src="/assets/image/pearl-chill.png" width=400px>
+	<a href="/misc/seadogs/pearl.png"><img src="/assets/image/pearl-chill.png" width=400px></a>
 </div>
 
 ---
