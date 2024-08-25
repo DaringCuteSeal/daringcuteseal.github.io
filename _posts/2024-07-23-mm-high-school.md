@@ -46,7 +46,7 @@ All my teachers are fun asf. Except for one though, my biology teacher. He's lik
 
 # Hm, More Exciting Things?
 
-My school has a yearly competition for younger students, and we get to be part of the commitee. I registered myself already, hopefully I'll get accepted.
+My school has a yearly competition for younger students, and we get to be part of the committee. I registered myself already, hopefully I'll get accepted.
 
 Also, I'm joining the so-called "IT Club" (I think you just learn C/C++ there :\\) and the poster & drawing extracurricular.
 
