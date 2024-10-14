@@ -1,6 +1,10 @@
 ---
-title: The Event Dubbed Excelsior
+title: Excelsior!
 toc: true
+tag:
+- personal
+- webdev
+- school
 ---
 
 In my [previous blog post](/blog/the-unexpected-interview), I highlighted briefly about my school's yearly competition dubbed Excelsior. I'm gonna discuss about it a little further here, as well as sharing all the wonderful (and _annoying_) experiences I've gotten along the way as one of the tech infrastructure maintainers for the event.
