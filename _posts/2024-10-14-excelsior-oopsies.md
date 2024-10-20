@@ -95,7 +95,7 @@ FETCH FAILED?? EXCUSE ME? FOR THAT SPECIIFIC PAGE?
 Unfortunately, we never completely got rid of that error, so we had to make a Google™ Form for participants who had troubles registering through our site.
 
 
-## Database Going Offline
+# Database Going Offline
 
 It was just another night. I was doing more Excelsior work, until I realized that the admin panel stopped working. I thought that I had messed something up—which is fine, because everything was still done locally. However, it turns out that the competition form page was blank as well. After a bit of investigation, we found that _our database server is dooown_. Because we had no root access whatsoever, we could only pray it would unfuck itself ASAP.
 
