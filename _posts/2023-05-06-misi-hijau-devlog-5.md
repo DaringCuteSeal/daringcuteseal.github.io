@@ -14,7 +14,7 @@ This week I glued different parts of my game together, and prepared for my game 
 # Progress Bars
 ![Progress bars](/blog/image/misi-hijau-5-progress-bars.png)
 
-Super fun piece to implement (I like geometry math and logic now). Original idea by [my boi again](https://ezntek.github.io).
+Super fun piece to implement (I like geometry math and logic now).
 
 Check this out:
 
