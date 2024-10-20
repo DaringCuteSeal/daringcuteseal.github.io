@@ -55,12 +55,13 @@ Another fun to implement component, but it's pretty much the second most buggy t
 >
 > THEY CAN PISS ON ME THOUGH
 >
-> — Eason 2023
+> — [Eason](https://ezntek.com) 2023
 
 So uh, I rushed Squidge's (my fav alien in this game btw) behaviour in like 15 minutes. They shoot "bullets" (idea from same person I mentioned before too) like so:
 
 ![Squidge being shot](/blog/image/misi-hijau-5-squidge.png)
 
+<!-- future editors: i am aware that this should have been "trigonometric functions" and not whatever this thing below is. -->
 I had to use some weird trigonometry functions to get x and y components for my squidge's bullet movement, which was very fun to write:
 
 ```python
