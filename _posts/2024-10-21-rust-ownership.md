@@ -50,12 +50,12 @@ define main():
 In languages like C, all variables will be dropped ("freed", or the address would be marked as usable again) automatically once it goes out of scope. However, memory that we manually allocated (e.g with `malloc`) will not be managed by the language. We have to manually free the memory. This is very bug-prone, however. What will happen if we free the same address twice? What will happen if we _don't_ free the memory? (a [memory leak](https://en.wikipedia.org/wiki/Memory_leak) will occur!)
 
 ## Automatic Memory Management
-There are several implementations of automatic memory management, notably with a garbage collector. In this scheme, the specific programming language would have to track which memory are still needed and which are no longer needed, so the user of the language wouldn't have to manage the memory on their own.
+There are several implementations of automatic memory management, notably with a garbage collector. In this scheme, the specific programming language would have to track which parts of the memory are still needed and which are no longer needed, so the user of the language wouldn't have to manage the memory on their own.
 
 However, like any other extra addition, this comes at a performance cost. Rust circumvents this need of runtime memory management shenanigans by ensuring that every single Rust code compiled is memory-safe. To do this, Rust implements an **ownership system**.
 
 ## Freeing with Condition
-Rust **only** frees memory in the heap that is "owned". An owned value is just a way of saying that something _really_ holds the data or the reference to the data. This ensures that no double-freeing will occur.
+Rust **only** frees memory in the heap that is "owned". A value is said to be owned when it _really_ is the data (not just a reference) or is a direct reference to the data. This ensures that no double-freeing will occur.
 
 Take this code example, where double-freeing can happen if we don't have an ownership system:
 ```rust
@@ -65,13 +65,12 @@ fn main() {
 	let array = vec![10, 20, 30];
 
 	// copy "pointer" from `array`.
-    // item also points to the same memory as array??
+    // item now also points to the same memory as array??
 	let item = array;
 }
 ```
 
 At the end of the scope, both `item` and `array` would be freed together alongside with the memory under the heap. **That's double-freeing!**
-
 
 
 ## Moving Out
@@ -87,7 +86,8 @@ If, however, the item implements the `Copy` trait, then it'll be copied when rea
 fn main() {
 	let x: i32 = 100;
 
-	// y will be copy of x (100), not &x
+	// i32 implements Copy
+    // y will be copy of x (100), not &x
 	let y = x;
 }
 ```
@@ -107,7 +107,6 @@ fn main() {
 
 This is because, at the end of the scope, only the heap's memory of `array` will be freed, because only `array` "owns" the vector.
 
-> **Box deallocation principle:** If a variable owns a box, when Rust deallocates the variable’s frame, then Rust deallocates the box’s heap memory[^1]
 
 ## Only Read OR Write!
 Borrows come in two forms: **mutable** and **immutable** borrow. They are concrete data types (`&T` and `&mut T`).
@@ -139,7 +138,7 @@ fn main() {
 }
 ```
 
-This code essentially declares that `string_borrow` must live until it is being used by the `println!` statement. That means, **we're borrowing `hello_string` both mutably and immutably at the same time**! Not allowed, nuh-uh.
+This code essentially declares that `string_borrow` must live until it is being used by the `println!` statement. That is, **we're borrowing `hello_string` both mutably and immutably at the same time**! Not allowed, nuh-uh.
 
 Now, why is this not allowed? Because, something that accesses a mutable reference may mutate the related data and invalidate another immutable reference. The example above is actually less clear, so we'll take a look at another example.
 
@@ -148,7 +147,7 @@ fn main() {
 	let mut numbers = vec![10, 20, 30];
 	let ref_to_20 = &numbers[1]; // immutable borrow
 	numbers.push(40); // mutable borrow
-	println!("{ref_to_20}"); // use of immutable borrow
+	println!("{ref_to_20}"); // use of our previous immutable borrow
 }
 ```
 
