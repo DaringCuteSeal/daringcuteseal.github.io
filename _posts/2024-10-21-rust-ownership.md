@@ -7,9 +7,11 @@ tag:
 
 
 # Why Was I So Bad?
-I was bad at Rust. I tripped off trying to understand ownership back then, and I'm glad I made a comeback.
+I was sooo bad at Rust. I tripped off trying to understand ownership back then, and I'm glad that I made a comeback.
 
-Ownership seemed like an alien idea to me, but really, the core concepts are easy to grasp once you know the reasons behind its implementation. I would be explaining my personal mental model of it here.
+Ownership seemed like an alien idea to me, but really, the core concepts are easier to grasp once you know the reasons behind its implementation. I overlooked the `Copy` trait, which is what Rust uses to decide whether or not it should "move" the ownership of some value.
+
+Let's start from scratch, I would be explaining my personal mental model of Rust's ownership model here.
 
 
 # What it Is
@@ -53,7 +55,7 @@ There are several implementations of automatic memory management, notably with a
 However, like any other extra addition, this comes at a performance cost. Rust circumvents this need of runtime memory management shenanigans by ensuring that every single Rust code compiled is memory-safe. To do this, Rust implements an **ownership system**.
 
 ## Freeing with Condition
-Rust **only** frees memory in the heap. This ensures that no double-freeing will occur.
+Rust **only** frees memory in the heap that is "owned". An owned value is just a way of saying that something _really_ holds the data or the reference to the data. This ensures that no double-freeing will occur.
 
 Take this code example, where double-freeing can happen if we don't have an ownership system:
 ```rust
@@ -62,14 +64,14 @@ fn main() {
 	// the actual numbers
 	let array = vec![10, 20, 30];
 
-	// item also points to the heap??
+	// copy "pointer" from `array`.
+    // item also points to the same memory as array??
 	let item = array;
 }
 ```
 
 At the end of the scope, both `item` and `array` would be freed together alongside with the memory under the heap. **That's double-freeing!**
 
-> **Box deallocation principle:** If a variable owns a box, when Rust deallocates the variable’s frame, then Rust deallocates the box’s heap memory[^1]
 
 
 ## Moving Out
@@ -105,15 +107,17 @@ fn main() {
 
 This is because, at the end of the scope, only the heap's memory of `array` will be freed, because only `array` "owns" the vector.
 
+> **Box deallocation principle:** If a variable owns a box, when Rust deallocates the variable’s frame, then Rust deallocates the box’s heap memory[^1]
+
 ## Only Read OR Write!
-Borrows come in two forms: **mutable** and **immutable** borrow. They are concrete data types (`&T and &mut T`).
+Borrows come in two forms: **mutable** and **immutable** borrow. They are concrete data types (`&T` and `&mut T`).
 
 Here are the simple rules of Rust's borrow checker:
 1. You can have **more than one** immutable borrows at a time.
 2. You can *ONLY* have **one** mutable borrow at a time.
 3. You can *NOT* have **both** immutable and mutable borrows at a time.
 
-The first one sounds obvious, as you can always have immutable references because you know they will never change. To understand rule 2 and 3, let's take a look at this example code:
+The first one sounds obvious, as you can always read from immutable references—you know that their values will not change. To understand rule 2 and 3, let's take a look at this example code:
 ```rust
 fn main() {
 	let mut hello_string = String::from("Hello,");
