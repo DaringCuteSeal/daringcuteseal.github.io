@@ -45,7 +45,7 @@ The part of me that understands how most people view this world screamed in terr
 
 If all beliefs are correct in their own ways, why not seek the parts that feel right to you and combine them into one? Did that and I got a belief you can categorize as [scientific pantheism](https://pantheism.net/beliefs/).
 
-As with the point before: we are ✨ this universe ✨ experiencing a human body! Am I saying that you and me are gods? Not really. I don't want to mess up the definition of "God" as most people use it to refer to a personal, anthropomorphic God. It's just that we are this universe—no more, no less. With a [materialistic](https://en.wikipedia.org/wiki/Materialism) and [deterministic](https://en.wikipedia.org/wiki/Materialism) view this would sound quite right.
+As with the point before: we are ✨ this universe ✨ experiencing a human body! Am I saying that you and me are gods? Not really. I don't want to mess up the definition of "God" as most people use it to refer to a personal, anthropomorphic God. It's just that we are this universe—no more, no less. With a [materialistic](https://en.wikipedia.org/wiki/Materialism) and [deterministic](https://en.wikipedia.org/wiki/Determinism) view this would sound quite right.
 
 Not saying that we are no more than waves and particles interacting. I mean, we are those, but humans are so unique that they see bizarre things like friendship bracelets—which are no more than threads weaved to make a circular thing that rests on your arm—as more than what it is. Humans seek meanings, and so we give them. We never "find" meanings, we make them. Most of us would agree that all of us are more than just waves and particles interacting. We make the meaning.
 
