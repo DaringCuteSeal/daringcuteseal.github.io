@@ -49,7 +49,7 @@ As with the point before: we are ✨ this universe ✨ experiencing a human body
 
 Not saying that we are no more than waves and particles interacting. I mean, we are those, but humans are so unique that they see bizarre things like friendship bracelets—which are no more than threads weaved to make a circular thing that rests on your arm—as more than what it is. Humans seek meanings, and so we give them. We never "find" meanings, we make them. Most of us would agree that all of us are more than just waves and particles interacting. We make the meaning.
 
-Once, there wasn't you. There were just, well, everything else. But one day everything collapsed into a singular YOU! And you lived since then as a part of this big picture, honoring your role in this universe while being guided by the interactions of everything. After you die, you will get recycled back into other things. And you will once again be this universe without your former identity. Remember, you are only temporarily in your body. But realize that you are actually not you, you are this universe. Don't be selfish buddy, live life like you're living life as its whole.
+Once, there wasn't you. There were just, well, everything else. But one day everything collapsed into a singular YOU! And you lived since then as a part of this big picture, honoring your role in this universe while being guided by the interactions of everything. After you die, you will get recycled back into other things. And you will once again be this universe without your former identity. Remember, you are only temporarily in your body. Realize that you are actually not you, you are this universe. Don't be selfish buddy, live life like you're living life as its whole.
 
 
 ## More of my Ideas (Like, The Basis of All)
