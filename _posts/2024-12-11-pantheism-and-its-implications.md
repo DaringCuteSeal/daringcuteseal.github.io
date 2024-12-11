@@ -38,7 +38,7 @@ Of several quotes I discovered, there's one that quite struck me:
 
 > We are not humans experiencing this universe, rather, we are this universe experiencing a human being.
 
-The part of me that understands how most people view this world screamed in terror, as that sentence don't quite make sense in any level—I'd even regard is as being quite absurd. However, this new worldview clicked for the _true_ me. It's kinda odd, that some quote changed my entire perspective of this world by 180 degrees overnight. I found that this belief is quite comforting as it helped me answer some trivial questions about reality and cope with sad truths—that would otherwise, well, stay pathetic without pantheism to back them up.
+The part of me that understands how most people view this world screamed in terror, as that sentence don't quite make sense in any level—I'd even regard it as being quite absurd. However, this new worldview clicked for the _true_ me. It's kinda odd, that some quote changed my entire perspective of this world by 180 degrees overnight. I found that this belief is quite comforting as it helped me answer some trivial questions about reality and cope with sad truths—that would otherwise, well, stay pathetic without pantheism to back them up.
 
 
 ## Intro to My Pantheism, in Particular
@@ -49,7 +49,7 @@ As with the point before: we are ✨ this universe ✨ experiencing a human body
 
 Not saying that we are no more than waves and particles interacting. I mean, we are those, but humans are so unique that they see bizarre things like friendship bracelets—which are no more than threads weaved to make a circular thing that rests on your arm—as more than what it is. Humans seek meanings, and so we give them. We never "find" meanings, we make them. Most of us would agree that all of us are more than just waves and particles interacting. We make the meaning.
 
-Once, there wasn't you. There were just, well, everything else. But one day everything collapsed into a singular YOU! And you lived since then as a part of this big picture, honoring your role in this universe while being guided by the interactions of everything. After you die, you will get recycled back into other things. And you will once again be this universe without your former identity. Remember, you are only temporarily in your body. Realize that you are actually not you, you are this universe. Don't be selfish buddy, live life like you're living life as its whole.
+Once, there wasn't you. There were just, well, everything else. But one day everything collapsed into a singular YOU! And you lived since then as a part of this big picture, honoring your role in this universe while being guided by the interactions of everything. After you die, you will get recycled back into other things. And you will once again be this universe without your former identity. Remember, you are only temporarily in your body. Realize that you are actually not you, you are this universe. Don't be selfish, buddy. Live life like you're living life as the whole life itself.
 
 
 ## More of my Ideas (Like, The Basis of All)
@@ -83,7 +83,7 @@ But that also comes to the question of what we _should_ govern. What rules do we
 
 Let's be realistic folks, rules don't govern what's right—rules govern what _most_ people think of as right. That's it. We can't ever agree on anything. Each human individual is unique with their own bizarre perspectives that we can't really see and all perspectives are [quite correct if backed up with reasoning](/blog/we-are-all-right-in-our-own-way). The most logical thing to do is to make rules that benefit the most people (agreed by most people), since that's what works to preserve our existence anyways.
 
-But from our first point from Stoicism—that we have power over our own interpretations—we can assure ourselves that we _have the willpower_ to try to find right and wrong things to do, as meaning-seeking humans. But what would be a good basis for this? In my opinion, the sentence that "we are all one" implies a lot, that other people (who, in some sense, are also part of us) also share some feelings like us—evidently shown as they behave like us. They have feelings, they have wills. They have imperfections, they have ambitions. Realizing both of those things, we can say that helping other people is just helping ourselves. Hurting others mean we are hurting ourselves.
+But from our first point from Stoicism—that we have power over our own interpretations—we can assure ourselves that we _have the willpower_ to try to find right and wrong things to do, as meaning-seeking humans. But what would be a good basis for this? In my opinion, the sentence that "we are all one" implies a lot—such as that other people (who, in some sense, are also part of us) also share some feelings like us—evidently shown as they behave like us. They have feelings, they have wills. They have strengths and imperfections. Realizing both of those things, we can say that helping other people is just helping ourselves. Hurting others mean we are hurting ourselves.
 
 Mm, how I put that reminds me of a short story by Andy Weir, [The Egg](https://www.galactanet.com/oneoff/theegg_mod.html).
 
