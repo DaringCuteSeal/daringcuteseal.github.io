@@ -89,7 +89,7 @@ Mm, how I put that reminds me of a short story by Andy Weir, [The Egg](https://w
 
 Anyway, yeah, that's just empathy. Our very gift. I blabbed too much, huh? Empathy is the ultimate source of morality and it is amplified even more with the view that other people are also us.
 
-As to, "should we convince people otherwise?" I think the answer is yes. Personally, I feel open to people correcting me so I can gain insights into more things, so I just assume that others would like that as well. See, it's easy. Put yourself on others' shoes. Morality doesn't have to be so complicated. _Or does it? Wait, what if you can't empathize, like the point before?_ In that case I think that morality is quite subjective. Do whatever feels right for you, folks. Believe in yourself, but also open up to arguments and others' reasoning. Rules will stay here to govern what most people think of as right.
+As to, "should we convince people otherwise?" I think the answer is yes. Personally, I feel open to people correcting me so I can gain insights into more things, so I just assume that others would like that as well.
 
 
 ✨ ALSO FEEL FREE TO DEBATE BELOW IF U WANT!! I'd love some spicy critics or arguments. ✨
