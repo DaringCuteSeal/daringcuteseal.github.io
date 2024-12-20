@@ -38,7 +38,7 @@ Of several quotes I discovered, there's one that quite struck me:
 
 > We are not humans experiencing this universe, rather, we are this universe experiencing a human being.
 
-The part of me that understands how most people view this world screamed in terror, as that sentence don't quite make sense in any level—I'd even regard it as being quite absurd. However, this new worldview clicked for the _true_ me. It's kinda odd, that some quote changed my entire perspective of this world by 180 degrees overnight. I found that this belief is quite comforting as it helped me answer some trivial questions about reality and cope with sad truths—that would otherwise, well, stay pathetic without pantheism to back them up.
+The part of me that understands how most people view this world screamed in terror, as that sentence don't quite make sense in any level—I'd even regard it as being quite absurd. However, this new worldview clicked for the _true_ me. It's kinda odd, that some quote changed my entire perspective of this world by 180 degrees overnight. I found that this belief is quite comforting as it helped me answer some not-so-trivial questions about reality and cope with sad truths—that would otherwise, well, stay pathetic without pantheism to back them up.
 
 
 ## Intro to My Pantheism, in Particular
