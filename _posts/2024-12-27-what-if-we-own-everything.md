@@ -35,4 +35,4 @@ As with "we own nothing", I think the thought that "we own everything" is as tho
 
 
 
-[^1] _Ermm akshually_, no there is no "akshually" this is a philosophy post not a math post!
+[^1]: _Ermm akshually_, no there is no "akshually" this is a philosophy post not a math post!
