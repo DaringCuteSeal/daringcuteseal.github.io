@@ -19,7 +19,7 @@ We were both there, stepping our way together on the balcony after a long day of
 
 "I don't think it's something you should care about. You got a whole life down here."
 
-She chuckled slightly. "I'm just thinking of how special those raindrops are right now. They are just like us, you know. Parts of this world. Matters interacting—all is that, really. And they seem to enjoy gliding through the winds right now. I'm thinking of their stories, now."
+She chuckled slightly. "I'm just thinking of how special those raindrops are right now. They are just like us, you know. Parts of this world. Matters interacting—all is that, really. And they seem to enjoy gliding through the winds. I'm thinking of their stories, now."
 
 "Stories?"
 
