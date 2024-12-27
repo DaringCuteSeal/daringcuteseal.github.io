@@ -123,7 +123,7 @@ int
 
 Now, normally in POSIX `sh`, you can't really do anything just by entering an expression like `$x` because the shell will evaluate the variable and treat it like a command (if I set `c=echo` and then I type `$c hello`, you will basically run `echo hello`. Weird)
 
-In Nu, that's not a thing. Everything in Nu is an expression—even commands (the output would be the evaluation result, which can then be piped into another command). In fact, there is no dynamic runtime code evaluation. [There is no](https://www.nushell.sh/book/how_nushell_code_gets_run.html#implications) `eval` command or something similar.
+In Nu, that's not a thing. Everything in Nu is a straightforward expression—even commands (the output would be the evaluation result, which can then be piped into another command or be stored in a variable). In fact, there is no dynamic runtime code evaluation. [There is no](https://www.nushell.sh/book/how_nushell_code_gets_run.html#implications) `eval` command or something similar.
 
 > In Nushell, there are exactly two steps:
 > * Parse the entire source code
@@ -303,7 +303,7 @@ $> ls
 
 Let's do something to each one of them! Forget the pain of `xargs` LOL.
 
-```
+```sh
 $> ls | each {|item| $"($item.name) is here"}
 ╭───┬───────────────────╮
 │ 0 │ Cloud is here     │
@@ -327,7 +327,7 @@ Here's the most exciting part. Nu takes away the most daunting task of shell scr
 
 The ordinary way to process arguments when you write a POSIX shell script would be to use `getopts`. But that's extremely annoying:
 
-```
+```sh
 while getopts hnSzHRZ opt; do
   case "$opt" in
     n) ZZZ_MODE=noop;;
@@ -345,7 +345,7 @@ shift $((OPTIND-1))
 Another way would be to eat the arguments one-by-one, i.e by acting upon the first found argument `$1` then `shift`ing the arguments index.
 
 With Nu shell, any function you define are treated as commands. Nu will then automatically generate command completion and a help page like so:
-```
+```sh
 $> def greet [name: string, --loud] {
 >   if $loud {
 >       print $"HELLO, ($name | str upcase)"
@@ -357,7 +357,7 @@ $> def greet [name: string, --loud] {
 
 Now we get a nice help page!
 
-```
+```sh
 $> greet --help
 Usage:
   > greet {flags} <name> 
