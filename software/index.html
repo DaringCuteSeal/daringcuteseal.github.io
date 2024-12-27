@@ -4,28 +4,32 @@ author_profile: true
 title: Software
 
 softwares:
+- name: <a href="https://github.com/DaringCuteSeal/beantextures">Beantextures</a>
+  desc: A Blender add-on to simplify the workflow of texture-based 3D animation.
 - name: Misi Hijau
   desc: My game entry for PENABUR Kids Fest 2023 coding competition. (<a href="https://github.com/DaringCuteSeal/misi-hijau">GitHub Page</a>)
-- name: Whow
-  desc: A simple and fancy CLI task manager.
-- name: AskMe
-  desc: A collection of simple scripts to help you study on the terminal and on the web.
-- name: RGBcat
+- name: <a href="https://github.com/DaringCuteSeal/Whow">
+  desc: A simple and fancy CLI task manager. (kinda dead)
+- name: <a href="askme">AskMe</a>
+  desc: A collection of simple scripts to help you study on the terminal and on the web. Rust rewrite at <a href="https://github.com/daringcuteseal/askme-rs">github.com/DaringCuteSeal/askme-rs</a>.
+- name: <a href="rgbcat">RGBcat</a>
   desc: A rainbow cat.
-- name: BloomBot
-  desc: A smart pot prototype for a STEM project competition. <a href="https://github.com/DaringCuteSeal/BloomBot-src">GitHub page here</a>.
+- name: <a href="https://github.com/sbxte/tuesday">Tuesday</a>
+  desc: A graph-based todo manager. Originally written by <a href="https://github.com/sbxte">SByte</a>.
+- name: <a href="https://github.com/DaringCuteSeal/taskmate">TaskMate</a>
+  desc: Publicly deployable Agenda renderer written with Svelte. My instance is at <a href="https://taskmate.daringcuteseal.tech">taskmate.daringcuteseal.tech</a> and is only for personal use.
 ---
 
 <p>These are not very great software, but I hope you find them useful slash inspiring.</p>
 
 <p>Also, I don't update this page very often. You may <a href="https://github.com/Daringcuteseal">want to check my GitHub instead</a>.</p>
 
-
 <ul>
 	{% for software in page.softwares %}
 	
 	<li>
-	<a href="/software/{{ software.name | slugify }}">{{ software.name }}</a>
+	<!-- <a href="/software/{{ software.name | slugify }}">{{ software.name }}</a> -->
+	<a>{{ software.name }}</a>
 	<p>{{ software.desc }}</p>
 	</li>
 
