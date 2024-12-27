@@ -5,6 +5,7 @@ tag:
 - shell
 - nushell
 - guide
+toc: true
 ---
 
 It's been a while since I delved into the mesmerizing intricacies of shell scripting. Nah, shell scripting still sucks. _Or does it have to be?_
@@ -14,7 +15,7 @@ My first shell, like other people, was [BASH](https://www.gnu.org/software/bash/
 
 The POSIX `sh` shell syntax is made to be readable and easy to write for day-to-day tasks. For example, if you want to process some input string, you can just call the command directly and any arguments following it, right? `programname file1 file2`. Much better than `programname(file1, file2)`. Wanna then process the output again? Pipe it to another program.
 
-The problem comes when you try to do some more complicated tasks, or even code with the language. This is also made a lot harder as neither `sh` nor BASH come with many useful built-in commands. Luckily, you can rely on core utilities for that, like `cat`, `sed`, `tee`, `tr`, `uniq`, etc. UNIX is made so that components work on their own independently, yet still confine to some standard that allows them to work together: _everything, and by this I mean EVERYTHING, is string!_ While this is a brilliant ideas, we now get a tremendous issue.
+The problem comes when you try to do some more complicated tasks, or even code with the language. This is also made a lot harder as neither `sh` nor BASH comes with many useful built-in commands. Luckily, you can rely on core utilities for that, like `cat`, `sed`, `tee`, `tr`, `uniq`, etc. UNIX is made so that components work on their own independently, yet still confine to some standard that allows them to work together: _everything, and by this I mean EVERYTHING, is string!_ While this is a brilliant idea, we now get a tremendous issue.
 
 As we know, there is no distinction between `variable=2` and `variable="2"`. There is also no distinction between `[ "abc" == "def" ]` and `[ abc == def ]`. Works fine for most automation tasks, but really, we all know that type-strict languages are 10 times better than their counterpart dynamic languages. Imagine the amount of mistakes you can make with this! You won't even get super meaningful error messages if you called your command with the wrong arguments.
 
@@ -77,7 +78,7 @@ WUHH, TABLES! But it's not just merely printing a table—it's a ready-to-manipu
 
 ## Variables Made Easily Strict
 
-I've tried Nu shell around a year or two ago, and from what I recall I seem to not be so excited about it. Nu has a quite Rust-like syntax. So, perhaps it's because I have not dipped my toes into Rust yet.
+I've tried Nu shell around a year or two ago, and from what I recall I seem to not be so excited about it. Nu has a quite Rust-like syntax. So, perhaps it's because I have not dipped my toes into Rust yet by that time.
 
 The first awesome thing I noticed from Nu is how everything has types. Yup, this is not like those Python type annotations. It's _actually_ really strict here.
 
@@ -211,7 +212,7 @@ $> $files.1
 Documents
 ```
 
-...using a Rust tuple-like syntax. I really wish that `[idx]` is a thing, because otherwise, dynamic list accesses would be so painful (we're talking something like `$arr | get $idx` here.
+...using a Rust tuple-like syntax. I really wish that `[idx]` is a thing, because otherwise, dynamic list accesses would be so painful (we're talking something like `$arr | get $idx` here).
 
 
 ### Even More Practical Pipelines
