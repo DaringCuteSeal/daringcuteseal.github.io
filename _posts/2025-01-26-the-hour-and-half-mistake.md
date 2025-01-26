@@ -48,11 +48,17 @@ This is roughly the question (with the story stripped away):
 > Given an `N` x `N` map matrix containing either 1 or 0 for each of the cells—where 1 represents land and 0 represents sea, determine the amount of islands that exist and the area of the largest island. Vertically and horizontally continuous 1's are counted as one island.
 >
 > Example:
+>
 > N = 5
+>
 > 1 0 0 0 1
+>
 > 0 1 1 1 0
+>
 > 0 1 1 0 0
+>
 > 1 0 0 0 0
+>
 > 0 0 0 0 0
 >
 > Answer: 4 islands and the largest area is 5.
