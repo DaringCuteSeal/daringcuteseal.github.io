@@ -1,6 +1,6 @@
 ---
 title: The C++ An Hour and Half Mistake
-postdesc: Type casting gone wrong, during a competition!
+excerpt: Type casting gone wrong, during a competition!
 tag:
 - programming
 - C
