@@ -18,9 +18,12 @@ Well, actually, DP is an application of brute-forcing because it tries every sin
 DP can be used in place of the [greedy technique](https://en.wikipedia.org/wiki/Greedy_algorithm). The difference between the two, is that with DP, you'd have to map out _every_ possible ways to solve a problem (and either pick the optimum one or count the ways), while with greedy, the optimum way to solve the problem is already known. An algorithm utilizing DP is easier to factual-check because it would've seen _every_ of the possible ways to solve a problem, so it is guaranteed that you get the most optimum result.
 
 There are two ways to implement dynamic programming:
-- Top-down
+- **Top-down**
+
     A top-down implementation of DP is done recursively by solving the biggest problem first where we don't know the solution to our problem yet. We then recursively go solve each one of those, ensuring that we only try to calculate the function call with a particular parameter once. This is done using **memoization**.
-- Bottom-up
+
+- **Bottom-up**
+
     A bottom-up implementation of DP is done by solving the problem that we already know the solution of. Then, we work our way up until we go to our main/biggest problem. This is done by tabulating the result.
 
 # Approaching a DP Problem
@@ -70,11 +73,15 @@ A helpful way to get our sub-problem is to go to our last step. Assume we're at 
 Our new question would be: **how many ways are there to write the last possible character from the choices that we have**? Intuitively, it's just the ways to append 0 + the ways to append 1 + the ways to append 2.
 
 But, comes the next problems. We don't even know how to calculate those. So let's jump through all of them:
-- To append 0
+- **To append 0**
+
   We _aren't always_ able to write 0. We can only write 0 if our previous character was 0 or 1. Therefore, the total ways to write 0 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $**. Those are all the possibilities that make us able to write 0 at position $ x $.
-- To append 1
+
+- **To append 1**
+
   Same thing here, we can only write 1 if our previous character was 0, 1, or 2. The ways to write 1 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1 $**.
-- To append 2
+- **To append 2**
+
   Also the same. The ways to write 2 when length is $ x $ is **the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1 $**.
 
 Let's simplify a bit. Assume that the solution to our original question is defined as f(x). And:
