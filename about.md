@@ -15,7 +15,7 @@ Hi, I'm Cikitta.
 
 <small><i>yes i like the beach but damn my skin be dark now</i></small>
 
-Just an ordinary 15-year-old Indonesian girl. I'm a furry, and I enjoy art and tech. I'm primarily a CGI artist, but I illustrate in 2D, too. I'm also a Linux enthusiast (kind of; a less hardcore one) and I enjoy coding in my free time. You can find me under the username "Daringcuteseal" or "Mysticreator" across the internet.
+Just an ordinary 16-year-old Indonesian girl. I'm a furry, and I enjoy art and tech. I'm primarily a CGI artist, but I illustrate in 2D, too. I'm also a Linux enthusiast (kind of; a less hardcore one) and I enjoy coding in my free time. You can find me under the username "Daringcuteseal" or "Mysticreator" across the internet.
 
 My fursona's a seal and she's Pearl (you can call me that too).
 
