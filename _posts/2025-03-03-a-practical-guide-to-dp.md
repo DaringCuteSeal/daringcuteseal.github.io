@@ -70,11 +70,11 @@ Our new question would be: **how many ways are there to write the last possible 
 
 But, comes the next problems. We don't even know how to calculate those. So let's jump through all of them:
 - To append 0
-  We _aren't always_ able to write 0. We can only write 0 if our previous character was 0 or 1. Therefore, the total ways to write 0 when length is $x$ is **the ways to write 0 with length $x-1$ + the ways to write 1 with length $x-1$**. Those are all the possibilities that make us able to write 0 at position $x$.
+  We _aren't always_ able to write 0. We can only write 0 if our previous character was 0 or 1. Therefore, the total ways to write 0 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $**. Those are all the possibilities that make us able to write 0 at position $ x $.
 - To append 1
-  Same thing here, we can only write 1 if our previous character was 0, 1, or 2. The ways to write 1 when length is $x$ is **the ways to write 0 with length $x-1$ + the ways to write 1 with length $x-1$ + the ways to write 2 with length $x-1$**.
+  Same thing here, we can only write 1 if our previous character was 0, 1, or 2. The ways to write 1 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1$ **.
 - To append 2
-  Also the same. The ways to write 2 when length is $x$ is **the ways to write 1 with length $x-1$ + the ways to write 2 with length $x-1$**.
+  Also the same. The ways to write 2 when length is $ x $ is **the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1 $**.
 
 Let's simplify a bit. Assume that the solution to our original question is defined as f(x). And:
 - a(x): ways to append 0 with length x
@@ -109,7 +109,5 @@ Now this does check out, as f(x) = a(x) + b(x) + c(x) and f(1) = 1 + 1 + 1 = 3.
 
 hi wait im testing if TeX works here
 
-$$
-x^2 + \frac{1}{\sqrt{2}}
-$$
+$ x^2 + \frac{1}{\sqrt{2}} $
 
