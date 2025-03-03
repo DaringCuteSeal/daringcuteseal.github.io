@@ -25,7 +25,7 @@ There are two ways to implement dynamic programming:
 
 # Approaching a DP Problem
 
-Here's my step to solving a problem with DP:
+Here are my steps to solve a problem with DP:
 1. Think about how you would build the solution **systematically** by hand. Since DP is just a brute-forcing algorithm, do not worry about how unoptimized it is—it _will_ be anyways :)
 2. Write down the **recursive formula** for the problem, making use of what's already known from the solved sub-problems.
 3. Determine its **base case**, i.e a specific sub-problem whose solution is already known.
@@ -43,6 +43,7 @@ Let's go through an example problem.
 > Example (N = 2):
 >
 > {0, 0}, {0, 1}, {1, 0}, {1, 1}, {1, 2}, {2, 1}, {2, 2} = 7 ways
+
 
 ## Building By-Hand
 
@@ -72,7 +73,7 @@ But, comes the next problems. We don't even know how to calculate those. So let'
 - To append 0
   We _aren't always_ able to write 0. We can only write 0 if our previous character was 0 or 1. Therefore, the total ways to write 0 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $**. Those are all the possibilities that make us able to write 0 at position $ x $.
 - To append 1
-  Same thing here, we can only write 1 if our previous character was 0, 1, or 2. The ways to write 1 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1$ **.
+  Same thing here, we can only write 1 if our previous character was 0, 1, or 2. The ways to write 1 when length is $ x $ is **the ways to write 0 with length $ x-1 $ + the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1 $**.
 - To append 2
   Also the same. The ways to write 2 when length is $ x $ is **the ways to write 1 with length $ x-1 $ + the ways to write 2 with length $ x-1 $**.
 
@@ -106,8 +107,134 @@ Now this does check out, as f(x) = a(x) + b(x) + c(x) and f(1) = 1 + 1 + 1 = 3.
 
 ## Our Formula
 
+$$
+f(x) = \begin{cases}
+a(x) + b(x) + c(x)  \iff x > 1 \\
+3 \iff x = 1
 
-hi wait im testing if TeX works here
+\end{cases}
+$$
 
-$ x^2 + \frac{1}{\sqrt{2}} $
+And
 
+$$
+a(x) = \begin{cases}
+a(x-1) + b(x-1) \iff x > 1\\
+1 \iff x = 1
+\end{cases}
+$$
+
+$$
+b(x) = \begin{cases}
+a(x-1) + b(x-1) + c(x-1) \iff x > 1\\
+1 \iff x = 1
+\end{cases}
+$$
+
+$$
+c(x) = \begin{cases}
+b(x-1) + c(x-1) \iff x > 1\\
+1 \iff x = 1
+\end{cases}
+$$
+
+## Calculating & Implementation
+
+I'll use bottom-up DP to fill a table, then display all the function call values (C++). Bottom-up approach is usually more preferred as we don't get affected by function call overhead—and we can do a lot more interesting stuff with it!
+
+_Disclaimer: why C++? It's nice for competitive programming scripts haha_ 
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N;
+	cin >> N;
+	int f[N+1];
+	int a[N+1];
+	int b[N+1];
+	int c[N+1];
+
+	a[1] = 1;
+	b[1] = 1;
+	c[1] = 1;
+
+	f[1] = a[1] + b[1] + c[1];
+
+	cout << "f(" << 1 << ") = " << f[1] << "\n";
+
+	for (int i = 2; i <= N; i++) {
+		a[i] = a[i-1] + b[i-1];
+		b[i] = a[i-1] + b[i-1] + c[i-1];
+		c[i] = b[i-1] + c[i-1];
+		f[i] = a[i] + b[i] + c[i];
+		cout << "f(" << i << ") = " << f[i] << "\n";
+	}
+}
+```
+
+So now, when we give some value for N:
+
+```
+$> ./program
+10
+f(1) = 3
+f(2) = 7
+f(3) = 17
+f(4) = 41
+f(5) = 99
+f(6) = 239
+f(7) = 577
+f(8) = 1393
+f(9) = 3363
+f(10) = 8119
+```
+
+it will print the filled table.
+
+## Complexity Analysis
+The time complexity of this is always O(N), as the loop iterates over N times. The space complexity, however, is O(N) as well because we store all the resulting solution of our sub-problems. We will optimize it in the next section.
+
+## Optimizing
+
+Notice that we only need to access our previous result, because in all our recurrence relations, we only use the parameter $ x-1 $.
+
+This means that storing the whole table is redundant, as we can simply only store the previous result:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N;
+	cin >> N;
+	int a_prev = 1;
+	int b_prev = 1;
+	int c_prev = 1;
+	int f_prev = a_prev + b_prev + c_prev;
+
+	int f, a, b, c;
+
+	cout << "f(" << 1 << ") = " << f_prev << "\n";
+
+	for (int i = 2; i <= N; i++) {
+		a = a_prev + b_prev;
+		b = a_prev + b_prev + c_prev;
+		c = b_prev + c_prev;
+		f = a + b + c;
+		cout << "f(" << i << ") = " << f << "\n";
+
+		a_prev = a;
+		b_prev = b;
+		c_prev = c;
+		f_prev = f;
+	}
+}
+```
+
+And with this, we get O(N) time complexity and O(1) space complexity. Awesome!
+
+
+# References
+- [TOKI's Competitive Programming Guidebook](https://osn.toki.id/data/pemrograman-kompetitif-dasar.pdf)
