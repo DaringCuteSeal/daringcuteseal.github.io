@@ -103,11 +103,15 @@ We have to make our recursion finite, so we need a base case. A base case is a p
 Now, it's helpful to go to the _start_ of the problem instead in this case, when we don't have anything yet. When we first append a character (this is f(x)), there's only 3 choices: append 0, 1, or 2. Or, in other words, f(1) = 3.
 
 But since f(x) is composed out of a(x), b(x), and c(x), it's a lot more helpful to find the base cases for those functions:
-- a(x)
+- **a(x)**
+
   When x = 1, it means the amount of ways to append 0 with length 1. There's nothing previously, so obviously, there's only one way to append 0 which is our first step in building our string.
-- b(x)
+
+- **b(x)**
+-
   Same thing as above. There's only one way.
-- c(x)
+
+- **c(x)**
   Same thing as above.
 
 Now this does check out, as f(x) = a(x) + b(x) + c(x) and f(1) = 1 + 1 + 1 = 3.
