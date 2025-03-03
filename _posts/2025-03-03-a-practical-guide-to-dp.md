@@ -50,7 +50,7 @@ Let's go through an example problem.
 
 ## Building By-Hand
 
-would one manually build a string of length N with the said rules?
+How would one manually build a string of length N with the said rules?
 
 We'd want to loop from the first character to the last one. For N = 1 (i.e same thing—the first character), we only have three ways: {0}, {1}, and {2}.
 
