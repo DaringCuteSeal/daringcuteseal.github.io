@@ -108,10 +108,11 @@ But since f(x) is composed out of a(x), b(x), and c(x), it's a lot more helpful 
   When x = 1, it means the amount of ways to append 0 with length 1. There's nothing previously, so obviously, there's only one way to append 0 which is our first step in building our string.
 
 - **b(x)**
--
+
   Same thing as above. There's only one way.
 
 - **c(x)**
+
   Same thing as above.
 
 Now this does check out, as f(x) = a(x) + b(x) + c(x) and f(1) = 1 + 1 + 1 = 3.
