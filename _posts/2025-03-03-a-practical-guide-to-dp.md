@@ -1,5 +1,5 @@
 ---
-title: A Practical to Dynamic Programming (DP)
+title: A Practical Guide to Dynamic Programming (DP)
 tag:
 - programming
 - tutorial
