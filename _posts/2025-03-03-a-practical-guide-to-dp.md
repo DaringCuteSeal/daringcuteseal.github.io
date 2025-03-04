@@ -98,9 +98,9 @@ Therefore:
 
 ## Making Our Base Case(s)
 
-We have to make our recursion finite, so we need a base case. A base case is a problem whose the solution is already known.
+We have to make our recursion finite, so we need a base case. A base case is a problem whose solution is already known.
 
-Now, it's helpful to go to the _start_ of the problem instead in this case, when we don't have anything yet. When we first append a character (this is f(x)), there's only 3 choices: append 0, 1, or 2. Or, in other words, f(1) = 3.
+Now, it's helpful to go to the _start_ of the problem instead in this case--when we don't have anything yet. When we first append a character (this is f(x)), there's only 3 choices: append 0, 1, or 2. Or, in other words, f(1) = 3.
 
 But since f(x) is composed out of a(x), b(x), and c(x), it's a lot more helpful to find the base cases for those functions:
 - **a(x)**
