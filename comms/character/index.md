@@ -55,6 +55,7 @@ Click the button below for further information if you're interested.
 <div><a href="examples/finish.png"><img src="examples/finish.png"></a></div>
 
 
+<br>
 
 <h1>Gallery</h1>
 
