@@ -8,3 +8,27 @@
 
 }
 
+.fancybutton {
+  background: linear-gradient(135deg, #5C94C2, #4278A5);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(110, 156, 194, 0.3);
+}
+
+
+.fancybutton:hover {
+  background: linear-gradient(135deg, #4B799E, #335D80);
+  box-shadow: 0 6px 12px rgba(110, 156, 194, 0.4);
+  transform: translateY(-2px);
+}
+
+.fancybutton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 170, 255, 0.2);
+}
