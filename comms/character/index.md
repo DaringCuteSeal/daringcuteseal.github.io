@@ -84,3 +84,8 @@ My art range is kinda broad, so I'll just place some examples below (click image
     <div><a href="examples/work/18.png"><img src="examples/work/18.png"></a><p>Portrait of Will Wood</p></div>
     <div><a href="examples/work/19.png"><img src="examples/work/19.png"></a></div>
 </div>
+
+<br>
+
+# Support
+For further information and support, please write a mail to [comms@dcutes.me](mailto://comms@dcutes.me).
