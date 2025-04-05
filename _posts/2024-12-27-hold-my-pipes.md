@@ -11,7 +11,10 @@ toc: true
 It's been a while since I delved into the mesmerizing intricacies of shell scripting. Nah, shell scripting still sucks. _Or does it have to be?_
 
 # POSIX Taste™
-My first shell, like other people, was [BASH](https://www.gnu.org/software/bash/bash.html). And so I grew with `program 2> /dev/null`, `[[ "$x" -lt "$y" ]]`, `echo "$(<filename)"`, `program | tee out`, and other weird shell syntaxes. They're fine if you're just using them interactively, but programming with those? Sounds hellish. Yet I somehow liked it, it was the first language that I truly used (..I guess, because I had to rice my Linux desktop).
+
+My first shell, like other people, was [bash](https://www.gnu.org/software/bash/bash). 
+
+And so, I grew with `program 2> /dev/null`, `[[ "$x" -lt "$y" ]]`, `echo "$(<filename)"`, `program | tee out`, and other weird shell syntaxes. They're fine if you're just using them interactively, but programming with those? Sounds hellish. Yet I somehow liked it, it was the first language that I truly used (..I guess, because I had to rice my Linux desktop).
 
 The POSIX `sh` shell syntax is made to be readable and easy to write for day-to-day tasks. For example, if you want to process some input string, you can just call the command directly and any arguments following it, right? `programname file1 file2`. Much better than `programname(file1, file2)`. Wanna then process the output again? Pipe it to another program.
 
