@@ -314,10 +314,8 @@ jekyll-spaceship:
       tex:
         inlineMath:
           - ['$','$']
-          - ['\(','\)']
         displayMath:
           - ['$$','$$']
-          - ['\[','\]']
       svg:
         fontCache: 'global'
     optimize: # optimization on building stage to check and add mathjax scripts
