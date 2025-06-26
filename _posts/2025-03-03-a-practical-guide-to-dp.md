@@ -121,8 +121,8 @@ Now this does check out, as f(x) = a(x) + b(x) + c(x) and f(1) = 1 + 1 + 1 = 3.
 
 $$
 f(x) = \begin{cases}
-a(x) + b(x) + c(x)  \iff x > 1 \\
-3 \iff x = 1
+a(x) + b(x) + c(x)  & \text{if x > 1} \\
+3 & \text{if x = 1}
 
 \end{cases}
 $$
@@ -131,22 +131,22 @@ And
 
 $$
 a(x) = \begin{cases}
-a(x-1) + b(x-1) \iff x > 1\\
-1 \iff x = 1
+a(x-1) + b(x-1) & \text{if x > 1}\\
+1 & \text{if x = 1}
 \end{cases}
 $$
 
 $$
 b(x) = \begin{cases}
-a(x-1) + b(x-1) + c(x-1) \iff x > 1\\
-1 \iff x = 1
+a(x-1) + b(x-1) + c(x-1) & \text{x > 1}\\
+1 & \text{if x = 1}
 \end{cases}
 $$
 
 $$
 c(x) = \begin{cases}
-b(x-1) + c(x-1) \iff x > 1\\
-1 \iff x = 1
+b(x-1) + c(x-1) & \text{if x > 1}\\
+1 & \text{if x = 1}
 \end{cases}
 $$
 
