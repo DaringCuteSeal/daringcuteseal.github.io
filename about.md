@@ -7,15 +7,7 @@ author_profile: true
 ---
 
 
-Hi, I'm Cikitta.
-
-<a href="/assets/image/me but dead.jpg"><img src="/assets/image/me but dead.jpg" width=500px alt="me but dead"></a>
-
-<img src="/assets/image/beach3.png" width=300px>
-
-<small><i>yes i like the beach but damn my skin be dark now</i></small>
-
-Just an ordinary 16-year-old Indonesian girl. I'm a furry, and I enjoy art and tech. I'm primarily a CGI artist, but I illustrate in 2D, too. I'm also a Linux enthusiast (kind of; a less hardcore one) and I enjoy coding in my free time. You can find me under the username "Daringcuteseal" or "Mysticreator" across the internet.
+Hi! I'm Cikitta, otherwise known as Daringcuteseal. I'm a 16 year-old high school student. I'm a visual artist and I love illustrating and animating. I'm also a CS student; I've been learning competitive programming lately. I use Artix Linux btw and I love to give back to the amazing FOSS community.
 
 My fursona's a seal and she's Pearl (you can call me that too).
 
@@ -37,6 +29,7 @@ The quickest way to contact me is probably through my Discord or my email.
 * <i class="fas fa-fw fa-code"></i> [Scratch][scratch] 
 * <i class="fas fa-fw fa-video"></i> [Odysee][odysee] 
 * <i class="fab fa-fw fa-telegram"></i> [Telegram][telegram] 
+* <i class="fab fa-fw fa-telegram"></i> [TLX][tlx] 
 
 
 ---
@@ -52,6 +45,7 @@ If you like what I'm doing, consider donating to me! 💙
 
 
 
+[tlx]: https://tlx.toki.id/profiles/dcutes
 [personal_insta]: https://instagram.com/cikitta.pkg.tar.zst
 [discord]: https://discord.com/users/781018748877537330
 [discord_server]: https://discord.gg/3bYmuKfHP4
