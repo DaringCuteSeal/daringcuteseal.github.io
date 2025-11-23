@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snapple: Kode Sumber:src/backend/components.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Snapple
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Dibangkitkan oleh Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cari',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('components_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Memuat...</div>
+<div class="SRStatus" id="Searching">Mencari...</div>
+<div class="SRStatus" id="NoMatches">Tidak Ditemukan</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">components.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="components_8hpp.html">Ke dokumentasi file ini.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="prelude_8hpp.html">../prelude.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>std::queue, std::string, std::vector, std::unique_ptr, std::function;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespaceGameComponents.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGameComponents.html">GameComponents</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// TODO: mungkin ga kepake</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Sprite.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classGameComponents_1_1Sprite.html">Sprite</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Sprite.html#a27a2745ccb9e1e5a42d76837d0e8b510">   23</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Sprite.html#a27a2745ccb9e1e5a42d76837d0e8b510">draw</a>() = 0;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Sprite.html#a6f7995cf586413f0dc770bca5a5d7565">   24</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Sprite.html#a6f7995cf586413f0dc770bca5a5d7565">update</a>() = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classGameComponents_1_1SpriteManager.html">   29</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#a757bd0abdc5551dd0420f7f7cfc81994">SpriteManager</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    vector&lt;unique_ptr&lt;Sprite&gt;&gt; sprites;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#a757bd0abdc5551dd0420f7f7cfc81994">SpriteManager</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#a45ee3bf5de02fbef4b5ce3f9b8d5f098">draw</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#a1bdaf189b3b2bde3fc99b0420c038e71">update</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#a76b8b63bb1a8012cc73def7a87095a6f">delete_all</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SpriteManager.html#af0053ac737df80ab7807fb482bd5818e">append</a>(unique_ptr&lt;Sprite&gt; sprite);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Scene.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="classGameComponents_1_1Scene.html">Scene</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Scene.html#aedbeb4726aa090e42c279886f1089065">   48</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classGameComponents_1_1Scene.html#aedbeb4726aa090e42c279886f1089065">id</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Scene.html#add9bd35f29a89b2dcd52fc82b0d0ff58">   50</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Scene.html#add9bd35f29a89b2dcd52fc82b0d0ff58">draw</a>() = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Scene.html#a0abdac224d9895dbaad8bc7822a513b7">   51</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Scene.html#a0abdac224d9895dbaad8bc7822a513b7">update</a>() = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classGameComponents_1_1SceneManager.html">   62</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameComponents_1_1SceneManager.html#aabc0f9d8537961bef084a0ef4aac3155">SceneManager</a> {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_class" href="classGameComponents_1_1Scene.html">Scene</a>* current_scene;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SceneManager.html#af66355708f2780241516e94915842ece">draw</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SceneManager.html#aa1aca67532fca8ae38c1ef8b2a6eb637">update</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="classGameComponents_1_1SceneManager.html#aabc0f9d8537961bef084a0ef4aac3155">SceneManager</a>(<a class="code hl_class" href="classGameComponents_1_1Scene.html">Scene</a>* initial_scene);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1SceneManager.html#a666d63cfe8dd597c20ece29fea688891">set_scene</a>(<a class="code hl_class" href="classGameComponents_1_1Scene.html">Scene</a>* initial_scene);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classGameComponents_1_1SceneManager.html#a5b9b7d652e39beb835fdb43364d3d708">current_id</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="};">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structGameComponents_1_1Event.html">   91</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structGameComponents_1_1Event.html">Event</a> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structGameComponents_1_1Event.html#aa9e67206580e48309c67ee8e8d0fdf7e">   92</a></span>    function&lt;void()&gt; <a class="code hl_variable" href="structGameComponents_1_1Event.html#aa9e67206580e48309c67ee8e8d0fdf7e">callback</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="};">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classGameComponents_1_1EventManager.html">  100</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameComponents_1_1EventManager.html#a89099b22114f158b5c530edfea52371d">EventManager</a> {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    queue&lt;Event&gt; events;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="classGameComponents_1_1EventManager.html#a89099b22114f158b5c530edfea52371d">EventManager</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1EventManager.html#a475866e72256acf59a034c824d128d14">update</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1EventManager.html#a39325c557761f23c1b9c90fa329e3863">dispatch</a>(<a class="code hl_struct" href="structGameComponents_1_1Event.html">Event</a> event);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="};">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="structGameComponents_1_1TimerItem.html">  119</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structGameComponents_1_1TimerItem.html">TimerItem</a> {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="structGameComponents_1_1TimerItem.html#ac15500ba5e7370ffba7dee5ec6f167d6">  121</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structGameComponents_1_1TimerItem.html#ac15500ba5e7370ffba7dee5ec6f167d6">expire</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="structGameComponents_1_1TimerItem.html#abb1fc1fb77171417d496c1181a8bf20a">  122</a></span>    function&lt;void()&gt; <a class="code hl_variable" href="structGameComponents_1_1TimerItem.html#abb1fc1fb77171417d496c1181a8bf20a">callback</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>};</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="};">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Timer.html">  127</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameComponents_1_1Timer.html#a46c43f55a18208184511732a56c46aaa">Timer</a> {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    double(*time_function)();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classGameComponents_1_1Timer.html#af7a611d6d7c9f6eb20a97b87550e092e">  132</a></span>    vector&lt;TimerItem&gt; <a class="code hl_variable" href="classGameComponents_1_1Timer.html#af7a611d6d7c9f6eb20a97b87550e092e">timers</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_function" href="classGameComponents_1_1Timer.html#a46c43f55a18208184511732a56c46aaa">Timer</a>(<span class="keywordtype">double</span>(*time_function)() = GetTime);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Timer.html#a5e18f610babd3fea2144045e97e42278">attach</a>(<span class="keywordtype">double</span> duration, function&lt;<span class="keywordtype">void</span>()&gt; callback);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1Timer.html#a745ad59b5a46744cd871a1129a25d74f">update</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>};</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
+<div class="foldopen" id="foldopen00146" data-start="{" data-end="};">
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classGameComponents_1_1GameStateManager.html">  146</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameComponents_1_1GameStateManager.html#a093b5616c2a8e5e5c169dbe07b00170b">GameStateManager</a> {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_function" href="classGameComponents_1_1GameStateManager.html#a093b5616c2a8e5e5c169dbe07b00170b">GameStateManager</a>(<a class="code hl_class" href="classGameComponents_1_1Scene.html">Scene</a>* init_scene);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classGameComponents_1_1GameStateManager.html#a327378d7e7f556f7ee910f90bbae2aa4">  149</a></span>    <a class="code hl_class" href="classGameComponents_1_1EventManager.html">EventManager</a> <a class="code hl_variable" href="classGameComponents_1_1GameStateManager.html#a327378d7e7f556f7ee910f90bbae2aa4">event_manager</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classGameComponents_1_1GameStateManager.html#aa953eccb56e305cfe71f62c4b7172322">  150</a></span>    <a class="code hl_class" href="classGameComponents_1_1Timer.html">Timer</a> <a class="code hl_variable" href="classGameComponents_1_1GameStateManager.html#aa953eccb56e305cfe71f62c4b7172322">timer</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classGameComponents_1_1GameStateManager.html#a2b98b15559e4ca71c85bb4fd5a6e312e">  151</a></span>    <a class="code hl_class" href="classGameComponents_1_1SceneManager.html">SceneManager</a> <a class="code hl_variable" href="classGameComponents_1_1GameStateManager.html#a2b98b15559e4ca71c85bb4fd5a6e312e">scene_manager</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1GameStateManager.html#afe49135ce3ef43fce33588c58460fd32">update</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameComponents_1_1GameStateManager.html#a8dd82ef0a6d0ccf9b122b5e8bc54f4d2">draw</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>};</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="};">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structGameComponents_1_1Coordinate.html">  160</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">Coordinate</a> {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structGameComponents_1_1Coordinate.html#a36b0f0b24d08c1fdc1361deb1328d740">  161</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameComponents_1_1Coordinate.html#a36b0f0b24d08c1fdc1361deb1328d740">row</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="structGameComponents_1_1Coordinate.html#a4b359ca4597b3b3ed251542b8310a137">  162</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameComponents_1_1Coordinate.html#a4b359ca4597b3b3ed251542b8310a137">col</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">Coordinate</a> <a class="code hl_function" href="structGameComponents_1_1Coordinate.html#ab6629621acd8e598014e55d83d19ce2a">operator +</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">Coordinate</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// Tambahkan baris ke koordinat ini. Method ini mengembalikan sebuah</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// `Coordinate` lain sehingga dapat digunakan untuk chaining.</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">Coordinate</a> <a class="code hl_function" href="structGameComponents_1_1Coordinate.html#a40e3806a91e1b822a61b5f14c2576c19">add_row</a>(<span class="keywordtype">int</span> r);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// Tambahkan kolom ke koordinat ini. Method ini mengembalikan sebuah</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// `Coordinate` lain sehingga dapat digunakan untuk chaining.</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">Coordinate</a> <a class="code hl_function" href="structGameComponents_1_1Coordinate.html#a54037ad483a0a7ccdd17fdb69f0bc534">add_col</a>(<span class="keywordtype">int</span> c);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    raylib::Vector2 <a class="code hl_function" href="structGameComponents_1_1Coordinate.html#a0132d51707144bf7d3d2a35b16870e73">to_vector2</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
+</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
+</div>
+<div class="ttc" id="aclassGameComponents_1_1EventManager_html"><div class="ttname"><a href="classGameComponents_1_1EventManager.html">GameComponents::EventManager</a></div><div class="ttdef"><b>Definition</b> components.hpp:100</div></div>
+<div class="ttc" id="aclassGameComponents_1_1EventManager_html_a39325c557761f23c1b9c90fa329e3863"><div class="ttname"><a href="classGameComponents_1_1EventManager.html#a39325c557761f23c1b9c90fa329e3863">GameComponents::EventManager::dispatch</a></div><div class="ttdeci">void dispatch(Event event)</div><div class="ttdef"><b>Definition</b> components.cpp:39</div></div>
+<div class="ttc" id="aclassGameComponents_1_1EventManager_html_a475866e72256acf59a034c824d128d14"><div class="ttname"><a href="classGameComponents_1_1EventManager.html#a475866e72256acf59a034c824d128d14">GameComponents::EventManager::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> components.cpp:32</div></div>
+<div class="ttc" id="aclassGameComponents_1_1EventManager_html_a89099b22114f158b5c530edfea52371d"><div class="ttname"><a href="classGameComponents_1_1EventManager.html#a89099b22114f158b5c530edfea52371d">GameComponents::EventManager::EventManager</a></div><div class="ttdeci">EventManager()</div><div class="ttdef"><b>Definition</b> components.cpp:28</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_a093b5616c2a8e5e5c169dbe07b00170b"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#a093b5616c2a8e5e5c169dbe07b00170b">GameComponents::GameStateManager::GameStateManager</a></div><div class="ttdeci">GameStateManager(Scene *init_scene)</div><div class="ttdef"><b>Definition</b> components.cpp:92</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_a2b98b15559e4ca71c85bb4fd5a6e312e"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#a2b98b15559e4ca71c85bb4fd5a6e312e">GameComponents::GameStateManager::scene_manager</a></div><div class="ttdeci">SceneManager scene_manager</div><div class="ttdef"><b>Definition</b> components.hpp:151</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_a327378d7e7f556f7ee910f90bbae2aa4"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#a327378d7e7f556f7ee910f90bbae2aa4">GameComponents::GameStateManager::event_manager</a></div><div class="ttdeci">EventManager event_manager</div><div class="ttdef"><b>Definition</b> components.hpp:149</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_a8dd82ef0a6d0ccf9b122b5e8bc54f4d2"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#a8dd82ef0a6d0ccf9b122b5e8bc54f4d2">GameComponents::GameStateManager::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> components.cpp:103</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_aa953eccb56e305cfe71f62c4b7172322"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#aa953eccb56e305cfe71f62c4b7172322">GameComponents::GameStateManager::timer</a></div><div class="ttdeci">Timer timer</div><div class="ttdef"><b>Definition</b> components.hpp:150</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html_afe49135ce3ef43fce33588c58460fd32"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html#afe49135ce3ef43fce33588c58460fd32">GameComponents::GameStateManager::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> components.cpp:95</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html">GameComponents::SceneManager</a></div><div class="ttdef"><b>Definition</b> components.hpp:62</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html_a5b9b7d652e39beb835fdb43364d3d708"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html#a5b9b7d652e39beb835fdb43364d3d708">GameComponents::SceneManager::current_id</a></div><div class="ttdeci">string current_id()</div><div class="ttdef"><b>Definition</b> components.cpp:24</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html_a666d63cfe8dd597c20ece29fea688891"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html#a666d63cfe8dd597c20ece29fea688891">GameComponents::SceneManager::set_scene</a></div><div class="ttdeci">void set_scene(Scene *initial_scene)</div><div class="ttdef"><b>Definition</b> components.cpp:20</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html_aa1aca67532fca8ae38c1ef8b2a6eb637"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html#aa1aca67532fca8ae38c1ef8b2a6eb637">GameComponents::SceneManager::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> components.cpp:16</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html_aabc0f9d8537961bef084a0ef4aac3155"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html#aabc0f9d8537961bef084a0ef4aac3155">GameComponents::SceneManager::SceneManager</a></div><div class="ttdeci">SceneManager(Scene *initial_scene)</div><div class="ttdef"><b>Definition</b> components.cpp:8</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SceneManager_html_af66355708f2780241516e94915842ece"><div class="ttname"><a href="classGameComponents_1_1SceneManager.html#af66355708f2780241516e94915842ece">GameComponents::SceneManager::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> components.cpp:12</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Scene_html"><div class="ttname"><a href="classGameComponents_1_1Scene.html">GameComponents::Scene</a></div><div class="ttdef"><b>Definition</b> components.hpp:42</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Scene_html_a0abdac224d9895dbaad8bc7822a513b7"><div class="ttname"><a href="classGameComponents_1_1Scene.html#a0abdac224d9895dbaad8bc7822a513b7">GameComponents::Scene::update</a></div><div class="ttdeci">virtual void update()=0</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Scene_html_add9bd35f29a89b2dcd52fc82b0d0ff58"><div class="ttname"><a href="classGameComponents_1_1Scene.html#add9bd35f29a89b2dcd52fc82b0d0ff58">GameComponents::Scene::draw</a></div><div class="ttdeci">virtual void draw()=0</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Scene_html_aedbeb4726aa090e42c279886f1089065"><div class="ttname"><a href="classGameComponents_1_1Scene.html#aedbeb4726aa090e42c279886f1089065">GameComponents::Scene::id</a></div><div class="ttdeci">const char * id</div><div class="ttdef"><b>Definition</b> components.hpp:48</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SpriteManager_html_a1bdaf189b3b2bde3fc99b0420c038e71"><div class="ttname"><a href="classGameComponents_1_1SpriteManager.html#a1bdaf189b3b2bde3fc99b0420c038e71">GameComponents::SpriteManager::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> components.cpp:53</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SpriteManager_html_a45ee3bf5de02fbef4b5ce3f9b8d5f098"><div class="ttname"><a href="classGameComponents_1_1SpriteManager.html#a45ee3bf5de02fbef4b5ce3f9b8d5f098">GameComponents::SpriteManager::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> components.cpp:47</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SpriteManager_html_a757bd0abdc5551dd0420f7f7cfc81994"><div class="ttname"><a href="classGameComponents_1_1SpriteManager.html#a757bd0abdc5551dd0420f7f7cfc81994">GameComponents::SpriteManager::SpriteManager</a></div><div class="ttdeci">SpriteManager()</div><div class="ttdef"><b>Definition</b> components.cpp:43</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SpriteManager_html_a76b8b63bb1a8012cc73def7a87095a6f"><div class="ttname"><a href="classGameComponents_1_1SpriteManager.html#a76b8b63bb1a8012cc73def7a87095a6f">GameComponents::SpriteManager::delete_all</a></div><div class="ttdeci">void delete_all()</div><div class="ttdef"><b>Definition</b> components.cpp:59</div></div>
+<div class="ttc" id="aclassGameComponents_1_1SpriteManager_html_af0053ac737df80ab7807fb482bd5818e"><div class="ttname"><a href="classGameComponents_1_1SpriteManager.html#af0053ac737df80ab7807fb482bd5818e">GameComponents::SpriteManager::append</a></div><div class="ttdeci">void append(unique_ptr&lt; Sprite &gt; sprite)</div><div class="ttdef"><b>Definition</b> components.cpp:63</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Sprite_html"><div class="ttname"><a href="classGameComponents_1_1Sprite.html">GameComponents::Sprite</a></div><div class="ttdef"><b>Definition</b> components.hpp:21</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Sprite_html_a27a2745ccb9e1e5a42d76837d0e8b510"><div class="ttname"><a href="classGameComponents_1_1Sprite.html#a27a2745ccb9e1e5a42d76837d0e8b510">GameComponents::Sprite::draw</a></div><div class="ttdeci">virtual void draw()=0</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Sprite_html_a6f7995cf586413f0dc770bca5a5d7565"><div class="ttname"><a href="classGameComponents_1_1Sprite.html#a6f7995cf586413f0dc770bca5a5d7565">GameComponents::Sprite::update</a></div><div class="ttdeci">virtual void update()=0</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Timer_html"><div class="ttname"><a href="classGameComponents_1_1Timer.html">GameComponents::Timer</a></div><div class="ttdef"><b>Definition</b> components.hpp:127</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Timer_html_a46c43f55a18208184511732a56c46aaa"><div class="ttname"><a href="classGameComponents_1_1Timer.html#a46c43f55a18208184511732a56c46aaa">GameComponents::Timer::Timer</a></div><div class="ttdeci">Timer(double(*time_function)()=GetTime)</div><div class="ttdef"><b>Definition</b> components.cpp:67</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Timer_html_a5e18f610babd3fea2144045e97e42278"><div class="ttname"><a href="classGameComponents_1_1Timer.html#a5e18f610babd3fea2144045e97e42278">GameComponents::Timer::attach</a></div><div class="ttdeci">void attach(double duration, function&lt; void()&gt; callback)</div><div class="ttdef"><b>Definition</b> components.cpp:71</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Timer_html_a745ad59b5a46744cd871a1129a25d74f"><div class="ttname"><a href="classGameComponents_1_1Timer.html#a745ad59b5a46744cd871a1129a25d74f">GameComponents::Timer::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> components.cpp:75</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Timer_html_af7a611d6d7c9f6eb20a97b87550e092e"><div class="ttname"><a href="classGameComponents_1_1Timer.html#af7a611d6d7c9f6eb20a97b87550e092e">GameComponents::Timer::timers</a></div><div class="ttdeci">vector&lt; TimerItem &gt; timers</div><div class="ttdef"><b>Definition</b> components.hpp:132</div></div>
+<div class="ttc" id="anamespaceGameComponents_html"><div class="ttname"><a href="namespaceGameComponents.html">GameComponents</a></div><div class="ttdef"><b>Definition</b> components.hpp:12</div></div>
+<div class="ttc" id="aprelude_8hpp_html"><div class="ttname"><a href="prelude_8hpp.html">prelude.hpp</a></div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html">GameComponents::Coordinate</a></div><div class="ttdef"><b>Definition</b> components.hpp:160</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_a0132d51707144bf7d3d2a35b16870e73"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#a0132d51707144bf7d3d2a35b16870e73">GameComponents::Coordinate::to_vector2</a></div><div class="ttdeci">raylib::Vector2 to_vector2() const</div><div class="ttdef"><b>Definition</b> components.cpp:119</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_a36b0f0b24d08c1fdc1361deb1328d740"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#a36b0f0b24d08c1fdc1361deb1328d740">GameComponents::Coordinate::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition</b> components.hpp:161</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_a40e3806a91e1b822a61b5f14c2576c19"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#a40e3806a91e1b822a61b5f14c2576c19">GameComponents::Coordinate::add_row</a></div><div class="ttdeci">Coordinate add_row(int r)</div><div class="ttdef"><b>Definition</b> components.cpp:111</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_a4b359ca4597b3b3ed251542b8310a137"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#a4b359ca4597b3b3ed251542b8310a137">GameComponents::Coordinate::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition</b> components.hpp:162</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_a54037ad483a0a7ccdd17fdb69f0bc534"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#a54037ad483a0a7ccdd17fdb69f0bc534">GameComponents::Coordinate::add_col</a></div><div class="ttdeci">Coordinate add_col(int c)</div><div class="ttdef"><b>Definition</b> components.cpp:115</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html_ab6629621acd8e598014e55d83d19ce2a"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html#ab6629621acd8e598014e55d83d19ce2a">GameComponents::Coordinate::operator+</a></div><div class="ttdeci">Coordinate operator+(const Coordinate &amp;other) const</div><div class="ttdef"><b>Definition</b> components.cpp:107</div></div>
+<div class="ttc" id="astructGameComponents_1_1Event_html"><div class="ttname"><a href="structGameComponents_1_1Event.html">GameComponents::Event</a></div><div class="ttdef"><b>Definition</b> components.hpp:91</div></div>
+<div class="ttc" id="astructGameComponents_1_1Event_html_aa9e67206580e48309c67ee8e8d0fdf7e"><div class="ttname"><a href="structGameComponents_1_1Event.html#aa9e67206580e48309c67ee8e8d0fdf7e">GameComponents::Event::callback</a></div><div class="ttdeci">function&lt; void()&gt; callback</div><div class="ttdef"><b>Definition</b> components.hpp:92</div></div>
+<div class="ttc" id="astructGameComponents_1_1TimerItem_html"><div class="ttname"><a href="structGameComponents_1_1TimerItem.html">GameComponents::TimerItem</a></div><div class="ttdef"><b>Definition</b> components.hpp:119</div></div>
+<div class="ttc" id="astructGameComponents_1_1TimerItem_html_abb1fc1fb77171417d496c1181a8bf20a"><div class="ttname"><a href="structGameComponents_1_1TimerItem.html#abb1fc1fb77171417d496c1181a8bf20a">GameComponents::TimerItem::callback</a></div><div class="ttdeci">function&lt; void()&gt; callback</div><div class="ttdef"><b>Definition</b> components.hpp:122</div></div>
+<div class="ttc" id="astructGameComponents_1_1TimerItem_html_ac15500ba5e7370ffba7dee5ec6f167d6"><div class="ttname"><a href="structGameComponents_1_1TimerItem.html#ac15500ba5e7370ffba7dee5ec6f167d6">GameComponents::TimerItem::expire</a></div><div class="ttdeci">double expire</div><div class="ttdef"><b>Definition</b> components.hpp:121</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_3f615ade772d23cefe5e20dcb18424a2.html">backend</a></li><li class="navelem"><a href="components_8hpp.html">components.hpp</a></li>
+    <li class="footer">Dibangkitkan oleh <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

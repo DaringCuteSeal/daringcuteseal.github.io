@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snapple: Kode Sumber:src/game/game.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Snapple
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Dibangkitkan oleh Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cari',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('game_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Memuat...</div>
+<div class="SRStatus" id="Searching">Mencari...</div>
+<div class="SRStatus" id="NoMatches">Tidak Ditemukan</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">game.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game_8hpp.html">Ke dokumentasi file ini.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="components_8hpp.html">../backend/components.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="prelude_8hpp.html">../prelude.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="scene__intro_8hpp.html">scene_intro.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="scene__interlude_8hpp.html">scene_interlude.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="scene__game_8hpp.html">scene_game.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="game_8hpp.html#af326d9b4cced6fd44a9f9567dc666014">    8</a></span><span class="preprocessor">#define FONT_PATH &quot;assets/delius-font/delius-regular.ttf&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Kelas utama untuk game. Menampung scene-scene yang ditampilkan pada game.</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classGame.html">   11</a></span><span class="keyword">class </span><a class="code hl_function" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a> game_state_manager;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    raylib::Font game_font;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    raylib::Window* window;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="classIntroScene.html">IntroScene</a> intro_scene;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="classGameScene.html">GameScene</a> game_scene;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="classInterludeScene.html">InterludeScene</a> interlude_scene;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* music_file = <span class="stringliteral">&quot;assets/byte-blast.mp3&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    raylib::Sound background_music;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> play_bgmusic = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Update state game.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#a79df6376b332d63c9eca0dcee30305c3">update</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Gambar state game.</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#a6d54497ce3a66f6dd45eacfdccc8d0bd">draw</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// Mulai interlude game (di tengah intro dan game).</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#af8cda9904ef2fe56c8169da9a016b832">start_game_interlude</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Mulai game.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7">start_game</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Kembali ke main menu game.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#add9c1a3f1488d8055314cd49c0bc3703">go_back_to_menu</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a></div><div class="ttdef"><b>Definition</b> components.hpp:146</div></div>
+<div class="ttc" id="aclassGameScene_html"><div class="ttname"><a href="classGameScene.html">GameScene</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:367</div></div>
+<div class="ttc" id="aclassGame_html_a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7"><div class="ttname"><a href="classGame.html#a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7">Game::start_game</a></div><div class="ttdeci">void start_game()</div><div class="ttdef"><b>Definition</b> game.cpp:22</div></div>
+<div class="ttc" id="aclassGame_html_a6d54497ce3a66f6dd45eacfdccc8d0bd"><div class="ttname"><a href="classGame.html#a6d54497ce3a66f6dd45eacfdccc8d0bd">Game::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> game.cpp:12</div></div>
+<div class="ttc" id="aclassGame_html_a79df6376b332d63c9eca0dcee30305c3"><div class="ttname"><a href="classGame.html#a79df6376b332d63c9eca0dcee30305c3">Game::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> game.cpp:6</div></div>
+<div class="ttc" id="aclassGame_html_ad59df6562a58a614fda24622d3715b65"><div class="ttname"><a href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition</b> game.cpp:35</div></div>
+<div class="ttc" id="aclassGame_html_add9c1a3f1488d8055314cd49c0bc3703"><div class="ttname"><a href="classGame.html#add9c1a3f1488d8055314cd49c0bc3703">Game::go_back_to_menu</a></div><div class="ttdeci">void go_back_to_menu()</div><div class="ttdef"><b>Definition</b> game.cpp:27</div></div>
+<div class="ttc" id="aclassGame_html_af8cda9904ef2fe56c8169da9a016b832"><div class="ttname"><a href="classGame.html#af8cda9904ef2fe56c8169da9a016b832">Game::start_game_interlude</a></div><div class="ttdeci">void start_game_interlude()</div><div class="ttdef"><b>Definition</b> game.cpp:18</div></div>
+<div class="ttc" id="aclassInterludeScene_html"><div class="ttname"><a href="classInterludeScene.html">InterludeScene</a></div><div class="ttdef"><b>Definition</b> scene_interlude.hpp:4</div></div>
+<div class="ttc" id="aclassIntroScene_html"><div class="ttname"><a href="classIntroScene.html">IntroScene</a></div><div class="ttdef"><b>Definition</b> scene_intro.hpp:42</div></div>
+<div class="ttc" id="acomponents_8hpp_html"><div class="ttname"><a href="components_8hpp.html">components.hpp</a></div></div>
+<div class="ttc" id="aprelude_8hpp_html"><div class="ttname"><a href="prelude_8hpp.html">prelude.hpp</a></div></div>
+<div class="ttc" id="ascene__game_8hpp_html"><div class="ttname"><a href="scene__game_8hpp.html">scene_game.hpp</a></div></div>
+<div class="ttc" id="ascene__interlude_8hpp_html"><div class="ttname"><a href="scene__interlude_8hpp.html">scene_interlude.hpp</a></div></div>
+<div class="ttc" id="ascene__intro_8hpp_html"><div class="ttname"><a href="scene__intro_8hpp.html">scene_intro.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1699be727a800b1d059c6f7f2b91d2ee.html">game</a></li><li class="navelem"><a href="game_8hpp.html">game.hpp</a></li>
+    <li class="footer">Dibangkitkan oleh <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

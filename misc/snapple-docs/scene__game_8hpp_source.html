@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snapple: Kode Sumber:src/game/scene_game.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Snapple
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Dibangkitkan oleh Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cari',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('scene__game_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Memuat...</div>
+<div class="SRStatus" id="Searching">Mencari...</div>
+<div class="SRStatus" id="NoMatches">Tidak Ditemukan</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">scene_game.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="scene__game_8hpp.html">Ke dokumentasi file ini.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="prelude_8hpp.html">../prelude.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="components_8hpp.html">../backend/components.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="cfg_8hpp.html">../cfg.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ac8c4d8667136ad6b8c5936106a240ec7">    7</a></span><span class="preprocessor">#define LIVES 3</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a16b6872a2bf05d42354a7bc1bc50a8a1">    8</a></span><span class="preprocessor">#define SNAKE_INITIAL_LENGTH 50 - 1 </span><span class="comment">// gak termasuk kepala</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#af717110f6bc3880978cb8986fc86d168">    9</a></span><span class="preprocessor">#define SNAKE_UNIT_LENGTH 5 </span><span class="comment">// banyak panjang untuk ditambah ketika makan angka</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                                                                   <span class="comment">// haha makan angka huh ..</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ac66153043744c90d0a40ad24d2b4a859">   11</a></span><span class="preprocessor">#define TILE_ROWS 17</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ae8af8e1c0bafcf8c7a0a364c3ddd4543">   12</a></span><span class="preprocessor">#define TILE_COLUMNS 32</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a5f4e6356f84136db0cce81c1bb983cfc">   13</a></span><span class="preprocessor">#define TILE_DIMENSION 60 </span><span class="comment">// sisi segiempat, dalam piksel</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span>std::pair, std::optional, std::nullopt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Arah</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aa">   18</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa">   19</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa">UP</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da">   20</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">   21</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">LEFT</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">   22</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// Jenis soal yang dikerjakan</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83">   26</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83">Difficulty</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0dfe4b5369ec0941401cb0e33308b5ef">   27</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0dfe4b5369ec0941401cb0e33308b5ef">ADD_SUB_EASY</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0ccca3f182d3ff5106c143e7ccacc1e6">   28</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0ccca3f182d3ff5106c143e7ccacc1e6">ADD_SUB_HARD</a>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83aa8658b74cd5c96f1903c321e34257e76">   29</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83aa8658b74cd5c96f1903c321e34257e76">MULT_DIV_EASY</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a1c9c6fe48e50acd29ebf63bc83b48476">   30</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a1c9c6fe48e50acd29ebf63bc83b48476">MULT_DIV_HARD</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a73f7736d42f39ee2083394eb53beea97">   31</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a73f7736d42f39ee2083394eb53beea97">POW_SQRT_EASY</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83abb942b809546a49e3c791e5319ea3822">   32</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83abb942b809546a49e3c791e5319ea3822">POW_SQRT_HARD</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">   35</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470badd63690c28875f788115a896769d0384">   36</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470badd63690c28875f788115a896769d0384">BAD_APPLE</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba5484ec37ffd1fcffb7aba549a4839910">   37</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba5484ec37ffd1fcffb7aba549a4839910">APPLE</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba3d6adf1186843b7cb2f65fccf1771f6c">   38</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba3d6adf1186843b7cb2f65fccf1771f6c">APPLE_PIE</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470baa0ede4786120e07ddc06a7a2c20d7818">   39</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470baa0ede4786120e07ddc06a7a2c20d7818">GOLDEN_APPLE_PIE</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0">   42</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0">GameOver</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0aa1e095cc966dbecf6a0d8aad75348d1a">   43</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a1015358936f51e6e3bba2b933dece609">   44</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a1015358936f51e6e3bba2b933dece609">CRASH_WALL</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a764c00d96971d00f986396ec1b674c52">   45</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a764c00d96971d00f986396ec1b674c52">CRASH_SELF</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0ac527a38f617bf1d71e23d71b2d1ebb37">   46</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0ac527a38f617bf1d71e23d71b2d1ebb37">BAD_FOOD</a>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Dapatkan makanan berdasarkan kesulitan.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><a class="code hl_enumeration" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a> <a class="code hl_function" href="scene__game_8hpp.html#a9a4ed2cb60c09100edf059c38ff4c02e">get_food</a>(<a class="code hl_enumeration" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83">Difficulty</a> difficulty);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// Dapatkan banyak poin berdasarkan makanan yang dimakan.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="scene__game_8hpp.html#ac5cc9fff682f589a0b7a727e5facbc84">get_pts</a>(<a class="code hl_enumeration" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a> food);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// Koordinat (dalam tile, bukan piksel)</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structTileCoord.html">   55</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structTileCoord.html">TileCoord</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structTileCoord.html#ae9347f5e38b4464684218b8af1b366cb">   56</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structTileCoord.html#ae9347f5e38b4464684218b8af1b366cb">row</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structTileCoord.html#a75d9b1e7c6f3d67d1745a07685ee9275">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structTileCoord.html#a75d9b1e7c6f3d67d1745a07685ee9275">col</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">GameComponents::Coordinate</a> <a class="code hl_function" href="structTileCoord.html#a16730f249586451ecd21237114667095">to_coord</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">GameComponents::Coordinate</a> <a class="code hl_function" href="structTileCoord.html#a5fbac8b38a3f3ebdb61aa222c29e86f3">to_coord_center</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Ubah lokasi ke vector 2 dimensi Raylib, tetapi buat lokasinya menjadi di</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// tengah dari tile.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    raylib::Vector2 <a class="code hl_function" href="structTileCoord.html#a28d41f3012ea954fede38155e90ea769">to_vector2_center</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Ubah lokasi ke vector 2 dimensi Raylib.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    raylib::Vector2 <a class="code hl_function" href="structTileCoord.html#acd512cae2427542be8e2d06fc01d5477">to_vector2</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classAppleExplosion.html">   68</a></span><span class="keyword">class </span><a class="code hl_function" href="classAppleExplosion.html#a7f2aa3985951185d5f8ce925eb3c497a">AppleExplosion</a> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    Texture2D texture;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> uint fps = 13;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structGameComponents_1_1Coordinate.html">GameComponents::Coordinate</a> pos = {790, 185};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> n_frames = 17;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> frame_apple_disappear = 7;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* explosion_sound_file = <span class="stringliteral">&quot;assets/explode.mp3&quot;</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    raylib::Sound explosion_sound;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* frames[n_frames] = {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="stringliteral">&quot;assets/explosion/0.png&quot;</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="stringliteral">&quot;assets/explosion/1.png&quot;</span>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="stringliteral">&quot;assets/explosion/2.png&quot;</span>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="stringliteral">&quot;assets/explosion/3.png&quot;</span>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="stringliteral">&quot;assets/explosion/4.png&quot;</span>,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="stringliteral">&quot;assets/explosion/5.png&quot;</span>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="stringliteral">&quot;assets/explosion/6.png&quot;</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="stringliteral">&quot;assets/explosion/7.png&quot;</span>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="stringliteral">&quot;assets/explosion/8.png&quot;</span>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="stringliteral">&quot;assets/explosion/9.png&quot;</span>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="stringliteral">&quot;assets/explosion/10.png&quot;</span>,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="stringliteral">&quot;assets/explosion/11.png&quot;</span>,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="stringliteral">&quot;assets/explosion/12.png&quot;</span>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="stringliteral">&quot;assets/explosion/13.png&quot;</span>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="stringliteral">&quot;assets/explosion/14.png&quot;</span>,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="stringliteral">&quot;assets/explosion/15.png&quot;</span>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="stringliteral">&quot;assets/explosion/16.png&quot;</span>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    };</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    raylib::Texture2D explosion_animation[n_frames];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">double</span> time_per_frame;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">double</span> last_time;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">size_t</span> current_frame = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_function" href="classAppleExplosion.html#a7f2aa3985951185d5f8ce925eb3c497a">AppleExplosion</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Buat suara ledakan.</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAppleExplosion.html#ad15126dcb9b4bb075bf609d64444320a">explode_sound</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// Putar ulang.</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAppleExplosion.html#af04f9362412336493bd69daf7cd4e865">reset</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// Apakah sudah berakhir?</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAppleExplosion.html#a326b507916c996961e74da6d23fd08de">ended</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// Apakah masih perlu menunjukkan apel?</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAppleExplosion.html#af7a71a765a6d107a2ede76246abf216d">show_apple</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAppleExplosion.html#abe571ee82e60ca004c938b19addeebb7">draw</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAppleExplosion.html#aa5dd9312f4d47c1e1f33b6f5b3017e8f">update</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="};">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classPlayerStats.html">  117</a></span><span class="keyword">class </span><a class="code hl_function" href="classPlayerStats.html#a80dcf207b4271ad8e3e8e3766b52a4eb">PlayerStats</a> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> hearts_gaps = <a class="code hl_define" href="scene__game_8hpp.html#a5f4e6356f84136db0cce81c1bb983cfc">TILE_DIMENSION</a> + 15;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">const</span> Color text_color = WHITE;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* heart_texture_file = <span class="stringliteral">&quot;assets/heart.png&quot;</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    raylib::Texture2D heart_texture;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_function" href="classPlayerStats.html#a80dcf207b4271ad8e3e8e3766b52a4eb">PlayerStats</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classPlayerStats.html#a8a6288c5ac25ca78d0c5c5ac10abe400">  126</a></span>    raylib::Font* <a class="code hl_variable" href="classPlayerStats.html#a8a6288c5ac25ca78d0c5c5ac10abe400">game_font</a>; <span class="comment">// harus diinisialisasi</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Sisa nyawa pemain.</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classPlayerStats.html#a638ae8ce15dfebb394d2490ab88ae5ea">  129</a></span>    uint8_t <a class="code hl_variable" href="classPlayerStats.html#a638ae8ce15dfebb394d2490ab88ae5ea">lives</a> = <a class="code hl_define" href="scene__game_8hpp.html#ac8c4d8667136ad6b8c5936106a240ec7">LIVES</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// TODO: atau ini harusnya ga variabel sendiri, biar kita bisa</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// player_segments.length() gitu? tapi kayaknya gak optimal kalau gitu karena</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// variabel ini dibaca setiap update() scene.</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classPlayerStats.html#aa6e17970f583ce17dd9225931fa5a32a">  134</a></span>    uint <a class="code hl_variable" href="classPlayerStats.html#aa6e17970f583ce17dd9225931fa5a32a">length</a> = (1 + <a class="code hl_define" href="scene__game_8hpp.html#a16b6872a2bf05d42354a7bc1bc50a8a1">SNAKE_INITIAL_LENGTH</a>) / <a class="code hl_define" href="scene__game_8hpp.html#af717110f6bc3880978cb8986fc86d168">SNAKE_UNIT_LENGTH</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// Skor pemain.</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classPlayerStats.html#a454cfc83175565d20ed3feb41b7222b3">  137</a></span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="classPlayerStats.html#a454cfc83175565d20ed3feb41b7222b3">pts</a> = 0;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#a6520dd9744fe6dc82215292c6a33c9ae">reset</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classPlayerStats.html#a4437a074ae46b977d954dea8cc095517">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#a4437a074ae46b977d954dea8cc095517">turn</a>(<a class="code hl_enumeration" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#afa4bc11703444407679a265ba9436fb7">init</a>(raylib::Font* <a class="code hl_variable" href="classPlayerStats.html#a8a6288c5ac25ca78d0c5c5ac10abe400">game_font</a>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#a6333901c17d99ce33060b287d39fd49d">draw_lives</a>(raylib::Vector2 pos);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#a06b5e293a7ab38be3163d92e70b2c240">draw_pts</a>(raylib::Vector2 pos);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerStats.html#add4039eac8aa016529a3e1ea8c540df1">draw_length</a>(raylib::Vector2 pos);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>};</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="structMathQuestion.html">  147</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structMathQuestion.html">MathQuestion</a> {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// Pertanyaan yang ditampilkan</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// Kita tidak menyimpan angka-angka aslinya karena tidak penting dan</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">// polymorphism itu ribet.</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="structMathQuestion.html#ae838510fadc131d4d6a458eb2a8ca96f">  151</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="structMathQuestion.html#ae838510fadc131d4d6a458eb2a8ca96f">display</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// Jawaban-jawaban pertanyaan.</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">// Untuk memudahkan, jawaban benarnya ada di answers[0]. Semua jawaban</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// di sini berbeda (harus digaransikan ketika generasi pertanyaan).</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="structMathQuestion.html#aca090b6de5968fce5ff8e41b44f12b23">  156</a></span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structMathQuestion.html#aca090b6de5968fce5ff8e41b44f12b23">answers</a>[3];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">// Tile tile jawaban.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="structMathQuestion.html#a0451d1ee012c1a95208c811b7ba69ef2">  159</a></span>    <a class="code hl_struct" href="structTileCoord.html">TileCoord</a> <a class="code hl_variable" href="structMathQuestion.html#a0451d1ee012c1a95208c811b7ba69ef2">coords</a>[3];</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// Tile tile jawaban (dalam koordinat piksel).</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="structMathQuestion.html#a2a7e4df1203557517d1bbdac0794bfa2">  162</a></span>    raylib::Vector2 <a class="code hl_variable" href="structMathQuestion.html#a2a7e4df1203557517d1bbdac0794bfa2">coords_pixel</a>[3];</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// Jawaban (dalam string; untuk display);</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="structMathQuestion.html#a21e4b2a554a79bc996a5195913dfebaa">  165</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="structMathQuestion.html#a21e4b2a554a79bc996a5195913dfebaa">answers_str</a>[3];</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// Kesulitan (buat variasi poin)</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="structMathQuestion.html#aa34ed636b747676890d560ca09633135">  168</a></span>    <a class="code hl_enumeration" href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83">Difficulty</a> <a class="code hl_variable" href="structMathQuestion.html#aa34ed636b747676890d560ca09633135">difficulty</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// Tulis pertanyaannya.</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structMathQuestion.html#a33c18ee97b4de8a0ce895cbe750b872a">draw_question</a>(raylib::Vector2 pos, raylib::Font* game_font, Color color);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">// Cek tabrakan dengan makanan.</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    optional&lt;Food&gt; <a class="code hl_function" href="structMathQuestion.html#a898f9edc4aa380bd41e251fd37778f4b">check_collision</a>(raylib::Vector2 head_location, <span class="keywordtype">float</span> head_radius);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classMathQuestionDisplay.html">  180</a></span><span class="keyword">class </span><a class="code hl_function" href="classMathQuestionDisplay.html#a35f77f461cdf7217f10d0bf4bfdfa0a8">MathQuestionDisplay</a> {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// di bawah ini dalam persen semua</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">const</span> uint probability_addsubtr_easy = 30;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">const</span> uint probability_addsubtr_hard = 30;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">const</span> uint probability_multdiv_easy = 10;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">const</span> uint probability_multdiv_hard = 10;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">// lucu, kenapa ini yang 15% ? 😭</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keyword">const</span> uint probability_powerssqrt_easy = 15;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keyword">const</span> uint probability_powerssqrt_hard = 5;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keyword">const</span> Color food_color = WHITE;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    raylib::Font* game_font;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_function" href="classMathQuestionDisplay.html#a35f77f461cdf7217f10d0bf4bfdfa0a8">MathQuestionDisplay</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// Pertanyaan sekarang. Bisa digunakan sebagai pointer untuk object lain.</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">// (Tidak pernah invalid selama kelas ini masih valid).</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classMathQuestionDisplay.html#a3e9c8a2108ccd7b80d9066300a2529f5">  199</a></span>    <a class="code hl_struct" href="structMathQuestion.html">MathQuestion</a> <a class="code hl_variable" href="classMathQuestionDisplay.html#a3e9c8a2108ccd7b80d9066300a2529f5">q_now</a>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMathQuestionDisplay.html#a3168d1b6f9f70aedce9a38b1cf07a622">init</a>(raylib::Font* game_font);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMathQuestionDisplay.html#a0be0fbe42df93415d3e84f4175244c4e">reset</a>();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="comment">// Generate sebuah pertanyaan dan simpan ke state `this-&gt;q_now`.</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMathQuestionDisplay.html#ae8bba2b4fc0631d7d100f6dc9ba4fcf2">generate_new_question</a>();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="comment">// Gambar jawaban-jawaban</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMathQuestionDisplay.html#aa1dbf9b026cf641e3d1f30d949a7d605">draw_answers</a>();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>};</div>
+</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="};">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835">  211</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835">MathDisplayStatus</a> {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835ad126f509c35e1661274f8b72693c7848">  212</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835ad126f509c35e1661274f8b72693c7848">QUESTION</a>,</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835a8d5289728d9829b4dc3765a461f80521">  213</a></span>    <a class="code hl_enumvalue" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835a8d5289728d9829b4dc3765a461f80521">FEEDBACK</a></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>};</div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="foldopen" id="foldopen00216" data-start="{" data-end="};">
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classStatusBar.html">  216</a></span><span class="keyword">class </span><a class="code hl_function" href="classStatusBar.html#a2fabf746268f1af787c09ec9097ecb7b">StatusBar</a> {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="comment">// Koordinat komponen-komponen (relatif dengan `this-&gt;pos`).</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">const</span> raylib::Vector2 lives_pos = {0, 10};</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">const</span> raylib::Vector2 pts_pos = {330, 3};</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">const</span> raylib::Vector2 question_pos = {815, 3};</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">const</span> raylib::Vector2 snake_length_pos = {1400, 3};</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">const</span> raylib::Vector2 answer_food_tex_pos = {1000, -2};</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* apple_texture_file = <span class="stringliteral">&quot;assets/apple.png&quot;</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* bad_apple_texture_file = <span class="stringliteral">&quot;assets/apple_bad.png&quot;</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* pie_texture_file = <span class="stringliteral">&quot;assets/pie.png&quot;</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* golden_pie_texture_file = <span class="stringliteral">&quot;assets/golden_pie.png&quot;</span>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    raylib::Texture2D apple_texture;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    raylib::Texture2D bad_apple_texture;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    raylib::Texture2D pie_texture;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    raylib::Texture2D golden_pie_texture;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keyword">const</span> Color math_question_color = ORANGE;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">const</span> Color math_feedback_color_correct = GREEN;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keyword">const</span> Color math_feedback_color_wrong = ORANGE;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">// Posisi untuk menyembunyikan statusbar.</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> min_statusbar_pos_y = -80;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="comment">// Posisi seharusnya</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> pos_y = -5;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> vy = 3;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* texture_file = <span class="stringliteral">&quot;assets/statusbar.png&quot;</span>;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    raylib::Texture2D texture;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordtype">bool</span> is_falling = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="comment">// Pertanyaan sekarang.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_struct" href="structMathQuestion.html">MathQuestion</a>* math_question;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    raylib::Font* game_font;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">// Statistik pengguna.</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="classStatusBar.html#a62ce14975500b885c3e1d482624fb88f">  259</a></span>    <a class="code hl_class" href="classPlayerStats.html">PlayerStats</a>* <a class="code hl_variable" href="classStatusBar.html#a62ce14975500b885c3e1d482624fb88f">player_stats</a>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// Posisi statusbar.</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="classStatusBar.html#a0c23b420283de1ef85dd54741ecbd88d">  262</a></span>    raylib::Vector2 <a class="code hl_variable" href="classStatusBar.html#a0c23b420283de1ef85dd54741ecbd88d">pos</a> = {0, 0};</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_function" href="classStatusBar.html#a2fabf746268f1af787c09ec9097ecb7b">StatusBar</a>();</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a5631cffae6bb8a46107dec28b2b3141a">reset</a>();</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#aa772ca122ba9f86d55452cc40f618560">init</a>(raylib::Font* game_font, <a class="code hl_struct" href="structMathQuestion.html">MathQuestion</a>* math_question, <a class="code hl_class" href="classPlayerStats.html">PlayerStats</a>* <a class="code hl_variable" href="classStatusBar.html#a62ce14975500b885c3e1d482624fb88f">player_stats</a>);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// Gambar bar</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a11841a7689ec6d33a7c627aa6c1a1163">draw</a>();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">// Tulis statistik ke bar</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a427678ebb06e0e38746d5a90c1434adc">draw_stats</a>();</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">// Tulis pertanyaan matematika ke bar</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a5c3a9b5482ff52040f73761aeab21a6f">draw_question</a>();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">// Tulis feedback jawaban ke bar</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a46cafb8dc4a309211635a9c4db640dbf">draw_feedback</a>(<a class="code hl_enumeration" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a> food);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a71d7b1add036accc3f1a55ebce6e02a2">update</a>();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="comment">// Buat animasi bar jatuh.</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classStatusBar.html#a80b85ee469e5c8628bd604b759aff491">fall</a>();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>};</div>
+</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="};">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="classPlayer.html">  285</a></span><span class="keyword">class </span><a class="code hl_function" href="classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> snake_point_radius = <a class="code hl_define" href="scene__game_8hpp.html#a5f4e6356f84136db0cce81c1bb983cfc">TILE_DIMENSION</a> / 15.0;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">const</span> Color snake_color = Color { .r = 87, .g = 141, .b = 237, .a = 255 };</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keyword">const</span> Color snake_color_pattern = Color { .r = 255, .g = 237, .b = 165, .a = 255 };</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* turn_sound_file = <span class="stringliteral">&quot;assets/turn.mp3&quot;</span>;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    raylib::Sound turn_sound;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    raylib::Sound* lose_sound;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="comment">// Titik-titik yang menjadi tubuh ular pengguna (tidak termasuk kepala).</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    vector&lt;Vector2&gt; points;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="comment">// Arah sekarang (a.k.a arah kepala).</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <a class="code hl_enumeration" href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> current_direction;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="comment">// Arah, jika kita perlu berbelok. Kita perlu queue ini karena belokan hanya</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">// dilakukan jika titik tengah dari tekstur</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    optional&lt;Direction&gt; turn_queue;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="comment">// Tekstur untuk kepala ular.</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* texture_snake_head_u = <span class="stringliteral">&quot;assets/snake_head_u.png&quot;</span>;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* texture_snake_head_d = <span class="stringliteral">&quot;assets/snake_head_d.png&quot;</span>;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* texture_snake_head_l = <span class="stringliteral">&quot;assets/snake_head_l.png&quot;</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* texture_snake_head_r = <span class="stringliteral">&quot;assets/snake_head_r.png&quot;</span>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    raylib::Texture2D snake_head_u;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    raylib::Texture2D snake_head_d;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    raylib::Texture2D snake_head_l;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    raylib::Texture2D snake_head_r;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="comment">// Mengembalikan `true` jika kepala (SEKARANG) sedang bertabrakan dengan</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="comment">// titik-titik tubuh lain.</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordtype">bool</span> check_collision_self();</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="comment">// Mengembalikan `true` jika kepala (SEKARANG) sedang bertabrakan dengan</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="comment">// dinding.</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordtype">bool</span> check_collision_corners();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="comment">// Cek tabrakan dengan makanan dan tambah poin, panjang ular, dsb. jika ya.</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordtype">void</span> check_collision_food();</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="comment">// Posisi awal ular</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <a class="code hl_struct" href="structTileCoord.html">TileCoord</a> initial_pos = {3, <a class="code hl_define" href="scene__game_8hpp.html#ae8af8e1c0bafcf8c7a0a364c3ddd4543">TILE_COLUMNS</a> + 1};</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="comment">// Bisa dikendalikan atau tidak?</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="comment">// Ini akan dirubah ketika intro ular masuk selesai.</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordtype">void</span> move(); <span class="comment">// ular bergerak sebesar v</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="comment">// Cek collision atau tidak</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keywordtype">bool</span> try_check_collision = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordtype">bool</span> active = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordtype">bool</span>* play_bgmusic;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="classPlayer.html#a6d779521d0ee8976bb37f067ba96b01a">  345</a></span>    <a class="code hl_enumeration" href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0">GameOver</a> <a class="code hl_variable" href="classPlayer.html#a6d779521d0ee8976bb37f067ba96b01a">game_over</a>;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="classPlayer.html#a416e2ac5905d7e9f3d986bd997902a28">  347</a></span>    <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classPlayer.html#a416e2ac5905d7e9f3d986bd997902a28">snake_body_radius</a> = <a class="code hl_define" href="scene__game_8hpp.html#a5f4e6356f84136db0cce81c1bb983cfc">TILE_DIMENSION</a> / 5.0;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno"><a class="line" href="classPlayer.html#adcdb4cca1fb9631523d8cfc9a29c864a">  349</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classPlayer.html#adcdb4cca1fb9631523d8cfc9a29c864a">controllable</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">reset</a>();</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="comment">// Posisi kepala.</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="classPlayer.html#a483d6535e9fb6cf011a30be27e3219bd">  354</a></span>    raylib::Vector2 <a class="code hl_variable" href="classPlayer.html#a483d6535e9fb6cf011a30be27e3219bd">head_pos</a>;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_function" href="classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a>();</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    raylib::Vector2 <a class="code hl_function" href="classPlayer.html#ac8d5937142df5e12cbde07662b968321">get_head_pos_center</a>();</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a48016a749bcbb1b26c543017debfdbcc">init</a>(raylib::Sound* lose_sound, <span class="keywordtype">bool</span>* play_bgmusic);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a09c66e4c44b5b509a56cbc8731b80be4">create_snake</a>();</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a64b83fe1f93c284bbc00c8678d5cf63c">check_collision</a>(<span class="keywordtype">bool</span>* play_bgmusic);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a82c3476f3e65a4e2ac6bcd040771bdd4">update</a>();</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#ac18c9d30d2997765321c62030a4b20b7">draw</a>();</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#aabb54e9739964868ef9c09a8e2b5e1d0">unqueue_turn</a>();</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayer.html#a4a676fd4f0a70b649c67d0ab311f687d">add_length</a>();</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>};</div>
+</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="foldopen" id="foldopen00367" data-start="{" data-end="};">
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="classGameScene.html">  367</a></span><span class="keyword">class </span><a class="code hl_function" href="classGameScene.html#ac53cc300c8896048c0e21c67e49681b9">GameScene</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGameComponents_1_1Scene.html">GameComponents::Scene</a> {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <a class="code hl_class" href="classAppleExplosion.html">AppleExplosion</a> explosion_animation;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* dead_crash_wall_file = <span class="stringliteral">&quot;assets/dead_crash_wall.png&quot;</span>;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* dead_crash_self_file = <span class="stringliteral">&quot;assets/dead_crash_self.png&quot;</span>;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* dead_bad_food_file = <span class="stringliteral">&quot;assets/dead_bad_food.png&quot;</span>;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* ground_texture_file = <span class="stringliteral">&quot;assets/ground.png&quot;</span>;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* ground_texture_apple_file = <span class="stringliteral">&quot;assets/interlude_animation/37.png&quot;</span>;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* bad_apple_sound_file = <span class="stringliteral">&quot;assets/wrong.mp3&quot;</span>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* correct_apple_sound_file = <span class="stringliteral">&quot;assets/crunch.mp3&quot;</span>;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* heavenly_choir_sound_file = <span class="stringliteral">&quot;assets/heavenly-choir.mp3&quot;</span>;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* lose_sound_file = <span class="stringliteral">&quot;assets/lose.mp3&quot;</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    raylib::Sound bad_apple_sound;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    raylib::Sound correct_apple_sound;</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    raylib::Sound heavenly_choir_sound;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    raylib::Sound lose_sound;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dead_popup_dimension_y = 587;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dead_popup_dimension_x = 970;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordtype">size_t</span> dead_popup_y; <span class="comment">// Diitung ketika konstruksi kelas</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordtype">size_t</span> dead_popup_x; <span class="comment">// Diitung ketika konstruksi kelas</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    raylib::Texture2D dead_crash_wall_texture;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    raylib::Texture2D dead_crash_self_texture;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    raylib::Texture2D dead_bad_food_texture;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    raylib::Texture2D ground_texture;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    raylib::Texture2D ground_texture_apple;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keywordtype">bool</span> is_game_started = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <a class="code hl_class" href="classStatusBar.html">StatusBar</a> status_bar;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <a class="code hl_class" href="classPlayerStats.html">PlayerStats</a> player_stats;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <a class="code hl_class" href="classMathQuestionDisplay.html">MathQuestionDisplay</a> math;</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    <a class="code hl_class" href="classPlayer.html">Player</a> player;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    raylib::Font* game_font;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a>* game_state_manager;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <span class="comment">// Status dari pertanyaan matematika.</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <a class="code hl_enumeration" href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835">MathDisplayStatus</a> math_status;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="comment">// Makanan terakhir yang didapat.</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <a class="code hl_enumeration" href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a> last_food;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="comment">// Callback untuk balik ke main menu game.</span></div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    function&lt;void()&gt; menu_callback;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <span class="keywordtype">bool</span>* play_bgmusic;</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <a class="code hl_function" href="classGameScene.html#ac53cc300c8896048c0e21c67e49681b9">GameScene</a>();</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameScene.html#aa50e6a3fe6b69831d449fc9f4d34d649">reset</a>(<span class="keywordtype">bool</span> apple_explode);</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameScene.html#af27593bfb16daf19653463648b908ad9">init</a>(raylib::Font* game_font, <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a>* game_state_manager, function&lt;<span class="keywordtype">void</span>()&gt; menu_callback, <span class="keywordtype">bool</span>* play_bgmusic);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameScene.html#ae9eb60cbb8fa55eeb07b951e3d83f426">draw</a>();</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameScene.html#abec698cbd459eb666a611fe5cc6712a0">update</a>();</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    <span class="comment">// Cek apakah pemain memakan makanan, lalu tambahkan skor dan panjang tubuh</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    <span class="comment">// jika ya sesuai makanan yang dimakan.</span></div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGameScene.html#a201be3d2e109a9998a27fcacff39ea17">food_check</a>();</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>};</div>
+</div>
+<div class="ttc" id="acfg_8hpp_html"><div class="ttname"><a href="cfg_8hpp.html">cfg.hpp</a></div></div>
+<div class="ttc" id="aclassAppleExplosion_html"><div class="ttname"><a href="classAppleExplosion.html">AppleExplosion</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:68</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_a326b507916c996961e74da6d23fd08de"><div class="ttname"><a href="classAppleExplosion.html#a326b507916c996961e74da6d23fd08de">AppleExplosion::ended</a></div><div class="ttdeci">bool ended()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:105</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_a7f2aa3985951185d5f8ce925eb3c497a"><div class="ttname"><a href="classAppleExplosion.html#a7f2aa3985951185d5f8ce925eb3c497a">AppleExplosion::AppleExplosion</a></div><div class="ttdeci">AppleExplosion()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:83</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_aa5dd9312f4d47c1e1f33b6f5b3017e8f"><div class="ttname"><a href="classAppleExplosion.html#aa5dd9312f4d47c1e1f33b6f5b3017e8f">AppleExplosion::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:113</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_abe571ee82e60ca004c938b19addeebb7"><div class="ttname"><a href="classAppleExplosion.html#abe571ee82e60ca004c938b19addeebb7">AppleExplosion::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:100</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_ad15126dcb9b4bb075bf609d64444320a"><div class="ttname"><a href="classAppleExplosion.html#ad15126dcb9b4bb075bf609d64444320a">AppleExplosion::explode_sound</a></div><div class="ttdeci">void explode_sound()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:109</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_af04f9362412336493bd69daf7cd4e865"><div class="ttname"><a href="classAppleExplosion.html#af04f9362412336493bd69daf7cd4e865">AppleExplosion::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:92</div></div>
+<div class="ttc" id="aclassAppleExplosion_html_af7a71a765a6d107a2ede76246abf216d"><div class="ttname"><a href="classAppleExplosion.html#af7a71a765a6d107a2ede76246abf216d">AppleExplosion::show_apple</a></div><div class="ttdeci">bool show_apple()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:96</div></div>
+<div class="ttc" id="aclassGameComponents_1_1GameStateManager_html"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a></div><div class="ttdef"><b>Definition</b> components.hpp:146</div></div>
+<div class="ttc" id="aclassGameComponents_1_1Scene_html"><div class="ttname"><a href="classGameComponents_1_1Scene.html">GameComponents::Scene</a></div><div class="ttdef"><b>Definition</b> components.hpp:42</div></div>
+<div class="ttc" id="aclassGameScene_html_a201be3d2e109a9998a27fcacff39ea17"><div class="ttname"><a href="classGameScene.html#a201be3d2e109a9998a27fcacff39ea17">GameScene::food_check</a></div><div class="ttdeci">void food_check()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:715</div></div>
+<div class="ttc" id="aclassGameScene_html_aa50e6a3fe6b69831d449fc9f4d34d649"><div class="ttname"><a href="classGameScene.html#aa50e6a3fe6b69831d449fc9f4d34d649">GameScene::reset</a></div><div class="ttdeci">void reset(bool apple_explode)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:690</div></div>
+<div class="ttc" id="aclassGameScene_html_abec698cbd459eb666a611fe5cc6712a0"><div class="ttname"><a href="classGameScene.html#abec698cbd459eb666a611fe5cc6712a0">GameScene::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:750</div></div>
+<div class="ttc" id="aclassGameScene_html_ac53cc300c8896048c0e21c67e49681b9"><div class="ttname"><a href="classGameScene.html#ac53cc300c8896048c0e21c67e49681b9">GameScene::GameScene</a></div><div class="ttdeci">GameScene()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:676</div></div>
+<div class="ttc" id="aclassGameScene_html_ae9eb60cbb8fa55eeb07b951e3d83f426"><div class="ttname"><a href="classGameScene.html#ae9eb60cbb8fa55eeb07b951e3d83f426">GameScene::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:783</div></div>
+<div class="ttc" id="aclassGameScene_html_af27593bfb16daf19653463648b908ad9"><div class="ttname"><a href="classGameScene.html#af27593bfb16daf19653463648b908ad9">GameScene::init</a></div><div class="ttdeci">void init(raylib::Font *game_font, GameComponents::GameStateManager *game_state_manager, function&lt; void()&gt; menu_callback, bool *play_bgmusic)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:704</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html"><div class="ttname"><a href="classMathQuestionDisplay.html">MathQuestionDisplay</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:180</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_a0be0fbe42df93415d3e84f4175244c4e"><div class="ttname"><a href="classMathQuestionDisplay.html#a0be0fbe42df93415d3e84f4175244c4e">MathQuestionDisplay::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:173</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_a3168d1b6f9f70aedce9a38b1cf07a622"><div class="ttname"><a href="classMathQuestionDisplay.html#a3168d1b6f9f70aedce9a38b1cf07a622">MathQuestionDisplay::init</a></div><div class="ttdeci">void init(raylib::Font *game_font)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:168</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_a35f77f461cdf7217f10d0bf4bfdfa0a8"><div class="ttname"><a href="classMathQuestionDisplay.html#a35f77f461cdf7217f10d0bf4bfdfa0a8">MathQuestionDisplay::MathQuestionDisplay</a></div><div class="ttdeci">MathQuestionDisplay()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:165</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_a3e9c8a2108ccd7b80d9066300a2529f5"><div class="ttname"><a href="classMathQuestionDisplay.html#a3e9c8a2108ccd7b80d9066300a2529f5">MathQuestionDisplay::q_now</a></div><div class="ttdeci">MathQuestion q_now</div><div class="ttdef"><b>Definition</b> scene_game.hpp:199</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_aa1dbf9b026cf641e3d1f30d949a7d605"><div class="ttname"><a href="classMathQuestionDisplay.html#aa1dbf9b026cf641e3d1f30d949a7d605">MathQuestionDisplay::draw_answers</a></div><div class="ttdeci">void draw_answers()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:418</div></div>
+<div class="ttc" id="aclassMathQuestionDisplay_html_ae8bba2b4fc0631d7d100f6dc9ba4fcf2"><div class="ttname"><a href="classMathQuestionDisplay.html#ae8bba2b4fc0631d7d100f6dc9ba4fcf2">MathQuestionDisplay::generate_new_question</a></div><div class="ttdeci">void generate_new_question()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:178</div></div>
+<div class="ttc" id="aclassPlayerStats_html"><div class="ttname"><a href="classPlayerStats.html">PlayerStats</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:117</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a06b5e293a7ab38be3163d92e70b2c240"><div class="ttname"><a href="classPlayerStats.html#a06b5e293a7ab38be3163d92e70b2c240">PlayerStats::draw_pts</a></div><div class="ttdeci">void draw_pts(raylib::Vector2 pos)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:149</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a4437a074ae46b977d954dea8cc095517"><div class="ttname"><a href="classPlayerStats.html#a4437a074ae46b977d954dea8cc095517">PlayerStats::turn</a></div><div class="ttdeci">void turn(Direction direction)</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a454cfc83175565d20ed3feb41b7222b3"><div class="ttname"><a href="classPlayerStats.html#a454cfc83175565d20ed3feb41b7222b3">PlayerStats::pts</a></div><div class="ttdeci">long long pts</div><div class="ttdef"><b>Definition</b> scene_game.hpp:137</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a6333901c17d99ce33060b287d39fd49d"><div class="ttname"><a href="classPlayerStats.html#a6333901c17d99ce33060b287d39fd49d">PlayerStats::draw_lives</a></div><div class="ttdeci">void draw_lives(raylib::Vector2 pos)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:137</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a638ae8ce15dfebb394d2490ab88ae5ea"><div class="ttname"><a href="classPlayerStats.html#a638ae8ce15dfebb394d2490ab88ae5ea">PlayerStats::lives</a></div><div class="ttdeci">uint8_t lives</div><div class="ttdef"><b>Definition</b> scene_game.hpp:129</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a6520dd9744fe6dc82215292c6a33c9ae"><div class="ttname"><a href="classPlayerStats.html#a6520dd9744fe6dc82215292c6a33c9ae">PlayerStats::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:126</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a80dcf207b4271ad8e3e8e3766b52a4eb"><div class="ttname"><a href="classPlayerStats.html#a80dcf207b4271ad8e3e8e3766b52a4eb">PlayerStats::PlayerStats</a></div><div class="ttdeci">PlayerStats()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:122</div></div>
+<div class="ttc" id="aclassPlayerStats_html_a8a6288c5ac25ca78d0c5c5ac10abe400"><div class="ttname"><a href="classPlayerStats.html#a8a6288c5ac25ca78d0c5c5ac10abe400">PlayerStats::game_font</a></div><div class="ttdeci">raylib::Font * game_font</div><div class="ttdef"><b>Definition</b> scene_game.hpp:126</div></div>
+<div class="ttc" id="aclassPlayerStats_html_aa6e17970f583ce17dd9225931fa5a32a"><div class="ttname"><a href="classPlayerStats.html#aa6e17970f583ce17dd9225931fa5a32a">PlayerStats::length</a></div><div class="ttdeci">uint length</div><div class="ttdef"><b>Definition</b> scene_game.hpp:134</div></div>
+<div class="ttc" id="aclassPlayerStats_html_add4039eac8aa016529a3e1ea8c540df1"><div class="ttname"><a href="classPlayerStats.html#add4039eac8aa016529a3e1ea8c540df1">PlayerStats::draw_length</a></div><div class="ttdeci">void draw_length(raylib::Vector2 pos)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:145</div></div>
+<div class="ttc" id="aclassPlayerStats_html_afa4bc11703444407679a265ba9436fb7"><div class="ttname"><a href="classPlayerStats.html#afa4bc11703444407679a265ba9436fb7">PlayerStats::init</a></div><div class="ttdeci">void init(raylib::Font *game_font)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:132</div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:285</div></div>
+<div class="ttc" id="aclassPlayer_html_a09c66e4c44b5b509a56cbc8731b80be4"><div class="ttname"><a href="classPlayer.html#a09c66e4c44b5b509a56cbc8731b80be4">Player::create_snake</a></div><div class="ttdeci">void create_snake()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:511</div></div>
+<div class="ttc" id="aclassPlayer_html_a1af5d39f7bac2aeaa1e30c7dda2332fa"><div class="ttname"><a href="classPlayer.html#a1af5d39f7bac2aeaa1e30c7dda2332fa">Player::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:505</div></div>
+<div class="ttc" id="aclassPlayer_html_a416e2ac5905d7e9f3d986bd997902a28"><div class="ttname"><a href="classPlayer.html#a416e2ac5905d7e9f3d986bd997902a28">Player::snake_body_radius</a></div><div class="ttdeci">const float snake_body_radius</div><div class="ttdef"><b>Definition</b> scene_game.hpp:347</div></div>
+<div class="ttc" id="aclassPlayer_html_a48016a749bcbb1b26c543017debfdbcc"><div class="ttname"><a href="classPlayer.html#a48016a749bcbb1b26c543017debfdbcc">Player::init</a></div><div class="ttdeci">void init(raylib::Sound *lose_sound, bool *play_bgmusic)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:596</div></div>
+<div class="ttc" id="aclassPlayer_html_a483d6535e9fb6cf011a30be27e3219bd"><div class="ttname"><a href="classPlayer.html#a483d6535e9fb6cf011a30be27e3219bd">Player::head_pos</a></div><div class="ttdeci">raylib::Vector2 head_pos</div><div class="ttdef"><b>Definition</b> scene_game.hpp:354</div></div>
+<div class="ttc" id="aclassPlayer_html_a4a676fd4f0a70b649c67d0ab311f687d"><div class="ttname"><a href="classPlayer.html#a4a676fd4f0a70b649c67d0ab311f687d">Player::add_length</a></div><div class="ttdeci">void add_length()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:528</div></div>
+<div class="ttc" id="aclassPlayer_html_a64b83fe1f93c284bbc00c8678d5cf63c"><div class="ttname"><a href="classPlayer.html#a64b83fe1f93c284bbc00c8678d5cf63c">Player::check_collision</a></div><div class="ttdeci">void check_collision(bool *play_bgmusic)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:581</div></div>
+<div class="ttc" id="aclassPlayer_html_a6d779521d0ee8976bb37f067ba96b01a"><div class="ttname"><a href="classPlayer.html#a6d779521d0ee8976bb37f067ba96b01a">Player::game_over</a></div><div class="ttdeci">GameOver game_over</div><div class="ttdef"><b>Definition</b> scene_game.hpp:345</div></div>
+<div class="ttc" id="aclassPlayer_html_a82c3476f3e65a4e2ac6bcd040771bdd4"><div class="ttname"><a href="classPlayer.html#a82c3476f3e65a4e2ac6bcd040771bdd4">Player::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:613</div></div>
+<div class="ttc" id="aclassPlayer_html_aabb54e9739964868ef9c09a8e2b5e1d0"><div class="ttname"><a href="classPlayer.html#aabb54e9739964868ef9c09a8e2b5e1d0">Player::unqueue_turn</a></div><div class="ttdeci">void unqueue_turn()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:601</div></div>
+<div class="ttc" id="aclassPlayer_html_ac18c9d30d2997765321c62030a4b20b7"><div class="ttname"><a href="classPlayer.html#ac18c9d30d2997765321c62030a4b20b7">Player::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:648</div></div>
+<div class="ttc" id="aclassPlayer_html_ac8d5937142df5e12cbde07662b968321"><div class="ttname"><a href="classPlayer.html#ac8d5937142df5e12cbde07662b968321">Player::get_head_pos_center</a></div><div class="ttdeci">raylib::Vector2 get_head_pos_center()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:563</div></div>
+<div class="ttc" id="aclassPlayer_html_adcdb4cca1fb9631523d8cfc9a29c864a"><div class="ttname"><a href="classPlayer.html#adcdb4cca1fb9631523d8cfc9a29c864a">Player::controllable</a></div><div class="ttdeci">bool controllable</div><div class="ttdef"><b>Definition</b> scene_game.hpp:349</div></div>
+<div class="ttc" id="aclassPlayer_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:496</div></div>
+<div class="ttc" id="aclassStatusBar_html"><div class="ttname"><a href="classStatusBar.html">StatusBar</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:216</div></div>
+<div class="ttc" id="aclassStatusBar_html_a0c23b420283de1ef85dd54741ecbd88d"><div class="ttname"><a href="classStatusBar.html#a0c23b420283de1ef85dd54741ecbd88d">StatusBar::pos</a></div><div class="ttdeci">raylib::Vector2 pos</div><div class="ttdef"><b>Definition</b> scene_game.hpp:262</div></div>
+<div class="ttc" id="aclassStatusBar_html_a11841a7689ec6d33a7c627aa6c1a1163"><div class="ttname"><a href="classStatusBar.html#a11841a7689ec6d33a7c627aa6c1a1163">StatusBar::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:448</div></div>
+<div class="ttc" id="aclassStatusBar_html_a2fabf746268f1af787c09ec9097ecb7b"><div class="ttname"><a href="classStatusBar.html#a2fabf746268f1af787c09ec9097ecb7b">StatusBar::StatusBar</a></div><div class="ttdeci">StatusBar()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:424</div></div>
+<div class="ttc" id="aclassStatusBar_html_a427678ebb06e0e38746d5a90c1434adc"><div class="ttname"><a href="classStatusBar.html#a427678ebb06e0e38746d5a90c1434adc">StatusBar::draw_stats</a></div><div class="ttdeci">void draw_stats()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:452</div></div>
+<div class="ttc" id="aclassStatusBar_html_a46cafb8dc4a309211635a9c4db640dbf"><div class="ttname"><a href="classStatusBar.html#a46cafb8dc4a309211635a9c4db640dbf">StatusBar::draw_feedback</a></div><div class="ttdeci">void draw_feedback(Food food)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:462</div></div>
+<div class="ttc" id="aclassStatusBar_html_a5631cffae6bb8a46107dec28b2b3141a"><div class="ttname"><a href="classStatusBar.html#a5631cffae6bb8a46107dec28b2b3141a">StatusBar::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:432</div></div>
+<div class="ttc" id="aclassStatusBar_html_a5c3a9b5482ff52040f73761aeab21a6f"><div class="ttname"><a href="classStatusBar.html#a5c3a9b5482ff52040f73761aeab21a6f">StatusBar::draw_question</a></div><div class="ttdeci">void draw_question()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:458</div></div>
+<div class="ttc" id="aclassStatusBar_html_a62ce14975500b885c3e1d482624fb88f"><div class="ttname"><a href="classStatusBar.html#a62ce14975500b885c3e1d482624fb88f">StatusBar::player_stats</a></div><div class="ttdeci">PlayerStats * player_stats</div><div class="ttdef"><b>Definition</b> scene_game.hpp:259</div></div>
+<div class="ttc" id="aclassStatusBar_html_a71d7b1add036accc3f1a55ebce6e02a2"><div class="ttname"><a href="classStatusBar.html#a71d7b1add036accc3f1a55ebce6e02a2">StatusBar::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:489</div></div>
+<div class="ttc" id="aclassStatusBar_html_a80b85ee469e5c8628bd604b759aff491"><div class="ttname"><a href="classStatusBar.html#a80b85ee469e5c8628bd604b759aff491">StatusBar::fall</a></div><div class="ttdeci">void fall()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:436</div></div>
+<div class="ttc" id="aclassStatusBar_html_aa772ca122ba9f86d55452cc40f618560"><div class="ttname"><a href="classStatusBar.html#aa772ca122ba9f86d55452cc40f618560">StatusBar::init</a></div><div class="ttdeci">void init(raylib::Font *game_font, MathQuestion *math_question, PlayerStats *player_stats)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:441</div></div>
+<div class="ttc" id="acomponents_8hpp_html"><div class="ttname"><a href="components_8hpp.html">components.hpp</a></div></div>
+<div class="ttc" id="aprelude_8hpp_html"><div class="ttname"><a href="prelude_8hpp.html">prelude.hpp</a></div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a16b6872a2bf05d42354a7bc1bc50a8a1"><div class="ttname"><a href="scene__game_8hpp.html#a16b6872a2bf05d42354a7bc1bc50a8a1">SNAKE_INITIAL_LENGTH</a></div><div class="ttdeci">#define SNAKE_INITIAL_LENGTH</div><div class="ttdef"><b>Definition</b> scene_game.hpp:8</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdef"><b>Definition</b> scene_game.hpp:18</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da"><div class="ttname"><a href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaa9b0b4a95b99523966e0e34ffdadac9da">DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdef"><b>Definition</b> scene_game.hpp:20</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa"><div class="ttname"><a href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaba595d8bca8bc5e67c37c0a9d89becfa">UP</a></div><div class="ttdeci">@ UP</div><div class="ttdef"><b>Definition</b> scene_game.hpp:19</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065"><div class="ttname"><a href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdef"><b>Definition</b> scene_game.hpp:21</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="scene__game_8hpp.html#a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdef"><b>Definition</b> scene_game.hpp:22</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83">Difficulty</a></div><div class="ttdeci">Difficulty</div><div class="ttdef"><b>Definition</b> scene_game.hpp:26</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83a0ccca3f182d3ff5106c143e7ccacc1e6"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0ccca3f182d3ff5106c143e7ccacc1e6">ADD_SUB_HARD</a></div><div class="ttdeci">@ ADD_SUB_HARD</div><div class="ttdef"><b>Definition</b> scene_game.hpp:28</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83a0dfe4b5369ec0941401cb0e33308b5ef"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a0dfe4b5369ec0941401cb0e33308b5ef">ADD_SUB_EASY</a></div><div class="ttdeci">@ ADD_SUB_EASY</div><div class="ttdef"><b>Definition</b> scene_game.hpp:27</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83a1c9c6fe48e50acd29ebf63bc83b48476"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a1c9c6fe48e50acd29ebf63bc83b48476">MULT_DIV_HARD</a></div><div class="ttdeci">@ MULT_DIV_HARD</div><div class="ttdef"><b>Definition</b> scene_game.hpp:30</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83a73f7736d42f39ee2083394eb53beea97"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83a73f7736d42f39ee2083394eb53beea97">POW_SQRT_EASY</a></div><div class="ttdeci">@ POW_SQRT_EASY</div><div class="ttdef"><b>Definition</b> scene_game.hpp:31</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83aa8658b74cd5c96f1903c321e34257e76"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83aa8658b74cd5c96f1903c321e34257e76">MULT_DIV_EASY</a></div><div class="ttdeci">@ MULT_DIV_EASY</div><div class="ttdef"><b>Definition</b> scene_game.hpp:29</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a43efb0a2e61815a66134dfa5ccea0a83abb942b809546a49e3c791e5319ea3822"><div class="ttname"><a href="scene__game_8hpp.html#a43efb0a2e61815a66134dfa5ccea0a83abb942b809546a49e3c791e5319ea3822">POW_SQRT_HARD</a></div><div class="ttdeci">@ POW_SQRT_HARD</div><div class="ttdef"><b>Definition</b> scene_game.hpp:32</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a5f4e6356f84136db0cce81c1bb983cfc"><div class="ttname"><a href="scene__game_8hpp.html#a5f4e6356f84136db0cce81c1bb983cfc">TILE_DIMENSION</a></div><div class="ttdeci">#define TILE_DIMENSION</div><div class="ttdef"><b>Definition</b> scene_game.hpp:13</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a7d763bad329705fdcac870347f5ea8b0"><div class="ttname"><a href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0">GameOver</a></div><div class="ttdeci">GameOver</div><div class="ttdef"><b>Definition</b> scene_game.hpp:42</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a7d763bad329705fdcac870347f5ea8b0a1015358936f51e6e3bba2b933dece609"><div class="ttname"><a href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a1015358936f51e6e3bba2b933dece609">CRASH_WALL</a></div><div class="ttdeci">@ CRASH_WALL</div><div class="ttdef"><b>Definition</b> scene_game.hpp:44</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a7d763bad329705fdcac870347f5ea8b0a764c00d96971d00f986396ec1b674c52"><div class="ttname"><a href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0a764c00d96971d00f986396ec1b674c52">CRASH_SELF</a></div><div class="ttdeci">@ CRASH_SELF</div><div class="ttdef"><b>Definition</b> scene_game.hpp:45</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a7d763bad329705fdcac870347f5ea8b0aa1e095cc966dbecf6a0d8aad75348d1a"><div class="ttname"><a href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a></div><div class="ttdeci">@ FALSE</div><div class="ttdef"><b>Definition</b> scene_game.hpp:43</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a7d763bad329705fdcac870347f5ea8b0ac527a38f617bf1d71e23d71b2d1ebb37"><div class="ttname"><a href="scene__game_8hpp.html#a7d763bad329705fdcac870347f5ea8b0ac527a38f617bf1d71e23d71b2d1ebb37">BAD_FOOD</a></div><div class="ttdeci">@ BAD_FOOD</div><div class="ttdef"><b>Definition</b> scene_game.hpp:46</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_a9a4ed2cb60c09100edf059c38ff4c02e"><div class="ttname"><a href="scene__game_8hpp.html#a9a4ed2cb60c09100edf059c38ff4c02e">get_food</a></div><div class="ttdeci">Food get_food(Difficulty difficulty)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:16</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_aa2cc7a8bd317f0cac42b1d090f78470b"><div class="ttname"><a href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470b">Food</a></div><div class="ttdeci">Food</div><div class="ttdef"><b>Definition</b> scene_game.hpp:35</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_aa2cc7a8bd317f0cac42b1d090f78470ba3d6adf1186843b7cb2f65fccf1771f6c"><div class="ttname"><a href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba3d6adf1186843b7cb2f65fccf1771f6c">APPLE_PIE</a></div><div class="ttdeci">@ APPLE_PIE</div><div class="ttdef"><b>Definition</b> scene_game.hpp:38</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_aa2cc7a8bd317f0cac42b1d090f78470ba5484ec37ffd1fcffb7aba549a4839910"><div class="ttname"><a href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470ba5484ec37ffd1fcffb7aba549a4839910">APPLE</a></div><div class="ttdeci">@ APPLE</div><div class="ttdef"><b>Definition</b> scene_game.hpp:37</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_aa2cc7a8bd317f0cac42b1d090f78470baa0ede4786120e07ddc06a7a2c20d7818"><div class="ttname"><a href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470baa0ede4786120e07ddc06a7a2c20d7818">GOLDEN_APPLE_PIE</a></div><div class="ttdeci">@ GOLDEN_APPLE_PIE</div><div class="ttdef"><b>Definition</b> scene_game.hpp:39</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_aa2cc7a8bd317f0cac42b1d090f78470badd63690c28875f788115a896769d0384"><div class="ttname"><a href="scene__game_8hpp.html#aa2cc7a8bd317f0cac42b1d090f78470badd63690c28875f788115a896769d0384">BAD_APPLE</a></div><div class="ttdeci">@ BAD_APPLE</div><div class="ttdef"><b>Definition</b> scene_game.hpp:36</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ac5cc9fff682f589a0b7a727e5facbc84"><div class="ttname"><a href="scene__game_8hpp.html#ac5cc9fff682f589a0b7a727e5facbc84">get_pts</a></div><div class="ttdeci">long long get_pts(Food food)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:38</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ac87ae68fea72cbf631f5ff42cc546835"><div class="ttname"><a href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835">MathDisplayStatus</a></div><div class="ttdeci">MathDisplayStatus</div><div class="ttdef"><b>Definition</b> scene_game.hpp:211</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ac87ae68fea72cbf631f5ff42cc546835a8d5289728d9829b4dc3765a461f80521"><div class="ttname"><a href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835a8d5289728d9829b4dc3765a461f80521">FEEDBACK</a></div><div class="ttdeci">@ FEEDBACK</div><div class="ttdef"><b>Definition</b> scene_game.hpp:213</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ac87ae68fea72cbf631f5ff42cc546835ad126f509c35e1661274f8b72693c7848"><div class="ttname"><a href="scene__game_8hpp.html#ac87ae68fea72cbf631f5ff42cc546835ad126f509c35e1661274f8b72693c7848">QUESTION</a></div><div class="ttdeci">@ QUESTION</div><div class="ttdef"><b>Definition</b> scene_game.hpp:212</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ac8c4d8667136ad6b8c5936106a240ec7"><div class="ttname"><a href="scene__game_8hpp.html#ac8c4d8667136ad6b8c5936106a240ec7">LIVES</a></div><div class="ttdeci">#define LIVES</div><div class="ttdef"><b>Definition</b> scene_game.hpp:7</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_ae8af8e1c0bafcf8c7a0a364c3ddd4543"><div class="ttname"><a href="scene__game_8hpp.html#ae8af8e1c0bafcf8c7a0a364c3ddd4543">TILE_COLUMNS</a></div><div class="ttdeci">#define TILE_COLUMNS</div><div class="ttdef"><b>Definition</b> scene_game.hpp:12</div></div>
+<div class="ttc" id="ascene__game_8hpp_html_af717110f6bc3880978cb8986fc86d168"><div class="ttname"><a href="scene__game_8hpp.html#af717110f6bc3880978cb8986fc86d168">SNAKE_UNIT_LENGTH</a></div><div class="ttdeci">#define SNAKE_UNIT_LENGTH</div><div class="ttdef"><b>Definition</b> scene_game.hpp:9</div></div>
+<div class="ttc" id="astructGameComponents_1_1Coordinate_html"><div class="ttname"><a href="structGameComponents_1_1Coordinate.html">GameComponents::Coordinate</a></div><div class="ttdef"><b>Definition</b> components.hpp:160</div></div>
+<div class="ttc" id="astructMathQuestion_html"><div class="ttname"><a href="structMathQuestion.html">MathQuestion</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:147</div></div>
+<div class="ttc" id="astructMathQuestion_html_a0451d1ee012c1a95208c811b7ba69ef2"><div class="ttname"><a href="structMathQuestion.html#a0451d1ee012c1a95208c811b7ba69ef2">MathQuestion::coords</a></div><div class="ttdeci">TileCoord coords[3]</div><div class="ttdef"><b>Definition</b> scene_game.hpp:159</div></div>
+<div class="ttc" id="astructMathQuestion_html_a21e4b2a554a79bc996a5195913dfebaa"><div class="ttname"><a href="structMathQuestion.html#a21e4b2a554a79bc996a5195913dfebaa">MathQuestion::answers_str</a></div><div class="ttdeci">string answers_str[3]</div><div class="ttdef"><b>Definition</b> scene_game.hpp:165</div></div>
+<div class="ttc" id="astructMathQuestion_html_a2a7e4df1203557517d1bbdac0794bfa2"><div class="ttname"><a href="structMathQuestion.html#a2a7e4df1203557517d1bbdac0794bfa2">MathQuestion::coords_pixel</a></div><div class="ttdeci">raylib::Vector2 coords_pixel[3]</div><div class="ttdef"><b>Definition</b> scene_game.hpp:162</div></div>
+<div class="ttc" id="astructMathQuestion_html_a33c18ee97b4de8a0ce895cbe750b872a"><div class="ttname"><a href="structMathQuestion.html#a33c18ee97b4de8a0ce895cbe750b872a">MathQuestion::draw_question</a></div><div class="ttdeci">void draw_question(raylib::Vector2 pos, raylib::Font *game_font, Color color)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:153</div></div>
+<div class="ttc" id="astructMathQuestion_html_a898f9edc4aa380bd41e251fd37778f4b"><div class="ttname"><a href="structMathQuestion.html#a898f9edc4aa380bd41e251fd37778f4b">MathQuestion::check_collision</a></div><div class="ttdeci">optional&lt; Food &gt; check_collision(raylib::Vector2 head_location, float head_radius)</div><div class="ttdef"><b>Definition</b> scene_game.cpp:157</div></div>
+<div class="ttc" id="astructMathQuestion_html_aa34ed636b747676890d560ca09633135"><div class="ttname"><a href="structMathQuestion.html#aa34ed636b747676890d560ca09633135">MathQuestion::difficulty</a></div><div class="ttdeci">Difficulty difficulty</div><div class="ttdef"><b>Definition</b> scene_game.hpp:168</div></div>
+<div class="ttc" id="astructMathQuestion_html_aca090b6de5968fce5ff8e41b44f12b23"><div class="ttname"><a href="structMathQuestion.html#aca090b6de5968fce5ff8e41b44f12b23">MathQuestion::answers</a></div><div class="ttdeci">long long answers[3]</div><div class="ttdef"><b>Definition</b> scene_game.hpp:156</div></div>
+<div class="ttc" id="astructMathQuestion_html_ae838510fadc131d4d6a458eb2a8ca96f"><div class="ttname"><a href="structMathQuestion.html#ae838510fadc131d4d6a458eb2a8ca96f">MathQuestion::display</a></div><div class="ttdeci">string display</div><div class="ttdef"><b>Definition</b> scene_game.hpp:151</div></div>
+<div class="ttc" id="astructTileCoord_html"><div class="ttname"><a href="structTileCoord.html">TileCoord</a></div><div class="ttdef"><b>Definition</b> scene_game.hpp:55</div></div>
+<div class="ttc" id="astructTileCoord_html_a16730f249586451ecd21237114667095"><div class="ttname"><a href="structTileCoord.html#a16730f249586451ecd21237114667095">TileCoord::to_coord</a></div><div class="ttdeci">GameComponents::Coordinate to_coord()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:63</div></div>
+<div class="ttc" id="astructTileCoord_html_a28d41f3012ea954fede38155e90ea769"><div class="ttname"><a href="structTileCoord.html#a28d41f3012ea954fede38155e90ea769">TileCoord::to_vector2_center</a></div><div class="ttdeci">raylib::Vector2 to_vector2_center()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:75</div></div>
+<div class="ttc" id="astructTileCoord_html_a5fbac8b38a3f3ebdb61aa222c29e86f3"><div class="ttname"><a href="structTileCoord.html#a5fbac8b38a3f3ebdb61aa222c29e86f3">TileCoord::to_coord_center</a></div><div class="ttdeci">GameComponents::Coordinate to_coord_center()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:67</div></div>
+<div class="ttc" id="astructTileCoord_html_a75d9b1e7c6f3d67d1745a07685ee9275"><div class="ttname"><a href="structTileCoord.html#a75d9b1e7c6f3d67d1745a07685ee9275">TileCoord::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition</b> scene_game.hpp:57</div></div>
+<div class="ttc" id="astructTileCoord_html_acd512cae2427542be8e2d06fc01d5477"><div class="ttname"><a href="structTileCoord.html#acd512cae2427542be8e2d06fc01d5477">TileCoord::to_vector2</a></div><div class="ttdeci">raylib::Vector2 to_vector2()</div><div class="ttdef"><b>Definition</b> scene_game.cpp:71</div></div>
+<div class="ttc" id="astructTileCoord_html_ae9347f5e38b4464684218b8af1b366cb"><div class="ttname"><a href="structTileCoord.html#ae9347f5e38b4464684218b8af1b366cb">TileCoord::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition</b> scene_game.hpp:56</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_1699be727a800b1d059c6f7f2b91d2ee.html">game</a></li><li class="navelem"><a href="scene__game_8hpp.html">scene_game.hpp</a></li>
+    <li class="footer">Dibangkitkan oleh <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
