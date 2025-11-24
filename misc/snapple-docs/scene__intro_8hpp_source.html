@@ -346,30 +346,24 @@ $(function(){initNavTree('scene__intro_8hpp_source.html','',''); });
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a>* game_state_manager;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="comment">// Main animasi dari awal.</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ac5f26c77c59c68eca1d9b5cba3f57d91">replay</a>();</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="comment">// Reset, tanpa main animasi dari awal.</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ae3644f39315314f78132202859ef696a">reset</a>();</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <a class="code hl_function" href="classIntroScene.html#a3691b51409f65b40f0c84008e49ef32b">IntroScene</a>();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="comment">// gara gara kalo ada kelas yang ada kelas lain, maka kelas yang</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">// dimiliki kelas lain itu harus ada default constructor, makanya aku</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="comment">// jadi pake fungsi init kayak gini. ini gunanya buat dependency</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// injection doang.</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// *perhatian*: fungsi ini HARUS dipanggil SETELAH</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// konstruksi dan harus diberi argumen non-null! ! !</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#a1cd975a256fef2c1b5d701a6fbc53f23">init</a>(raylib::Font* game_font, <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a>* game_state_manager, function&lt;<span class="keywordtype">void</span>()&gt; start_game_callback);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="comment">// Bikin tulisan judul membal ke bawah (sampai `ground_y`).</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ac501f56163d5322f2159ce7533e6278f">letters_bounce_down</a>();</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// Bikin tulisan judul terbang ke atas (sampai `letters_y_min`).</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#aa8fc31947523a6c3a200a659d1da4476">letters_fly_up</a>();</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#aa3a88c34622aa3949215b0bf131ff645">draw</a>();</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#a29de91cf789d4b09b547e8cbcafffb34">update</a>();</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>};</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ac5f26c77c59c68eca1d9b5cba3f57d91">replay</a>();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ae3644f39315314f78132202859ef696a">reset</a>();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <a class="code hl_function" href="classIntroScene.html#a3691b51409f65b40f0c84008e49ef32b">IntroScene</a>();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// gara gara kalo ada kelas yang ada kelas lain, maka kelas yang</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// dimiliki kelas lain itu harus ada default constructor, makanya aku</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// jadi pake fungsi init kayak gini. ini gunanya buat dependency</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// injection doang.</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#a1cd975a256fef2c1b5d701a6fbc53f23">init</a>(raylib::Font* game_font, <a class="code hl_class" href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a>* game_state_manager, function&lt;<span class="keywordtype">void</span>()&gt; start_game_callback);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#ac501f56163d5322f2159ce7533e6278f">letters_bounce_down</a>();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#aa8fc31947523a6c3a200a659d1da4476">letters_fly_up</a>();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#aa3a88c34622aa3949215b0bf131ff645">draw</a>();</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIntroScene.html#a29de91cf789d4b09b547e8cbcafffb34">update</a>();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>};</div>
 </div>
 <div class="ttc" id="aclassGameComponents_1_1GameStateManager_html"><div class="ttname"><a href="classGameComponents_1_1GameStateManager.html">GameComponents::GameStateManager</a></div><div class="ttdef"><b>Definition</b> components.hpp:146</div></div>
 <div class="ttc" id="aclassGameComponents_1_1Scene_html"><div class="ttname"><a href="classGameComponents_1_1Scene.html">GameComponents::Scene</a></div><div class="ttdef"><b>Definition</b> components.hpp:42</div></div>
