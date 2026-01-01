@@ -105,7 +105,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Cikitta™"
+  name             : "Cikitta"
   avatar           : "/assets/image/profile.png"
   bio              : "*The Linux, visual art, and coding weirdo.*"
   location         : "Indonesia"
@@ -215,7 +215,7 @@ sass:
 permalink: /blog/:title/
 paginate: 3 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Jakarta # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -289,7 +289,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false # but already included in social share includes.
       share: true
