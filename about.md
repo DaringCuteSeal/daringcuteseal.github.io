@@ -7,7 +7,7 @@ author_profile: true
 ---
 
 
-Hi! I'm Cikitta, otherwise known as Daringcuteseal. I'm a 16 year-old high school student. I'm a visual artist and I love illustrating and animating. I'm also a CS student; I've been learning competitive programming lately. I use Artix Linux btw and I love to give back to the amazing FOSS community.
+Hi! I'm Cikitta, otherwise known as Daringcuteseal. I'm a 17 year-old high school student. I'm a visual artist and I love illustrating and animating. I'm also a CS student; I've been learning competitive programming lately. I use Artix Linux btw and I love to give back to the amazing FOSS community.
 
 My fursona's a seal and she's Pearl (you can call me that too).
 
