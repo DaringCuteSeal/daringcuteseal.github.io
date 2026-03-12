@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+	<input type='number' placeholder='jarak (km)' id='jarak'></input>
+
+	<button onclick='calculate()' label='prediksikan'>Prediksikan</button>
+	<div>
+		<p id='hasil'>Hasil:</p>
+	</div>
+
+	<script>
+		function calculate() {
+			value = document.getElementById('jarak').value
+			hasil_elem = document.getElementById('hasil')
+			hasil_elem.innerHTML = 'Hasil: ' + (1.332 * value + 8.234).toFixed(2) + ' menit'
+			return 1.322 * value + 8.234
+		}
+	</script>
+	<style>
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	background-color: white;
+	min-height: 100vh;
+}
+	</style>
+
+
+
+</BODY>
+
