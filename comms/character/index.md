@@ -88,4 +88,4 @@ My art range is kinda broad, so I'll just place some examples below (click image
 <br>
 
 # Support
-For further information and support, please write a mail to [comms@dcutes.me](mailto://comms@dcutes.me).
+For further information and support, please write a mail to [comms@dcutes.my.id](mailto://comms@dcutes.my.id).
