@@ -252,7 +252,7 @@ Again, don't forget to watch your RSS reader :3
 # My Thoughts about PHP, BTW
 
 - It's good and feels more than just a preprocessor.
-- No type checking is hell, though.
+- No strong typing is hell, though.
 - Feels as dirty as BASH, as weirdly object-oriented as Python, as curly bracketed as C, and as web-oriented as JavaScript.
 
 
